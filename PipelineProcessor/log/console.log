@@ -1,0 +1,59 @@
+# Design: Design PipelineProcessor already active.
+# DESIGN: Default Design Language: VERILOG
+# DESIGN: Default BDE Language: VERILOG
+# DESIGN: Flow Manager: Not Defined
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/parameter.v
+# Error: VCP2000 integration/parameter.v : (4, 5): Syntax error. Unexpected token: non-printable: \x0.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/parameter.v
+# Error: VCP2000 integration/parameter.v : (4, 5): Syntax error. Unexpected token: non-printable: \x0.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v
+# Error: VCP2000 integration/ClockGenerator.v : (9, 7): Syntax error. Unexpected token: =.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/ClockGenerator.v
+# Error: VCP2980 integration/ClockGenerator.v : (12, 1): Variable "clock" cannot be driven by both the procedural and continuous assignment statements. Use "-err VCP2980 W1" to suppress this error.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/ClockGenerator.v
+# Unit top modules: ClockGenerator.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/parameter.v
+# Warning: VCP2640 No modules defined.
+# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v
+# Unit top modules: ClockGenerator.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v
+# Unit top modules: ClockGenerator.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v
+# Unit top modules: ClockGenerator.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/parameter.v
+# Warning: VCP2640 No modules defined.
+# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/ClockGenerator.v
+# Error: VCP5103 integration/ClockGenerator.v : (5, 12): Undeclared identifier: LOW.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v
+# Unit top modules: ClockGenerator.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v
+# Unit top modules: ClockGenerator.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/ClockGenerator.v
+# Error: VCP5103 integration/ClockGenerator.v : (5, 12): Undeclared identifier: LOW.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v
+# Unit top modules: ClockGenerator.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/integration/parameter.v $dsn/src/integratio
