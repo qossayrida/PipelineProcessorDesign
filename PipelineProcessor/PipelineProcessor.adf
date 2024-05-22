@@ -1,0 +1,36 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=PipelineProcessor
+[Library]
+PipelineProcessor=.\PipelineProcessor\PipelineProcessor.lib
+[$LibMap$]
+PipelineProcessor=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VERILOG
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+[Files]
+integration/parameter.v=-1
+integration/ClockGenerator.v=-1
+integration/PipelineProcessor.v=-1
+integration/ClockGenerator.v=-1
+[Files.Data]
+.\src\parameter.v=Verilog Source Code
+.\src\integration\parameter.v=Verilog Source Code
+.\src\integration\ClockGenerator.v=Verilog Source Code
+.\src\integration\PipelineProcessor.v=Verilog Source Code
+.\src\integration\ClockGenerator.v=Verilog Source Code
+[Groups]
+alu=1
+data_memory=1
+instruction_memory=1
+register_file=1
+control_unit=1
+integration=1

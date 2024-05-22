@@ -1,0 +1,73 @@
+##########
+BUS DEFAULT TYPE
+STD_LOGIC_VECTOR
+##########
+CHECK DIAGRAM
+YES
+##########
+GND DEFAULT TYPE
+STD_LOGIC
+##########
+GND DEFAULT VALUE
+'0'
+##########
+HANGING WIRE DEFAULT TYPE
+STD_LOGIC
+##########
+HANGING WIRE DEFAULT VALUE
+'Z'
+##########
+LIBRARIES
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_signed.all;
+use IEEE.std_logic_unsigned.all;
+##########
+VCC DEFAULT TYPE
+STD_LOGIC
+##########
+VCC DEFAULT VALUE
+'1'
+##########
+VERILOG DANGLING DEFAULT VALUE
+1'bZ
+##########
+VERILOG DESIGN UNIT HEADER
+`timescale 1ps / 1ps
+##########
+VERILOG GND DEFAULT VALUE
+1'b0
+##########
+VERILOG VCC DEFAULT VALUE
+1'b1
+##########
+WIRE DEFAULT TYPE
+STD_LOGIC
+##########
+VERILOG VCC DEFAULT TYPE
+supply1
+##########
+VERILOG GND DEFAULT TYPE
+supply0
+##########
+USE GLOBAL DEFAULTS
+1
+##########
+INCREMENT NETS
+0
+##########
+INCREMENT NET FACTOR
+1
+##########
+INCREMENT NET START
+0
+##########
+INCLUDE ACTIVE LIBRARY CLAUSE
+0
+##########
+PAGE_DEFAULT_HEIGHT
+1700
+##########
+PAGE_DEFAULT_WIDTH
+2200

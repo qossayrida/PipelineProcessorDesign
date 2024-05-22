@@ -1,0 +1,3 @@
+.\src\integration\parameter.v
+.\src\integration\ClockGenerator.v
+.\src\integration\PipelineProcessor.v
