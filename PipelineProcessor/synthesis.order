@@ -1,3 +1,8 @@
 i<>.\src\PipelineProcessor.v
 i<>.\src\ClockGenerator.v
 i<>.\src\parameter.v
+i<>.\src\DataMemory.v
+i<>.\src\InstructionMemory.v
+i<>.\src\RegisterFile.v
+i<>.\src\ControlUnit.v
+i<>.\src\ALU.v

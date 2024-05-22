@@ -17,16 +17,24 @@ REFRESH_FLOW=1
 FLOWTOOLS=NONE
 FAMILY=
 [Files]
+alu/ALU.v=-1
+data_memory/DataMemory.v=-1
+instruction_memory/InstructionMemory.v=-1
+register_file/RegisterFile.v=-1
+control_unit/ControlUnit.v=-1
 integration/parameter.v=-1
 integration/ClockGenerator.v=-1
 integration/PipelineProcessor.v=-1
-integration/ClockGenerator.v=-1
 [Files.Data]
-.\src\parameter.v=Verilog Source Code
+.\src\ALU.v=Verilog Source Code
+.\src\alu\ALU.v=Verilog Source Code
+.\src\data_memory\DataMemory.v=Verilog Source Code
+.\src\instruction_memory\InstructionMemory.v=Verilog Source Code
+.\src\register_file\RegisterFile.v=Verilog Source Code
+.\src\control_unit\ControlUnit.v=Verilog Source Code
 .\src\integration\parameter.v=Verilog Source Code
 .\src\integration\ClockGenerator.v=Verilog Source Code
 .\src\integration\PipelineProcessor.v=Verilog Source Code
-.\src\integration\ClockGenerator.v=Verilog Source Code
 [Groups]
 alu=1
 data_memory=1
