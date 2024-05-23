@@ -1,4 +1,5 @@
 .\src\alu\ALU.v
+.\src\data_memory\DataMemoryTestbench.v
 .\src\data_memory\DataMemory.v
 .\src\instruction_memory\InstructionMemory.v
 .\src\register_file\RegisterFile.v

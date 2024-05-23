@@ -6,3 +6,4 @@ i<>.\src\InstructionMemory.v
 i<>.\src\RegisterFile.v
 i<>.\src\ControlUnit.v
 i<>.\src\ALU.v
+i<>.\src\DataMemoryTestbench.v

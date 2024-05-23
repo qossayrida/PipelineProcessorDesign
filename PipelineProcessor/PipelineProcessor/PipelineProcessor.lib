@@ -1,9 +1,10 @@
-timestamp=1716398355289
+timestamp=1716433334526
 
 [~A]
-CUSP_Counter=6
+C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v=0*23713*24879
+CUSP_Counter=8
 LastVerilogToplevel=PipelineProcessor
-ModifyID=11
+ModifyID=13
 Version=74
 c:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v=0*17883*18713
 c:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/integration/ClockGenerator.v=0*372*918
@@ -11,41 +12,49 @@ c:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/in
 c:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/integration/parameter.v_ClockGenerator.v_PipelineProcessor.v=0*15756*16414
 
 [~MFT]
-0=7|0PipelineProcessor.mgf|18713|9908
-1=8|1PipelineProcessor.mgf|17252|15365
-3=16|3PipelineProcessor.mgf|14296|12476
+0=10|0PipelineProcessor.mgf|24879|12327
+1=10|1PipelineProcessor.mgf|26441|22857
+3=20|3PipelineProcessor.mgf|21638|18060
 
 [$root]
-A/$root=22|||1*15365
-BinW64/$root=3*12476
-SLP=3*12591
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c921648e9b5aff5ced1b81c8c9ea94989828f
+A/$root=22|||1*22857
+BinW64/$root=3*18060
+SLP=3*18175
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c92165bf9b517e8732a1ef6816d6905580dba
 
 [ClockGenerator]
-A/ClockGenerator=22|../src/integration/ClockGenerator.v|1|1*15755
-BinW64/ClockGenerator=3*12659
-CUSP=UnitScopePackage_6
+A/ClockGenerator=22|../src/integration/ClockGenerator.v|1|1*24944
+BinW64/ClockGenerator=3*20001
+CUSP=UnitScopePackage_8
 R=../src/integration/ClockGenerator.v|1
-SLP=3*13446
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|29401d40d399d6fc9585f993b3e20fdbe5b50b19905b9e8c8fa7978cd8c5257117170c86f88132e11c40cd5334e6d56a
+SLP=3*20788
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|29401d40d399d6fc9585f993b3e20fdbe5b50b19905b9e8c8fa7978cd8c52571eb47abd3cfeb95a3ee2a9ce734272b57
+
+[DataMemory]
+A/DataMemory=22|../src/data_memory/DataMemory.v|1|1*23263
+BinW64/DataMemory=3*18243
+R=../src/data_memory/DataMemory.v|1
+SLP=3*19370
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|ab5b04ae54b0797c38b8547f936232d99426d89c50ff4379bf89bab4c639842d1be7092e1d9a9951abdc5afe1c7b3577
 
 [PipelineProcessor]
-A/PipelineProcessor=22|../src/integration/PipelineProcessor.v|1|1*16685
-BinW64/PipelineProcessor=3*13823
+A/PipelineProcessor=22|../src/integration/PipelineProcessor.v|1|1*25874
+BinW64/PipelineProcessor=3*21165
 R=../src/integration/PipelineProcessor.v|1
-SLP=3*13950
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|1c6c5566b88730f7fd6cb85636a8b12c601169342216ef45e4410ce0e541c021b5a1689fa622d776c55fd9149e9456bb
+SLP=3*21292
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|1c6c5566b88730f7fd6cb85636a8b12c601169342216ef45e4410ce0e541c0214fa8b7c63953104886b3aa9a486106ba
 
-[UnitScopePackage_6]
-A/UnitScopePackage_6=22|../src/integration/parameter.v|0|1*17252
-BinW64/UnitScopePackage_6=3*14043
+[UnitScopePackage_8]
+A/UnitScopePackage_8=22|../src/data_memory/DataMemory.v|0|1*26441
+BinW64/UnitScopePackage_8=3*21385
 CUSP=1
-R=../src/integration/parameter.v|0
-SLP=3*14296
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|fab98aed36991913255ea6c02c9bb53e83f780e33cc48e0917bf64d32b1b39fbd403a4b4fe911da2e58a7232d921171e
+R=../src/data_memory/DataMemory.v|0
+SLP=3*21638
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|fab98aed36991913255ea6c02c9bb53e140e650f87bf97ca8c7e1f6b5ddbbabba8373466d4c85b7f04f1e1de38243089
 
 [~U]
-$root=12|0*17081|
-ClockGenerator=12|0*17279||0x10
-PipelineProcessor=12|0*17494||0x10
-UnitScopePackage_6=12|0*17668||0x40200000
+$root=12|0*22627|
+ClockGenerator=12|0*23109||0x10
+DataMemory=12|0*22841||0x10
+PipelineProcessor=12|0*23324||0x10
+UnitScopePackage_8=12|0*23498||0x40200000
