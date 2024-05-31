@@ -1,10 +1,12 @@
-timestamp=1716433334526
+timestamp=1717174425732
 
 [~A]
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v=0*23713*24879
-CUSP_Counter=8
-LastVerilogToplevel=PipelineProcessor
-ModifyID=13
+C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemoryTestbench.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v=0*39629*41426
+C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemoryTestbench.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v_IFStage.v_PC.v=0*68172*70464
+CUSP_Counter=17
+LastVerilogToplevel=IFStage
+ModifyID=22
 Version=74
 c:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v=0*17883*18713
 c:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/integration/ClockGenerator.v=0*372*918
@@ -12,49 +14,84 @@ c:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/in
 c:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/integration/parameter.v_ClockGenerator.v_PipelineProcessor.v=0*15756*16414
 
 [~MFT]
-0=10|0PipelineProcessor.mgf|24879|12327
-1=10|1PipelineProcessor.mgf|26441|22857
-3=20|3PipelineProcessor.mgf|21638|18060
+0=14|0PipelineProcessor.mgf|70464|36634
+1=18|1PipelineProcessor.mgf|143894|132723
+3=36|3PipelineProcessor.mgf|98428|88223
 
 [$root]
-A/$root=22|||1*22857
-BinW64/$root=3*18060
-SLP=3*18175
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c92165bf9b517e8732a1ef6816d6905580dba
+A/$root=22|||1*132723
+BinW64/$root=3*88223
+SLP=3*88338
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c92162ff2d1955ce7aa937b163bdaf87262f9
 
 [ClockGenerator]
-A/ClockGenerator=22|../src/integration/ClockGenerator.v|1|1*24944
-BinW64/ClockGenerator=3*20001
-CUSP=UnitScopePackage_8
+A/ClockGenerator=22|../src/integration/ClockGenerator.v|1|1*138369
+BinW64/ClockGenerator=3*93979
+CUSP=UnitScopePackage_17
 R=../src/integration/ClockGenerator.v|1
-SLP=3*20788
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|29401d40d399d6fc9585f993b3e20fdbe5b50b19905b9e8c8fa7978cd8c52571eb47abd3cfeb95a3ee2a9ce734272b57
+SLP=3*94765
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|29401d40d399d6fc9585f993b3e20fdbe5b50b19905b9e8c8fa7978cd8c52571bfb8f567ceec0cbc0e5ee635c148bd24
 
 [DataMemory]
-A/DataMemory=22|../src/data_memory/DataMemory.v|1|1*23263
-BinW64/DataMemory=3*18243
+A/DataMemory=22|../src/data_memory/DataMemory.v|1|1*133161
+BinW64/DataMemory=3*88406
 R=../src/data_memory/DataMemory.v|1
-SLP=3*19370
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|ab5b04ae54b0797c38b8547f936232d99426d89c50ff4379bf89bab4c639842d1be7092e1d9a9951abdc5afe1c7b3577
+SLP=3*89547
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|ab5b04ae54b0797c38b8547f936232d99426d89c50ff4379bf89bab4c639842da4189a73a81e55c8c5079110ca1cf728
+
+[IFStage]
+A/IFStage=22|../src/stages/IFStage.v|1|1*140027
+BinW64/IFStage=3*95733
+CUSP=UnitScopePackage_17
+R=../src/stages/IFStage.v|1
+SLP=3*96223
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|ff3c6229497c1bf9469ddb190df3141926527262ddaa47cb266f3a3c4d9b973a686b2a362053f7c96eef5a441c065ed4
+
+[InstructionMemory]
+A/InstructionMemory=22|../src/instruction_memory/InstructionMemory.v|1|1*134835
+BinW64/InstructionMemory=3*90210
+CUSP=UnitScopePackage_17
+R=../src/instruction_memory/InstructionMemory.v|1
+SLP=3*91981
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|b86a443a1d82ec234d09f8a4c7b8cd6b46404b5c54a2301d05949f8e3043a72000543124c1fc9704c6d6b1dcd2afde7c
+
+[PC]
+A/PC=22|../src/utilities/PC.v|1|1*142075
+BinW64/PC=3*96469
+CUSP=UnitScopePackage_17
+R=../src/utilities/PC.v|1
+SLP=3*97675
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8180830d307fd32bf17aee65de57f6927e0cad6ba822c1ae80f90efa281b0604
 
 [PipelineProcessor]
-A/PipelineProcessor=22|../src/integration/PipelineProcessor.v|1|1*25874
-BinW64/PipelineProcessor=3*21165
+A/PipelineProcessor=22|../src/integration/PipelineProcessor.v|1|1*139301
+BinW64/PipelineProcessor=3*95145
 R=../src/integration/PipelineProcessor.v|1
-SLP=3*21292
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|1c6c5566b88730f7fd6cb85636a8b12c601169342216ef45e4410ce0e541c0214fa8b7c63953104886b3aa9a486106ba
+SLP=3*95534
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|1c6c5566b88730f7fd6cb85636a8b12c601169342216ef45e4410ce0e541c02103dedb14b385cda5ad5e74dd921fed50
 
-[UnitScopePackage_8]
-A/UnitScopePackage_8=22|../src/data_memory/DataMemory.v|0|1*26441
-BinW64/UnitScopePackage_8=3*21385
-CUSP=1
+[RegisterFile]
+A/RegisterFile=22|../src/register_file/RegisterFile.v|1|1*136536
+BinW64/RegisterFile=3*92383
+R=../src/register_file/RegisterFile.v|1
+SLP=3*93345
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|22f74543ade67d85359ca455f1aa161036d96cbaa54bbfe1fa4f47ec71d764292081c009a947762ef2fe70773dcb61ac
+
+[UnitScopePackage_17]
+A/UnitScopePackage_17=22|../src/data_memory/DataMemory.v|0|1*143894
+BinW64/UnitScopePackage_17=3*98174
+CUSP=4
 R=../src/data_memory/DataMemory.v|0
-SLP=3*21638
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|fab98aed36991913255ea6c02c9bb53e140e650f87bf97ca8c7e1f6b5ddbbabba8373466d4c85b7f04f1e1de38243089
+SLP=3*98428
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|fab98aed36991913255ea6c02c9bb53e0d83ccb244198aff27d3c602a4e353fae6da5d987667d4bef111b2d0ed698703
 
 [~U]
-$root=12|0*22627|
-ClockGenerator=12|0*23109||0x10
-DataMemory=12|0*22841||0x10
-PipelineProcessor=12|0*23324||0x10
-UnitScopePackage_8=12|0*23498||0x40200000
+$root=12|0*65570|
+ClockGenerator=12|0*66622||0x10
+DataMemory=12|0*65832||0x10
+IFStage=12|0*67011||0x10
+InstructionMemory=12|0*66096|
+PC=12|0*67345|
+PipelineProcessor=12|0*66837||0x10
+RegisterFile=12|0*66360||0x10
+UnitScopePackage_17=12|0*67623||0x40200000

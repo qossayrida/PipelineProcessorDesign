@@ -7,3 +7,5 @@
 .\src\integration\parameter.v
 .\src\integration\ClockGenerator.v
 .\src\integration\PipelineProcessor.v
+.\src\stages\IFStage.v
+.\src\utilities\PC.v

@@ -1,9 +1,0 @@
-alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v
-# Warning: VCP5210 data_memory/DataMemory.v : (19, 15): Event synchronized on a constant value: 8.
-# Unit top modules: DataMemory ClockGenerator PipelineProcessor.
-# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v
-# Unit top modules: DataMemory ClockGenerator PipelineProcessor.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done

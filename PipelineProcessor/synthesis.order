@@ -7,3 +7,6 @@ i<>.\src\RegisterFile.v
 i<>.\src\ControlUnit.v
 i<>.\src\ALU.v
 i<>.\src\DataMemoryTestbench.v
+i<>.\src\IFStage.v
+i<>.\src\mux.v
+i<>.\src\PC.v
