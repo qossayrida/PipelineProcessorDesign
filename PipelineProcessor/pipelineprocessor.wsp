@@ -62,9 +62,9 @@ FileTimeLow=456638646
 FileTimeHigh=31108204
 Status=Modified
 [COMPILESTATUS|.\src\control_unit\ControlUnit.v]
-FileTimeLow=3149373799
-FileTimeHigh=31111011
-Status=Compiled
+FileTimeLow=2586300115
+FileTimeHigh=31111023
+Status=Modified
 [COMPILESTATUS|.\src\ALU.v]
 FileTimeLow=608753057
 FileTimeHigh=31108204

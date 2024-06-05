@@ -104,9 +104,33 @@ endmodule
 
 module HazardDetect (
 	input [3:0] opCode,
+	input [2:0] RS1,RS2
 	input stall,
 	output reg PcSrc,kill 
 ); 
 
+	always @ (*) begin  
+	
+	
+	end	
+	
+	
+	      
+// If ((Rs != 0) and (Rs == Rd2) and (EX.RegWr))  ForwardA = 1
+// Else if ((Rs != 0) and (Rs == Rd3) and (MEM.RegWr)) ForwardA = 2
+// Else if ((Rs != 0) and (Rs == Rd4) and (WB.RegWr))  ForwardA = 3
+// Else    
+// ForwardA = 0	 
+//
+// If((Rt != 0) and (Rt == Rd2) and (EX.RegWr))  ForwardB = 1
+// Else if ((Rt != 0) and (Rt == Rd3) and (MEM.RegWr)) ForwardB = 2
+// Else if ((Rt != 0) and (Rt == Rd4) and (WB.RegWr)) ForwardB = 3
+// Else    
+// ForwardB = 0
+
+	
+	
+	if ((EX.MemRd == 1)  // Detect Load in EX stage
+ and (ForwardA==1 or ForwardB==1)) Stall
 
 endmodule
