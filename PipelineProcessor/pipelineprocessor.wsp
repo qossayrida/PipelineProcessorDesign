@@ -62,9 +62,9 @@ FileTimeLow=456638646
 FileTimeHigh=31108204
 Status=Modified
 [COMPILESTATUS|.\src\control_unit\ControlUnit.v]
-FileTimeLow=2586300115
-FileTimeHigh=31111023
-Status=Modified
+FileTimeLow=439141128
+FileTimeHigh=31111029
+Status=Compiled
 [COMPILESTATUS|.\src\ALU.v]
 FileTimeLow=608753057
 FileTimeHigh=31108204
@@ -238,6 +238,6 @@ FileTimeLow=569647043
 FileTimeHigh=31110993
 Status=Compiled
 [COMPILESTATUS|.\src\utilities\Compare.v]
-FileTimeLow=3623424388
-FileTimeHigh=31111000
+FileTimeLow=837709300
+FileTimeHigh=31111030
 Status=Compiled

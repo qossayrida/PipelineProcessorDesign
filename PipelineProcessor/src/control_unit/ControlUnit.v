@@ -86,51 +86,65 @@ endmodule
 
 
 module PcControl (
-	input [3:0] opCode,
-	input stall,
-	output reg PcSrc,kill 
+    input [3:0] opCode,
+    input stall,
+    input GT,LT,EQ,
+    output reg PcSrc,kill 
 ); 
-
-
-	initial begin 
-		PcSrc = 0 ;
-		kill = 0;
-	end
 	
+	always @ (*) begin	
+		if ((opCode==BranchGreater && GT) || (opCode==BranchLess && LT) || (opCode==BranchEqual && EQ) || (opCode==BranchNotEqual && !EQ)) begin
+        	PcSrc=2;
+        	kill=1;
+        end else if (opCode ==  JMP) begin
+        	PcSrc=1;
+        	kill=1;
+        end else if (opCode ==  RET) begin
+        	PcSrc=3;
+        	kill=1;
+        end else begin
+    		PcSrc=0;
+    		kill=0;
+		end
+	end
 
-endmodule		 
 
+endmodule
 
 
 module HazardDetect (
 	input [3:0] opCode,
-	input [2:0] RS1,RS2
-	input stall,
-	output reg PcSrc,kill 
+	input [2:0] RS1,RS2,Rd2,Rd3,Rd4,
+	input EX_RegWr, MEM_RegWr ,WB_RegWr,EX_MemRd,
+	output reg stall,ForwardA,ForwardB 
 ); 
 
-	always @ (*) begin  
-	
-	
-	end	
-	
-	
-	      
-// If ((Rs != 0) and (Rs == Rd2) and (EX.RegWr))  ForwardA = 1
-// Else if ((Rs != 0) and (Rs == Rd3) and (MEM.RegWr)) ForwardA = 2
-// Else if ((Rs != 0) and (Rs == Rd4) and (WB.RegWr))  ForwardA = 3
-// Else    
-// ForwardA = 0	 
-//
-// If((Rt != 0) and (Rt == Rd2) and (EX.RegWr))  ForwardB = 1
-// Else if ((Rt != 0) and (Rt == Rd3) and (MEM.RegWr)) ForwardB = 2
-// Else if ((Rt != 0) and (Rt == Rd4) and (WB.RegWr)) ForwardB = 3
-// Else    
-// ForwardB = 0
+	always @(*) begin  
+        // ForwardA logic
+        if ((RS1 != 0) && (RS1 == Rd2) && EX_RegWr) 
+            ForwardA = 1;
+        else if ((RS1 != 0) && (RS1 == Rd3) && MEM_RegWr) 
+            ForwardA = 2;
+        else if ((RS1 != 0) && (RS1 == Rd4) && WB_RegWr) 
+            ForwardA = 3;
+        else    
+            ForwardA = 0;
 
-	
-	
-	if ((EX.MemRd == 1)  // Detect Load in EX stage
- and (ForwardA==1 or ForwardB==1)) Stall
+        // ForwardB logic
+        if ((RS2 != 0) && (RS2 == Rd2) && EX_RegWr) 
+            ForwardB = 1;
+        else if ((RS2 != 0) && (RS2 == Rd3) && MEM_RegWr) 
+            ForwardB = 2;
+        else if ((RS2 != 0) && (RS2 == Rd4) && WB_RegWr) 
+            ForwardB = 3;
+        else    
+            ForwardB = 0;
+
+        // Stall logic
+        if (EX_MemRd && ((ForwardA == 1) || (ForwardB == 1))) 
+            stall = 1;
+        else 
+            stall = 0;
+    end	
 
 endmodule
