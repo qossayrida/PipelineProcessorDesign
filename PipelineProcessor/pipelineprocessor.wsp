@@ -38,8 +38,8 @@ FileTimeLow=3906111187
 FileTimeHigh=31108203
 Status=Modified
 [COMPILESTATUS|.\src\data_memory\DataMemory.v]
-FileTimeLow=1281658028
-FileTimeHigh=31110029
+FileTimeLow=3169806593
+FileTimeHigh=31111001
 Status=Compiled
 [COMPILESTATUS|.\src\InstructionMemory.v]
 FileTimeLow=4227704787
