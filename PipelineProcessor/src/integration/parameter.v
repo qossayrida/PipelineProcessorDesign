@@ -37,4 +37,8 @@ parameter
     R4 = 3'd4, // general purpose register
     R5 = 3'd5, // general purpose register
     R6 = 3'd6, // general purpose register
-    R7 = 3'd7; // general purpose register
+    R7 = 3'd7, // general purpose register
+	
+	ALU_AND = 2'b00,
+    ALU_ADD = 2'b01,
+    ALU_SUB = 2'b10;

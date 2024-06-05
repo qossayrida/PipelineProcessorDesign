@@ -18,7 +18,6 @@ FLOWTOOLS=NONE
 FAMILY=
 [Files]
 alu/ALU.v=-1
-data_memory/DataMemoryTestbench.v=-1
 data_memory/DataMemory.v=-1
 instruction_memory/InstructionMemory.v=-1
 register_file/RegisterFile.v=-1
