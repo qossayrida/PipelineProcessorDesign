@@ -10,25 +10,28 @@ parameter
     ADDI = 4'b0011, // ADD Immediate
     ANDI = 4'b0100, // AND Immediate
     LW   = 4'b0101, // Load Word
+    LoadByte  = 4'b0110, 
     LBu  = 4'b0110, // Load Byte unsigned
     LBs  = 4'b0110, // Load Byte signed
-	LOAD_BYTE  = 4'b0110,
+
     SW   = 4'b0111, // Store Word
-    
+    BranchGreater  = 4'b1000, // Branch if Greater 
     BGT  = 4'b1000, // Branch if Greater Than
     BGTZ = 4'b1000, // Branch if Greater Than Zero
+    BranchLess  = 4'b1001,
     BLT  = 4'b1001, // Branch if Less Than
     BLTZ = 4'b1001, // Branch if Less Than Zero
+    BranchEqual  = 4'b1010,
     BEQ  = 4'b1010, // Branch if Equal
     BEOZ = 4'b1010, // Branch if Equal to Zero
+    BranchNotEqual  = 4'b1011,
     BNE  = 4'b1011, // Branch if Not Equal
     BNEZ = 4'b1011, // Branch if Not Equal to Zero
-    
+
     JMP  = 4'b1100, // Jump
     CALL = 4'b1101, // Call subroutine
     RET  = 4'b1110, // Return from subroutine
-    Sv   = 4'b1111, // Store value
-	
+    SV   = 4'b1111, // Store value
 	
 	R0 = 3'd0, // zero register
     R1 = 3'd1, // general purpose register
