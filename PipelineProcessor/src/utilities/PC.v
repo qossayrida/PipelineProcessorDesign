@@ -2,12 +2,12 @@ module PC(
 	input wire clk,  
 	input wire I_TypeImmediate, J_TypeImmediate, ReturnAddress, 
 	input wire [1:0] PCsrc,
-	output reg [WordSize-1:0] PC
+	output reg [15:0] PC
 );
 
 
  
-    wire [WordSize-1:0] nextPC;
+    wire [15:0] nextPC;
 
     
     assign nextPC = PC + 16'd2;

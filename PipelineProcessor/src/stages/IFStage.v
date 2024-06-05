@@ -1,8 +1,8 @@
 module IFStage (
 	input clk, 		   
 	input wire [1:0] PCsrc,
-	input[WordSize-1:0] I_TypeImmediate,J_TypeImmediate,ReturnAddress, 
-	output reg [WordSize-1:0] PC, instruction);
+	input[15:0] I_TypeImmediate,J_TypeImmediate,ReturnAddress, 
+	output reg [15:0] PC, instruction);
 
 
   	PC FindTargetAddress(

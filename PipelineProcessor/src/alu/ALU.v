@@ -7,9 +7,9 @@ module ALU(
 
     always @(A,B) begin 
         case (ALUop)
-            ALU_AND:  Output <= A & B;
-            ALU_ADD:  Output <= A + B;
-            ALU_SUB:  Output <= A - B; 
+            ALU_OP_AND:  Output <= A & B;
+            ALU_OP_ADD:  Output <= A + B;
+            ALU_OP_SUB:  Output <= A - B;
         endcase
     end
 
@@ -40,12 +40,14 @@ module ALU_tb;
 
         A <= 16'd30;
         B <= 16'd20;
-        ALUop <= ALU_ADD;
+        ALUop <= ALU_SUB;
 
 
 
         #10
-
+        A <= 16'd30;
+        B <= 16'd30;
+        ALUop <= ALU_ADD;
 
         #5 $finish;
     end

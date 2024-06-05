@@ -3,8 +3,7 @@ parameter
     LOW = 0,
     HIGH = 1,
 	
-	WordSize = 16,
-	
+	OP_CODE_LENGTH=3'd4,
 	AND  = 4'b0000, // AND operation
     ADD  = 4'b0001, // ADD operation
     SUB  = 4'b0010, // SUB operation
@@ -39,6 +38,7 @@ parameter
     R6 = 3'd6, // general purpose register
     R7 = 3'd7, // general purpose register
 	
-	ALU_AND = 2'b00,
-    ALU_ADD = 2'b01,
-    ALU_SUB = 2'b10;
+	ALU_OP_CODE_LENGTH=3'd2,
+	ALU_OP_AND = 2'b00,
+    ALU_OP_ADD = 2'b01,
+    ALU_OP_SUB = 2'b10;

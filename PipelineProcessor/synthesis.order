@@ -11,3 +11,4 @@ i<>.\src\IFStage.v
 i<>.\src\mux.v
 i<>.\src\PC.v
 i<>.\src\DCStage.v
+i<>.\src\Compare.v

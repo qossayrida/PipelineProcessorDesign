@@ -8,4 +8,5 @@
 .\src\integration\PipelineProcessor.v
 .\src\stages\DCStage.v
 .\src\stages\IFStage.v
+.\src\utilities\Compare.v
 .\src\utilities\PC.v
