@@ -1,6 +1,6 @@
 module ALU( 
-	input wire [15:0] A, B, 
-	output reg [15:0] Output, 
+	input wire signed  [15:0] A, B, 
+	output reg signed  [15:0] Output, 
 	input wire [1:0] ALUop
 );
 
@@ -17,37 +17,51 @@ module ALU(
 endmodule	  
 
 
-module ALU_tb;
+module ALU_TB;
 
-
-    reg [15:0] A, B;
-    wire [15:0] Output;
+    reg signed [15:0] A, B; // Declare testbench registers as signed
+    wire signed [15:0] Output; // Declare output wire as signed
     reg [1:0] ALUop;
 
-
-    ALU alu(A, B, Output,ALUop);
+    // Instantiate the ALU
+    ALU alu(A, B, Output, ALUop);
 
     initial begin
-
+        // Unsigned test cases
         #0
         A <= 16'd3;
         B <= 16'd2;
         ALUop <= ALU_OP_AND;
-
-        #10
+        #10;
 
         A <= 16'd30;
         B <= 16'd20;
         ALUop <= ALU_OP_SUB;
+        #10;
 
-
-
-        #10
         A <= 16'd30;
         B <= 16'd30;
         ALUop <= ALU_OP_ADD;
+        #10;
 
-        #5 $finish;
+        // Signed test cases
+        A <= 16'sd15;
+        B <= -16'sd10;
+        ALUop <= ALU_OP_ADD;
+        #10;
+
+        A <= -16'sd20;
+        B <= 16'sd25;
+        ALUop <= ALU_OP_SUB;
+        #10;
+
+        A <= -16'sd10;
+        B <= -16'sd5;
+        ALUop <= ALU_OP_AND;
+        #10;
+
+        $finish;
     end
 
 endmodule
+
