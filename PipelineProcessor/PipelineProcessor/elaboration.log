@@ -1,21 +1,21 @@
-Active-HDL 15.0.261.9132 2024-06-05 16:32:23
+Active-HDL 15.0.261.9132 2024-06-05 18:11:15
 
 Elaboration top modules:
-Verilog Module                ALU_tb
-SystemVerilog Package         UnitScopePackage_22
+Verilog Module                ALU_TB
+SystemVerilog Package         UnitScopePackage_33
 
 
 -----------------------------------------------------------------------------------------------------
 Verilog Module          | Library           | Info | Compiler Version          | Compilation Options
 -----------------------------------------------------------------------------------------------------
-ALU_tb                  | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+ALU_TB                  | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 ALU                     | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 -----------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------
 SystemVerilog Package   | Library           | Info | Compiler Version          | Compilation Options
 -----------------------------------------------------------------------------------------------------
-UnitScopePackage_22     | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+UnitScopePackage_33     | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 -----------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ pipelineprocessor       | None
 -----------------------------------------------------------------------------------------------------
 
 
-Simulation Options: asim -O5 +access +r +m+ALU_tb ALU_tb
+Simulation Options: asim -O5 +access +r +m+ALU_TB ALU_TB
 
 
 The performance of simulation is reduced. Version Student Edition

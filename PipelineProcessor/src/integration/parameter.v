@@ -11,8 +11,9 @@ parameter
     ANDI = 4'b0100, // AND Immediate
     LW   = 4'b0101, // Load Word
     LBu  = 4'b0110, // Load Byte unsigned
-    LBs  = 4'b0111, // Load Byte signed
-    SW   = 4'b1000, // Store Word
+    LBs  = 4'b0110, // Load Byte signed
+	LOAD_BYTE  = 4'b0110,
+    SW   = 4'b0111, // Store Word
     
     BGT  = 4'b1000, // Branch if Greater Than
     BGTZ = 4'b1000, // Branch if Greater Than Zero

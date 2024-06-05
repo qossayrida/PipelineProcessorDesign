@@ -8,10 +8,14 @@ module MainAluControl (
 
   always @ (*) begin
     if (stall == 0) begin
-//     case (opCode)
+		
+      	case (opCode)
+            AND:  signlas <= {1'b0 , 1'b1 , 1'b0 , 1'bx , 1'bx , 1'b1 , 1'b0};
+            ADD:  signlas <= {1'b0 , 1'b1 , 1'b0 , 1'bx , 1'bx , 1'b1 , 1'b0};
+            SUB:  signlas <= {1'b0 , 1'b1 , 1'b0 , 1'bx , 1'bx , 1'b1 , 1'b0};
+        endcase
         
 		  
-//      endcase
 	  
     end
 
