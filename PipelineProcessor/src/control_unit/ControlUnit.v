@@ -1,6 +1,6 @@
 module MainAluControl (
 	input [3:0] opCode,
-	input stall,
+	input mode,stall,
 	output reg [15:0] signlas
 );
 

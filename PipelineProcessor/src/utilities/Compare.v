@@ -37,10 +37,6 @@ module Compare_TB;
     wire  eq;
 
 
-
-
-
-
     compare comp(A, B, gt,lt,eq);
 
     initial begin
