@@ -18,6 +18,6 @@ module IFStage (
     	.clk(clk),
     	.address(PC),
     	.instruction(instruction)
-  	);   
+  	);
   
 endmodule 

@@ -14,7 +14,7 @@ module InstructionMemory(
 
 
     initial begin
-        instructionMemory[0] = { ADD, R0, R1, R2,3'b000};       
+        instructionMemory[0] = {ADD, R0, R1, R2,3'b000};       
     end
 
 

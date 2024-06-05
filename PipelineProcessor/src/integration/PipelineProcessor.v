@@ -10,7 +10,11 @@ module PipelineProcessor ();
 	//					clock & registers		
 	//******************************************************
 	
-	wire clk;
+	wire clk;		
+	
+	ClockGenerator clock( 
+		.clk(clk)
+	);
 	
 	
 	
@@ -25,8 +29,9 @@ module PipelineProcessor ();
 	
 	//******************************************************
 	//					   Pipeline stages		
-	//****************************************************** 
+	//******************************************************  
 	
+
 	
 	
 endmodule

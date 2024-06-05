@@ -8,7 +8,7 @@ module DataMemory (
     input wire numberOfByte
 );
 
-    reg [7:0] memory [0:1023]; 		// the size will be 2 ^ 16
+    reg [7:0] memory [0:255]; 		// the size will be 2 ^ 16
     
     initial begin	
 		memory[1] = 8'd1;

@@ -26,13 +26,10 @@ control_unit/ControlUnit.v=-1
 integration/parameter.v=-1
 integration/ClockGenerator.v=-1
 integration/PipelineProcessor.v=-1
+stages/DCStage.v=-1
 stages/IFStage.v=-1
 utilities/PC.v=-1
-utilities/PC.v=-1
-integration/PipelineProcessor.v=-1
-stages/IFStage.v=-1
 [Files.Data]
-.\src\PC.v=Verilog Source Code
 .\src\alu\ALU.v=Verilog Source Code
 .\src\data_memory\DataMemoryTestbench.v=Verilog Source Code
 .\src\data_memory\DataMemory.v=Verilog Source Code
@@ -42,11 +39,9 @@ stages/IFStage.v=-1
 .\src\integration\parameter.v=Verilog Source Code
 .\src\integration\ClockGenerator.v=Verilog Source Code
 .\src\integration\PipelineProcessor.v=Verilog Source Code
+.\src\stages\DCStage.v=Verilog Source Code
 .\src\stages\IFStage.v=Verilog Source Code
 .\src\utilities\PC.v=Verilog Source Code
-.\src\utilities\PC.v=Verilog Source Code
-.\src\integration\PipelineProcessor.v=Verilog Source Code
-.\src\stages\IFStage.v=Verilog Source Code
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel
