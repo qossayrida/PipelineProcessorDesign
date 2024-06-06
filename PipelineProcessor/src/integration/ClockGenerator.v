@@ -7,7 +7,7 @@ initial begin
 end
 
  
-always #10 begin
+always #5 begin
     clk=~clk;
 end
 					   

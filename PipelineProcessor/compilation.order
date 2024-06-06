@@ -6,6 +6,7 @@
 .\src\integration\parameter.v
 .\src\integration\ClockGenerator.v
 .\src\integration\PipelineProcessor.v
+.\src\stages\MEMStage.v
 .\src\stages\EXEStage.v
 .\src\stages\IDStage.v
 .\src\stages\IFStage.v

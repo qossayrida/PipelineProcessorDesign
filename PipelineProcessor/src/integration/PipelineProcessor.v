@@ -7,7 +7,7 @@ module PipelineProcessor ();
 	
 	
 	//******************************************************
-	//					clock & registers		
+	//						 clock 		
 	//******************************************************
 	
 	wire clk;		
@@ -40,7 +40,15 @@ module PipelineProcessor ();
 	always @(posedge clk) begin
         
 		PC2 <= PC1;
-		Immediate2 <= Immediate1; 
+		Immediate2 <= Immediate1;
+		RD3 <= RD2;	
+		
+		RD4 <= RD3;	   
+		
+		EXE_signals <= signals [10:0];
+	 	MEM_signals <= EXE_signals[7:0];
+	 	WB_signals <= MEM_signals[0]; 
+		
     end
 	
 	
@@ -160,8 +168,15 @@ module PipelineProcessor ();
 	//****************************************************** 
 	
 	
-	
-	
+	MEMStage mem_stage (
+        .clk(clk),
+        .AluResult(AluResult),
+        .Immediate2(Immediate2),
+        .PC2(PC2),
+        .DataMemory(DataMemory),
+        .signals(MEM_signals[7:1]),
+        .DataWB(DataWB)
+    );
 	
 	
 	//******************************************************
