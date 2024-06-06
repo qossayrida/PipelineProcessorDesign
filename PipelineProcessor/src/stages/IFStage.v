@@ -2,9 +2,9 @@ module IFStage (
 	input clk, 		   
 	input wire [1:0] PCsrc,
 	input[15:0] I_TypeImmediate,J_TypeImmediate,ReturnAddress, 
-	output reg [15:0] NPC, instruction , PC);
+	output reg [15:0] NPC, instruction );
 	
-	//reg [15:0] PC;
+	reg [15:0] PC;
 		
 	initial begin
 		PC = 16'd0;
@@ -47,7 +47,7 @@ module IFStage_TB;
     reg [15:0] ReturnAddress;
 
     // Outputs
-    wire [15:0] NPC,PC;
+    wire [15:0] NPC;
     wire [15:0] instruction;
    
 
@@ -59,8 +59,7 @@ module IFStage_TB;
         .J_TypeImmediate(J_TypeImmediate),
         .ReturnAddress(ReturnAddress),
         .NPC(NPC),
-        .instruction(instruction),
-        						  .PC(PC)
+        .instruction(instruction)
     );
 
     // Clock generation

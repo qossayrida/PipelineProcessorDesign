@@ -14,7 +14,7 @@ module InstructionMemory(
 
     initial begin
         // R-type
-        instructionMemory[0] = {AND, R4, R6, R7, 3'b000};  
+        instructionMemory[0] = {AND, R4, R6, R7, 3'b000};  	 
 		instructionMemory[1] = {ADD, R6, R4, R2, 3'b000};  
 		instructionMemory[2] = {SUB, R5, R4, R5, 3'b000};
 		

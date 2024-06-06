@@ -33,7 +33,7 @@ module PipelineProcessor ();
 	wire [15:0] NPC,PC1,PC2;
 	wire [15:0] DataWB;
 	wire [2:0] RD2,RD3,RD4;
-	wire [15:0] Immediate1 , Immediate2 , A , B ;
+	wire [15:0] Immediate1 , Immediate2 , A , B;
 	
 	
 	
@@ -104,11 +104,39 @@ module PipelineProcessor ();
 	//******************************************************
 	
 	
+	IDStage id_stage (
+        .clk(clk), 
+        .stall(stall),
+        .ForwardA(ForwardA),
+        .ForwardB(ForwardB),
+        .WB_signals(WB_signals),
+        .signals(signals[15:11]), // Passing relevant bits of signals
+        .instruction(instruction),
+        .NPC(NPC),
+        .AluResult(/**/),
+        .MemoryResult(/**/), 
+        .WBResult(/**/), 
+        .RD4(RD4),
+        .I_TypeImmediate(I_TypeImmediate),
+        .J_TypeImmediate(J_TypeImmediate),
+        .ReturnAddress(ReturnAddress),
+        .PC1(PC1),
+        .Immediate1(Immediate1),
+        .A(A),
+        .B(B),
+        .RD2(RD2),
+        .gt(GT),
+        .lt(LT),
+        .eq(EQ)
+    );
+	
 	
 	
 	//******************************************************
 	//					Pipeline EXE stages		
 	//******************************************************
+	
+	
 	
 	
 	
