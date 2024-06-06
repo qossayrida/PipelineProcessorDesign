@@ -3,7 +3,8 @@ module RegisterFile(
 	input wire [2:0] RA, RB, RW, 
 	input wire enableWrite, 
 	input wire [15:0] BusW , 
-	output reg [15:0] BusA, BusB
+	output reg [15:0] BusA, BusB,
+	output reg [15:0] R7
 );
 
 
@@ -14,6 +15,7 @@ module RegisterFile(
     always @(posedge clk) begin
         BusA = registersArray[RA];
         BusB = registersArray[RB];
+		R7 = registersArray[7];
     end
 
     always @(posedge clk) begin

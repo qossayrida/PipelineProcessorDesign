@@ -1,14 +1,14 @@
-Active-HDL 15.0.261.9132 2024-06-05 21:28:55
+Active-HDL 15.0.261.9132 2024-06-06 18:55:35
 
 Elaboration top modules:
-Verilog Module                Compare_TB
+Verilog Module                Extender_TB
 
 
 -----------------------------------------------------------------------------------------------------
 Verilog Module          | Library           | Info | Compiler Version          | Compilation Options
 -----------------------------------------------------------------------------------------------------
-Compare_TB              | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-Compare                 | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+Extender_TB             | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+Extender                | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 -----------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------
@@ -18,7 +18,7 @@ pipelineprocessor       | None
 -----------------------------------------------------------------------------------------------------
 
 
-Simulation Options: asim -O5 +access +r +m+Compare_TB Compare_TB
+Simulation Options: asim -O5 +access +r +m+Extender_TB Extender_TB
 
 
 The performance of simulation is reduced. Version Student Edition
