@@ -23,7 +23,7 @@ parameter
     BLTZ = 4'b1001, // Branch if Less Than Zero
     BranchEqual  = 4'b1010,
     BEQ  = 4'b1010, // Branch if Equal
-    BEOZ = 4'b1010, // Branch if Equal to Zero
+    BEQZ = 4'b1010, // Branch if Equal to Zero
     BranchNotEqual  = 4'b1011,
     BNE  = 4'b1011, // Branch if Not Equal
     BNEZ = 4'b1011, // Branch if Not Equal to Zero

@@ -22,7 +22,8 @@ module PipelineProcessor ();
 	
     
 	wire [15:0] instruction, I_TypeImmediate, J_TypeImmediate, ReturnAddress;
-	wire stall, ForwardA, ForwardB, GT, LT, EQ, PcSrc, kill;
+	wire stall, GT, LT, EQ, PcSrc, kill;
+	wire [1:0] ForwardA, ForwardB;
     wire [15:0] signals;
 	wire [10:0] EXE_signals;
 	wire [7:0]  MEM_signals;
@@ -30,6 +31,7 @@ module PipelineProcessor ();
 	
 
 	wire [15:0] NPC,PC1,PC2;
+	wire [15:0] DataWB;
 	wire [2:0] RD2,RD3,RD4;
 	wire [15:0] Immediate1 , Immediate2 , A , B ;
 	

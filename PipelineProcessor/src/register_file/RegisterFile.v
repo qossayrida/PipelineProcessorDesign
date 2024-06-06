@@ -1,5 +1,4 @@
-module RegisterFile(
-	input wire clk, 
+module RegisterFile( 
 	input wire [2:0] RA, RB, RW, 
 	input wire enableWrite, 
 	input wire [15:0] BusW , 
@@ -12,13 +11,13 @@ module RegisterFile(
    
 	
     // read registers always
-    always @(posedge clk) begin
+    always @(*) begin 
         BusA = registersArray[RA];
         BusB = registersArray[RB];
 		R7 = registersArray[7];
     end
 
-    always @(posedge clk) begin
+    always @(*) begin
         if (enableWrite && (RW != 3'b000)) begin 
             registersArray[RW] = BusW;
         end

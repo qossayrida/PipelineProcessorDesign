@@ -71,7 +71,7 @@ always @ (*) begin
           
     end
 
-    else if (stall ==  1) begin
+    else begin
 	   	signlas <= 16'b0;
     end	   
 	
@@ -96,7 +96,7 @@ module PcControl (
 		if ((opCode==BranchGreater && GT) || (opCode==BranchLess && LT) || (opCode==BranchEqual && EQ) || (opCode==BranchNotEqual && !EQ)) begin
         	PcSrc=2;
         	kill=1;
-        end else if (opCode ==  JMP) begin
+        end else if (opCode ==  JMP || opCode == CALL) begin
         	PcSrc=1;
         	kill=1;
         end else if (opCode ==  RET) begin
@@ -116,7 +116,8 @@ module HazardDetect (
 	input [3:0] opCode,
 	input [2:0] RS1,RS2,Rd2,Rd3,Rd4,
 	input EX_RegWr, MEM_RegWr ,WB_RegWr,EX_MemRd,
-	output reg stall,ForwardA,ForwardB 
+	output reg stall, 
+	output reg [1:0] ForwardA,ForwardB
 ); 
 
 	always @(*) begin  

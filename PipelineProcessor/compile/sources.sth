@@ -1,3 +1,4 @@
 [Files List]
 C:/Aldec/Active-HDL-Student-Edition/vlib/std/src/standard.vhd=S
-C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/utilities/Extender.v=S
+C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/instruction_memory/InstructionMemory.v=S
+C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/stages/IFStage.v=S

@@ -31,6 +31,7 @@ utilities/Extender.v=-1
 utilities/Compare.v=-1
 integration/PipelineProcessor.v=-1
 stages/IFStage.v=-1
+stages/IDStage.v=-1
 [Files.Data]
 .\src\Extender.v=Verilog Source Code
 .\src\alu\ALU.v=Verilog Source Code
@@ -48,6 +49,7 @@ stages/IFStage.v=-1
 .\src\utilities\PC.v=Verilog Source Code
 .\src\integration\PipelineProcessor.v=Verilog Source Code
 .\src\stages\IFStage.v=Verilog Source Code
+.\src\stages\IDStage.v=Verilog Source Code
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel

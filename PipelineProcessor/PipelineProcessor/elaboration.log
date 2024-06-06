@@ -1,14 +1,22 @@
-Active-HDL 15.0.261.9132 2024-06-06 18:55:35
+Active-HDL 15.0.261.9132 2024-06-06 20:38:41
 
 Elaboration top modules:
-Verilog Module                Extender_TB
+Verilog Module                IFStage_TB
+SystemVerilog Package         UnitScopePackage_68
 
 
 -----------------------------------------------------------------------------------------------------
 Verilog Module          | Library           | Info | Compiler Version          | Compilation Options
 -----------------------------------------------------------------------------------------------------
-Extender_TB             | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-Extender                | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+IFStage_TB              | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+IFStage                 | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+InstructionMemory       | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+-----------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------
+SystemVerilog Package   | Library           | Info | Compiler Version          | Compilation Options
+-----------------------------------------------------------------------------------------------------
+UnitScopePackage_68     | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 -----------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------
@@ -18,7 +26,7 @@ pipelineprocessor       | None
 -----------------------------------------------------------------------------------------------------
 
 
-Simulation Options: asim -O5 +access +r +m+Extender_TB Extender_TB
+Simulation Options: asim -O5 +access +r +m+IFStage_TB IFStage_TB
 
 
 The performance of simulation is reduced. Version Student Edition
