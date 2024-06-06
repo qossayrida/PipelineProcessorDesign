@@ -62,21 +62,21 @@ module IDStage (
     always @(posedge clk) begin
 		
 		if (signals[4])
-			RA = 3'b000;
+			RA <= 3'b000;
 		else
-			RA = instruction[8:6];	  
+			RA <= instruction[8:6];	  
 			
 			
 	    if (signals[3])
-			RB = instruction[5:3];
+			RB <= instruction[5:3];
 		else
-			RB = instruction[11:9];
+			RB <= instruction[11:9];
 			
 		
 		if (signals[2])
-			RD2 = 3'b111;
+			RD2 <= 3'b111;
 		else
-			RD2 = instruction[11:9];
+			RD2 <= instruction[11:9];
 
 				
         // Decoding immediate values

@@ -5,11 +5,12 @@ module ALU(
 );
 
 
-    always @(A,B) begin 
+    always @(A,B,ALUop) begin 
         case (ALUop)
             ALU_OP_AND:  Output <= A & B;
             ALU_OP_ADD:  Output <= A + B;
             ALU_OP_SUB:  Output <= A - B;
+			default:    Output <= 16'b0;
         endcase
     end
 
