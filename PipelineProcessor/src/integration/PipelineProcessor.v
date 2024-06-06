@@ -22,19 +22,27 @@ module PipelineProcessor ();
 	
     
 	reg [15:0] instruction, I_TypeImmediate, J_TypeImmediate, ReturnAddress;
-	reg stall, GT, LT, EQ, PcSrc, kill;
-	reg [1:0] ForwardA, ForwardB;
+	reg stall, GT, LT, EQ, kill;
+	reg [1:0] PcSrc,ForwardA, ForwardB;
     reg [15:0] signals;
 	reg [10:0] EXE_signals;
 	reg [7:0]  MEM_signals;
 	reg WB_signals; 
 	
 
-	reg [15:0] NPC,PC1,PC2;
+	wire [15:0] NPC;
+	reg [15:0] PC1,PC2;
 	reg [15:0] DataWB;
 	reg [2:0] RD2,RD3,RD4;
 	reg [15:0] Immediate1 , Immediate2,A,B;
 	reg [15:0] AluResult , DataMemory;
+	
+	
+	initial begin
+	   EXE_signals = 0;
+	   MEM_signals = 0;
+	   WB_signals =0;
+	end
 	
 	
 	always @(posedge clk) begin

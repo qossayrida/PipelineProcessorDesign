@@ -8,6 +8,8 @@ module IFStage (
 		
 	initial begin
 		PC = 16'd0;
+		
+		$monitor("PC = %b",   PC);
 	end	
 	
 	assign NPC = PC + 16'd2;
