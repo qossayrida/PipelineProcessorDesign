@@ -9,9 +9,15 @@ module MEMStage (
 );
 
     // Internal wires
-	wire [15:0] data_in,data_out;
+	reg [15:0] data_in,data_out;
 	
-	assign data_in = signals[6] ? DataMemory : Immediate2;
+	
+	always @(posedge clk)begin
+        if (signals[6]==1)
+            data_in = DataMemory;
+        else
+            data_in = Immediate2;
+    end
 
     // DataMemory instance
     DataMemory data_memory (
