@@ -62,8 +62,8 @@ FileTimeLow=456638646
 FileTimeHigh=31108204
 Status=Modified
 [COMPILESTATUS|.\src\control_unit\ControlUnit.v]
-FileTimeLow=1069736194
-FileTimeHigh=31111440
+FileTimeLow=2378660971
+FileTimeHigh=31111457
 Status=Compiled
 [COMPILESTATUS|.\src\ALU.v]
 FileTimeLow=608753057
@@ -362,6 +362,6 @@ FileTimeLow=3455974587
 FileTimeHigh=31111452
 Status=Modified
 [COMPILESTATUS|.\src\data_memory\DataMemory.v]
-FileTimeLow=592085435
-FileTimeHigh=31111453
+FileTimeLow=1836728499
+FileTimeHigh=31111457
 Status=Compiled

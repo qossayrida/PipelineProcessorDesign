@@ -16,7 +16,7 @@ always @ (*) begin
 			ADDI: signlas <= {1'b0 , 1'b0 , 1'b0 , 1'b1 , 1'b0 , 1'b1 , 2'b01 , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b01 , 1'b1};
 			ANDI: signlas <= {1'b0 , 1'b0 , 1'b0 , 1'b1 , 1'b0 , 1'b1 , 2'b00 , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b01 , 1'b1};
 			LW:   signlas <= {1'b0 , 1'b0 , 1'b0 , 1'b1 , 1'b0 , 1'b1 , 2'b01 , 1'bx , 1'b1 , 1'b0 , 2'b00 , 2'b10 , 1'b1};
-			SW:	  signlas <= {1'b0 , 1'b0 , 1'bx , 1'b1 , 1'b0 , 1'b1 , 2'b01 , 1'b1 , 1'b0 , 1'b1 , 2'bxx , 2'bxx , 1'b0};
+			SW:	  signlas <= {1'b0 , 1'b0 , 1'bx , 1'b1 , 1'b0 , 1'b1 , 2'b01 , 1'b1 , 1'b0 , 1'b1 , 2'b10 , 2'bxx , 1'b0};
 			LoadByte:
 				begin
                 	if (!mode) begin

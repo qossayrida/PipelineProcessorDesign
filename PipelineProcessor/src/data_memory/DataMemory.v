@@ -20,10 +20,12 @@ module DataMemory (
     always @(posedge clk) begin
         if (wrEnable) begin  
 			
-            // Writing 16-bit data to two consecutive memory locations
-            memory[address] <= in[7:0];
-            memory[address + 1] <= in[15:8];
+			memory[address] <= in[7:0];
 			
+            // Writing 16-bit data to two consecutive memory locations
+			if (numberOfByte == 2'b10)
+            	memory[address + 1] <= in[15:8];
+					
         end	else if (rdEnable) begin
 			
             if (numberOfByte == 2'b00) begin

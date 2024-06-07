@@ -1,4 +1,4 @@
-timestamp=1717793969989
+timestamp=1717795672891
 
 [~A]
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v=0*23713*24879
@@ -9,7 +9,7 @@ C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/al
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v_IDStage.v_IFStage.v_Extender.v_Compare.v=0*566839*574159
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v_IDStage.v_IFStage.v_Extender.v_Compare.v_PC.v=0*411788*417513
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v_MEMStage.v_EXEStage.v_IDStage.v_IFStage.v_Extender.v_Compare.v=0*981790*990300
-C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v_MEMStage.v_EXEStage.v_WBStage.v_IDStage.v_IFStage.v_Extender.v_Compare.v=0*3077882*3086418
+C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v_MEMStage.v_EXEStage.v_WBStage.v_IDStage.v_IFStage.v_Extender.v_Compare.v=0*3110607*3119175
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemoryTestbench.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v=0*39629*41426
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemoryTestbench.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v_DCStage.v_IFStage.v_PC.v=0*74014*76348
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemoryTestbench.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v_IFStage.v_PC.v=0*68172*70464
@@ -19,9 +19,9 @@ C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/st
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/stages/IDStage.v=0*1726930*1728953
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/stages/IFStage.v=0*1109612*1110690
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/utilities/Extender.v=0*430803*431725
-CUSP_Counter=221
+CUSP_Counter=223
 LastVerilogToplevel=Compare_TB
-ModifyID=244
+ModifyID=246
 Version=74
 c:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v_DataMemory.v_InstructionMemory.v_RegisterFile.v_ControlUnit.v_parameter.v_ClockGenerator.v_PipelineProcessor.v=0*17883*18713
 c:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/integration/ClockGenerator.v=0*372*918
@@ -29,31 +29,31 @@ c:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/in
 c:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/integration/parameter.v_ClockGenerator.v_PipelineProcessor.v=0*15756*16414
 
 [~MFT]
-0=30|0PipelineProcessor.mgf|3086418|1838664
-1=50|1PipelineProcessor.mgf|10257424|10194313
-3=100|3PipelineProcessor.mgf|8030017|7980406
+0=30|0PipelineProcessor.mgf|3119175|1859020
+1=50|1PipelineProcessor.mgf|10370686|10307575
+3=100|3PipelineProcessor.mgf|8119727|8070006
 
 [$root]
-A/$root=22|||1*10207674
-BinW64/$root=3*7985481
-SLP=3*7985596
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c92166fa11fda1e16cbedc656d6ce4ff11088
+A/$root=22|||1*10320936
+BinW64/$root=3*8075081
+SLP=3*8075196
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c92160ed9e0942b93b9821b080f5663fae395
 
 [ALU]
-A/ALU=22|../src/alu/ALU.v|1|1*10208176
-BinW64/ALU=3*7985664
-CUSP=UnitScopePackage_221
+A/ALU=22|../src/alu/ALU.v|1|1*10321438
+BinW64/ALU=3*8075264
+CUSP=UnitScopePackage_223
 R=../src/alu/ALU.v|1
-SLP=3*7986964
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|b3eb40c25b2a3c0379c7730185183eec74b27d55b61e2610a87581c32939a2fd
+SLP=3*8076564
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|b3eb40c25b2a3c0379c7730185183eecc5a431bfbbf9c91fb463f5f3d060a399
 
 [ALU_TB]
-A/ALU_TB=22|../src/alu/ALU.v|22|1*10209837
-BinW64/ALU_TB=3*7987373
-CUSP=UnitScopePackage_221
+A/ALU_TB=22|../src/alu/ALU.v|22|1*10323099
+BinW64/ALU_TB=3*8076974
+CUSP=UnitScopePackage_223
 R=../src/alu/ALU.v|22
-SLP=3*7988315
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|36f388c45b5ac3e9478203b9a3b21952ae504b0697bafc4526e2600d533db951
+SLP=3*8077916
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|36f388c45b5ac3e9478203b9a3b219520c4ee72f4fa483b3d5a36b34f8007c16
 
 [ALU_tb]
 A/ALU_tb=22|../src/alu/ALU.v|20|1*438996
@@ -64,119 +64,119 @@ SLP=3*288493
 Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|b991c9f412e6706da1c2ecbb67c6e548d66687e3f6346ba8d1eb3ca9fe38aa08
 
 [ClockGenerator]
-A/ClockGenerator=22|../src/integration/ClockGenerator.v|1|1*10217165
-BinW64/ClockGenerator=3*7996948
-CUSP=UnitScopePackage_221
+A/ClockGenerator=22|../src/integration/ClockGenerator.v|1|1*10330427
+BinW64/ClockGenerator=3*8086657
+CUSP=UnitScopePackage_223
 R=../src/integration/ClockGenerator.v|1
-SLP=3*7997735
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|29401d40d399d6fc9585f993b3e20fdbe5b50b19905b9e8c8fa7978cd8c52571c4d00b0ddff2c7c524452461033061a4
+SLP=3*8087444
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|29401d40d399d6fc9585f993b3e20fdbe5b50b19905b9e8c8fa7978cd8c52571ca3d008ad87f4fdf2c536062bd70e3b3
 
 [Compare]
-A/Compare=22|../src/utilities/Compare.v|1|1*10247430
-BinW64/Compare=3*8020799
+A/Compare=22|../src/utilities/Compare.v|1|1*10360692
+BinW64/Compare=3*8110509
 R=../src/utilities/Compare.v|1
-SLP=3*8021394
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|87f2930aabb469b9164f76b4ac83733026527262ddaa47cb266f3a3c4d9b973a4443b50f55fb392904caa6b24ed7d84b
+SLP=3*8111104
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|87f2930aabb469b9164f76b4ac83733026527262ddaa47cb266f3a3c4d9b973ab25e7aefb2159f0deae7ca8e70eee600
 
 [Compare_TB]
-A/Compare_TB=22|../src/utilities/Compare.v|29|1*10256230
-BinW64/Compare_TB=3*8028615
+A/Compare_TB=22|../src/utilities/Compare.v|29|1*10369492
+BinW64/Compare_TB=3*8118325
 R=../src/utilities/Compare.v|29
-SLP=3*8029265
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c747d34b397f5c62c57c23d58bc4980d3e5f7942982a2804650e73c12d553bd41446b90ddede7c977274ba193704f6a1
+SLP=3*8118975
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c747d34b397f5c62c57c23d58bc4980d3e5f7942982a2804650e73c12d553bd466d0dffe2837a76f0f236e27baac5051
 
 [DataMemory]
-A/DataMemory=22|../src/data_memory/DataMemory.v|1|1*10211488
-BinW64/DataMemory=3*7988976
+A/DataMemory=22|../src/data_memory/DataMemory.v|1|1*10324750
+BinW64/DataMemory=3*8078577
 R=../src/data_memory/DataMemory.v|1
-SLP=3*7990808
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|ab5b04ae54b0797c38b8547f936232d99426d89c50ff4379bf89bab4c639842d549118ec3dda656c5031b079fc9f46e3
+SLP=3*8080490
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|ab5b04ae54b0797c38b8547f936232d99426d89c50ff4379bf89bab4c639842dfce99031da95ab8cdb51a01ef58f747f
 
 [EXEStage]
-A/EXEStage=22|../src/stages/EXEStage.v|1|1*10238951
-BinW64/EXEStage=3*8014127
+A/EXEStage=22|../src/stages/EXEStage.v|1|1*10352213
+BinW64/EXEStage=3*8103837
 R=../src/stages/EXEStage.v|1
-SLP=3*8014670
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8b71b443d604dfe1a484958fafd38aeb5df0c91d9fd255c758cec4d3f5cc52158e0e13e7bc73715d5de3337025c6a80f
+SLP=3*8104380
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8b71b443d604dfe1a484958fafd38aeb5df0c91d9fd255c758cec4d3f5cc521506015e418b585d376e8b018f3e9f75f1
 
 [EXEStage_TB]
-A/EXEStage_TB=22|../src/stages/EXEStage.v|32|1*10244354
-BinW64/EXEStage_TB=3*8017548
+A/EXEStage_TB=22|../src/stages/EXEStage.v|32|1*10357616
+BinW64/EXEStage_TB=3*8107258
 R=../src/stages/EXEStage.v|32
-SLP=3*8018928
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|07925f66de4fbd3ee10f5f4f405dc36b06c851e9e48d559910886b7a74f4a4936e65239a0aed0356f4a15356f9930a01
+SLP=3*8108638
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|07925f66de4fbd3ee10f5f4f405dc36b06c851e9e48d559910886b7a74f4a493e39a63edaab62df4cf9eb2b0b1491473
 
 [Extender]
-A/Extender=22|../src/utilities/Extender.v|1|1*10246270
-BinW64/Extender=3*8019758
+A/Extender=22|../src/utilities/Extender.v|1|1*10359532
+BinW64/Extender=3*8109468
 R=../src/utilities/Extender.v|1
-SLP=3*8020384
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|a261af10a9c686e7aecc5c2773f178128e9d9588c4ff5cca4594dc3e49d761f77c8b3bc5ad660717114f8861a7a0b404
+SLP=3*8110094
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|a261af10a9c686e7aecc5c2773f178128e9d9588c4ff5cca4594dc3e49d761f788d62bc9e28fea45b88360fcf6474252
 
 [Extender_TB]
-A/Extender_TB=22|../src/utilities/Extender.v|25|1*10254748
-BinW64/Extender_TB=3*8026806
+A/Extender_TB=22|../src/utilities/Extender.v|25|1*10368010
+BinW64/Extender_TB=3*8116516
 R=../src/utilities/Extender.v|25
-SLP=3*8027881
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8cb00bc5916ab38a657fa19aa742f4d711be8a0a79ba65b2b3ce55c9b5b4f917533722f33576341f81a9bd9a656b46a5
+SLP=3*8117591
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8cb00bc5916ab38a657fa19aa742f4d711be8a0a79ba65b2b3ce55c9b5b4f9176627014e100a20393067f13998822423
 
 [HazardDetect]
-A/HazardDetect=22|../src/control_unit/ControlUnit.v|115|1*10224538
-BinW64/HazardDetect=3*8006038
+A/HazardDetect=22|../src/control_unit/ControlUnit.v|115|1*10337800
+BinW64/HazardDetect=3*8095748
 R=../src/control_unit/ControlUnit.v|115
-SLP=3*8007304
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|254404d9e3063afee2255ceb3960fdf1e64acc72f2e5e2f2e3bfef8a7c21bdf3f95d116d1a72e30dde4ce3fa2dd563e6
+SLP=3*8097014
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|254404d9e3063afee2255ceb3960fdf1e64acc72f2e5e2f2e3bfef8a7c21bdf309860f386218eaf946bac6d84052708a
 
 [IDStage]
-A/IDStage=22|../src/stages/IDStage.v|1|1*10234741
-BinW64/IDStage=3*8011394
+A/IDStage=22|../src/stages/IDStage.v|1|1*10348003
+BinW64/IDStage=3*8101104
 R=../src/stages/IDStage.v|1
-SLP=3*8012988
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|aea204e0485281cf71400052df86587326527262ddaa47cb266f3a3c4d9b973a35f858e138fdfb7e335dff500c693319
+SLP=3*8102698
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|aea204e0485281cf71400052df86587326527262ddaa47cb266f3a3c4d9b973a8f83627601b726491839193b56878fb0
 
 [IDStage_TB]
-A/IDStage_TB=22|../src/stages/IDStage.v|108|1*10248521
-BinW64/IDStage_TB=3*8021733
+A/IDStage_TB=22|../src/stages/IDStage.v|108|1*10361783
+BinW64/IDStage_TB=3*8111443
 R=../src/stages/IDStage.v|108
-SLP=3*8023696
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|6b1c96875fb8265aa492c355dc5be876e56291fae7c8dc9d3bcc9afd5da695d110cf0640e7a2d0be071f71e8a91ef64c
+SLP=3*8113406
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|6b1c96875fb8265aa492c355dc5be876e56291fae7c8dc9d3bcc9afd5da695d1e06d5809adc3687065623e0b3e882a31
 
 [IFStage]
-A/IFStage=22|../src/stages/IFStage.v|1|1*10232803
-BinW64/IFStage=3*8009727
+A/IFStage=22|../src/stages/IFStage.v|1|1*10346065
+BinW64/IFStage=3*8099437
 R=../src/stages/IFStage.v|1
-SLP=3*8010839
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|ff3c6229497c1bf9469ddb190df3141926527262ddaa47cb266f3a3c4d9b973a6a711c4fd9ab827aa1ca36507755aeaf
+SLP=3*8100549
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|ff3c6229497c1bf9469ddb190df3141926527262ddaa47cb266f3a3c4d9b973a8f83627601b726491839193b56878fb0
 
 [IFStage_TB]
-A/IFStage_TB=22|../src/stages/IFStage.v|43|1*10252814
-BinW64/IFStage_TB=3*8024985
+A/IFStage_TB=22|../src/stages/IFStage.v|43|1*10366076
+BinW64/IFStage_TB=3*8114695
 R=../src/stages/IFStage.v|43
-SLP=3*8026136
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|3bc2c19a3a3d2dfafcfb5ea7aec85add246a6b44d5a928b8d3cfa0f61ecbeac94caf1eb3a9ebf0629049f93cd6957d45
+SLP=3*8115846
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|3bc2c19a3a3d2dfafcfb5ea7aec85add246a6b44d5a928b8d3cfa0f61ecbeac9e06d5809adc3687065623e0b3e882a31
 
 [InstructionMemory]
-A/InstructionMemory=22|../src/instruction_memory/InstructionMemory.v|1|1*10213447
-BinW64/InstructionMemory=3*7991734
-CUSP=UnitScopePackage_221
+A/InstructionMemory=22|../src/instruction_memory/InstructionMemory.v|1|1*10326709
+BinW64/InstructionMemory=3*8081443
+CUSP=UnitScopePackage_223
 R=../src/instruction_memory/InstructionMemory.v|1
-SLP=3*7994964
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|b86a443a1d82ec234d09f8a4c7b8cd6b46404b5c54a2301d05949f8e3043a720048ef71fce805cdbf9083eb2075e99fa
+SLP=3*8084673
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|b86a443a1d82ec234d09f8a4c7b8cd6b46404b5c54a2301d05949f8e3043a7201dfaac1879dd9c9db79484e62b7b8026
 
 [MEMStage]
-A/MEMStage=22|../src/stages/MEMStage.v|1|1*10240672
-BinW64/MEMStage=3*8014961
+A/MEMStage=22|../src/stages/MEMStage.v|1|1*10353934
+BinW64/MEMStage=3*8104671
 R=../src/stages/MEMStage.v|1
-SLP=3*8016241
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|0636c591f08377f99f870ff36b2104ebf20f1095f39cdefe2dcaf90d3d715e47be6173368ea96aff8cbbdec2f9f2d651
+SLP=3*8105951
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|0636c591f08377f99f870ff36b2104ebf20f1095f39cdefe2dcaf90d3d715e472282dd7e78c29981267c7777298bd370
 
 [MainAluControl]
-A/MainAluControl=22|../src/control_unit/ControlUnit.v|1|1*10220248
-BinW64/MainAluControl=3*8000542
-CUSP=UnitScopePackage_221
+A/MainAluControl=22|../src/control_unit/ControlUnit.v|1|1*10333510
+BinW64/MainAluControl=3*8090251
+CUSP=UnitScopePackage_223
 R=../src/control_unit/ControlUnit.v|1
-SLP=3*8003121
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|9b804613b9b9094e3ec47e6eabf289ebe8a89f383bdda049693e0961d1122ec58336a048267163a2375e4f06c85a42f4
+SLP=3*8092833
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|9b804613b9b9094e3ec47e6eabf289ebe8a89f383bdda049693e0961d1122ec591b773161be771867c74b1c8b99efa41
 
 [PC]
 A/PC=22|../src/utilities/PC.v|1|1*1206312
@@ -186,34 +186,34 @@ SLP=3*849078
 Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8180830d307fd32bf17aee65de57f692f5a845c650562fae6356c42e849bfc48
 
 [PcControl]
-A/PcControl=22|../src/control_unit/ControlUnit.v|88|1*10222667
-BinW64/PcControl=3*8004436
-CUSP=UnitScopePackage_221
+A/PcControl=22|../src/control_unit/ControlUnit.v|88|1*10335929
+BinW64/PcControl=3*8094147
+CUSP=UnitScopePackage_223
 R=../src/control_unit/ControlUnit.v|88
-SLP=3*8005346
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|1ff042cea8b4a0ae164deaa48473268bf4037a77f4e1be0707c1a63701b1499b900efd80f76f8d0c1e1cf3854912af19
+SLP=3*8095057
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|1ff042cea8b4a0ae164deaa48473268bf4037a77f4e1be0707c1a63701b1499b27d220195d7ca87add0330de819d16c3
 
 [PipelineProcessor]
-A/PipelineProcessor=22|../src/integration/PipelineProcessor.v|1|1*10226556
-BinW64/PipelineProcessor=3*8008021
+A/PipelineProcessor=22|../src/integration/PipelineProcessor.v|1|1*10339818
+BinW64/PipelineProcessor=3*8097731
 R=../src/integration/PipelineProcessor.v|1
-SLP=3*8008901
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|1c6c5566b88730f7fd6cb85636a8b12c601169342216ef45e4410ce0e541c021aa573a56132eeb16cf7e1543f7be7150
+SLP=3*8098611
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|1c6c5566b88730f7fd6cb85636a8b12c601169342216ef45e4410ce0e541c021d2617bf56494ac1c556adade7d4cac6b
 
 [RegisterFile]
-A/RegisterFile=22|../src/register_file/RegisterFile.v|1|1*10218099
-BinW64/RegisterFile=3*7998114
+A/RegisterFile=22|../src/register_file/RegisterFile.v|1|1*10331361
+BinW64/RegisterFile=3*8087823
 R=../src/register_file/RegisterFile.v|1
-SLP=3*7999666
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|22f74543ade67d85359ca455f1aa161036d96cbaa54bbfe1fa4f47ec71d764299a586f9bbbfc1fd4a6fc23c01a34792c
+SLP=3*8089375
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|22f74543ade67d85359ca455f1aa161036d96cbaa54bbfe1fa4f47ec71d76429de3696cb7895db5376dfb79bf03621fc
 
-[UnitScopePackage_221]
-A/UnitScopePackage_221=22|../src/alu/ALU.v|0|1*10257424
-BinW64/UnitScopePackage_221=3*8029762
+[UnitScopePackage_223]
+A/UnitScopePackage_223=22|../src/alu/ALU.v|0|1*10370686
+BinW64/UnitScopePackage_223=3*8119472
 CUSP=6
 R=../src/alu/ALU.v|0
-SLP=3*8030017
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|fab98aed36991913255ea6c02c9bb53ec736c9020509b2e727cf360be013482adfd50c280be6cdb42316df390e519872
+SLP=3*8119727
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|fab98aed36991913255ea6c02c9bb53e37fe40b40d1339172b5c556ca398722cce0930f7f445d18390eabfe94a2a075e
 
 [UnitScopePackage_31]
 A/UnitScopePackage_31=22|../src/alu/ALU.v|0|1*456106
@@ -224,11 +224,11 @@ SLP=3*301932
 Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|fab98aed36991913255ea6c02c9bb53ef0d1c6554ee4e22cf92f75034a1a69a14c74e98a8bd6a4dfff57da4b57a4f885
 
 [WBStage]
-A/WBStage=22|../src/stages/WBStage.v|1|1*10243025
-BinW64/WBStage=3*8016901
+A/WBStage=22|../src/stages/WBStage.v|1|1*10356287
+BinW64/WBStage=3*8106611
 R=../src/stages/WBStage.v|1
-SLP=3*8017319
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8fade0dee20993eb79b2c2257fda5b1526527262ddaa47cb266f3a3c4d9b973a00bf916bbc9d80cdf282a1512401cbd1
+SLP=3*8107029
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8fade0dee20993eb79b2c2257fda5b1526527262ddaa47cb266f3a3c4d9b973a35d066eb4c87cde9944aabca3acf2439
 
 [compare]
 A/compare=22|../src/utilities/Compare.v|1|1*282180
@@ -252,11 +252,11 @@ SLP=3*185146
 Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|37559bb714d9790ed0d2b33a2227305569fc64f104d581d1d39b9b8592bd86361ec1581bcc44f9c7479b67c027f00c9a
 
 [instructionMemory_TB]
-A/instructionMemory_TB=22|../src/instruction_memory/InstructionMemory.v|29|1*10215643
-BinW64/instructionMemory_TB=3*7995638
+A/instructionMemory_TB=22|../src/instruction_memory/InstructionMemory.v|29|1*10328905
+BinW64/instructionMemory_TB=3*8085347
 R=../src/instruction_memory/InstructionMemory.v|29
-SLP=3*7996452
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|2b14bce026953b8dd1e6dfba2f813208cb48b7d7b6d746e1a698db932b083c54bc2e77c82cbf9545b886382017eb5816
+SLP=3*8086161
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|2b14bce026953b8dd1e6dfba2f813208cb48b7d7b6d746e1a698db932b083c54c6b0ebb63071398effe861e9c6efd048
 
 [main]
 A/main=22|../src/control_unit/ControlUnit.v|1|1*299163
@@ -266,35 +266,35 @@ SLP=3*200868
 Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|a10d1194a18e37435e6d6f0ad7feedab70aa57c9f5192d556a17ccac868dc897
 
 [~U]
-$root=12|0*3071049|
-ALU=12|0*3071471|
-ALU_TB=12|0*3071721||0x10
+$root=12|0*3103772|
+ALU=12|0*3104194|
+ALU_TB=12|0*3104445||0x10
 ALU_tb=12|0*167035||0x10
-ClockGenerator=12|0*3072655|
-Compare=12|0*3076276|
-Compare_TB=12|0*3077063||0x10
-DataMemory=12|0*3071910|
-EXEStage=12|0*3075080|
-EXEStage_TB=12|0*3075873||0x10
-Extender=12|0*3076054|
-Extender_TB=12|0*3076892||0x10
-HazardDetect=12|0*3073671|
-IDStage=12|0*3074620|
-IDStage_TB=12|0*3076494||0x10
-IFStage=12|0*3074334|
-IFStage_TB=12|0*3076699||0x10
-InstructionMemory=12|0*3072175|
-MEMStage=12|0*3075340|
-MainAluControl=12|0*3073140|
+ClockGenerator=12|0*3105379|
+Compare=12|0*3109001|
+Compare_TB=12|0*3109788||0x10
+DataMemory=12|0*3104634|
+EXEStage=12|0*3107805|
+EXEStage_TB=12|0*3108598||0x10
+Extender=12|0*3108779|
+Extender_TB=12|0*3109617||0x10
+HazardDetect=12|0*3106396|
+IDStage=12|0*3107345|
+IDStage_TB=12|0*3109219||0x10
+IFStage=12|0*3107059|
+IFStage_TB=12|0*3109424||0x10
+InstructionMemory=12|0*3104899|
+MEMStage=12|0*3108065|
+MainAluControl=12|0*3105864|
 PC=12|0*410888|
-PcControl=12|0*3073402|
-PipelineProcessor=12|0*3073987||0x10
-RegisterFile=12|0*3072872|
-UnitScopePackage_221=12|0*3077232||0x40200000
+PcControl=12|0*3106127|
+PipelineProcessor=12|0*3106712||0x10
+RegisterFile=12|0*3105596|
+UnitScopePackage_223=12|0*3109957||0x40200000
 UnitScopePackage_31=12|0*170064||0x40200000
-WBStage=12|0*3075620|
+WBStage=12|0*3108345|
 compare=12|0*113486|
 compare_tb=12|0*113703||0x10
 controller=12|0*112201||0x10
-instructionMemory_TB=12|0*3072440||0x10
+instructionMemory_TB=12|0*3105164||0x10
 main=12|0*119952||0x10
