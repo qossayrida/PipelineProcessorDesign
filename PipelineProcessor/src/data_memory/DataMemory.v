@@ -32,7 +32,7 @@ module DataMemory (
             end else if (numberOfByte == 2'b01) begin
                 // Reading 8-bit data from one memory location with MSB = 00000000
                 out = {8'b00000000, memory[address]};	 
-			end else if (numberOfByte == 2'b01) begin
+			end else if (numberOfByte == 2'b10) begin
                 // Sign extend memory[address] and store to out
             	out = {{8{memory[address][7]}}, memory[address]};
             end

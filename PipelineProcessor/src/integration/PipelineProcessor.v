@@ -1,7 +1,7 @@
 module PipelineProcessor ();
 	
 	initial begin		 
-        #400 $finish; 
+        #50 $finish; 
     end			
 	
 	
@@ -33,9 +33,9 @@ module PipelineProcessor ();
 	wire [15:0] NPC;
 	reg [15:0] PC1,PC2;
 	reg [15:0] DataWB;
-	reg [2:0] RD2,RD3,RD4;
+	reg [2:0] RD2,RD3,RD4,DestinationRegister;
 	reg [15:0] Immediate1 , Immediate2,A,B;
-	reg [15:0] AluResult , DataMemory;
+	reg [15:0] AluResult , DataMemory ,DataBus;
 	
 	
 	initial begin
@@ -138,9 +138,9 @@ module PipelineProcessor ();
         .instruction(instruction),
         .NPC(NPC),
         .AluResult(AluResult),
-        .MemoryResult(/**/), 
-        .WBResult(/**/), 
-        .RD4(RD4),
+        .MemoryResult(DataWB), 
+        .WBResult(DataBus), 
+        .RD4(DestinationRegister),
         .I_TypeImmediate(I_TypeImmediate),
         .J_TypeImmediate(J_TypeImmediate),
         .ReturnAddress(ReturnAddress),
@@ -189,7 +189,15 @@ module PipelineProcessor ();
 	
 	//******************************************************
 	//					 Pipeline WB stages		
-	//******************************************************
+	//****************************************************** 
+	
+	WBStage wb_stage(
+	.clk(clk),
+	.DataWB(DataWB),
+	.RD4(RD4),
+	.DataBus(DataBus),
+	.DestinationRegister(DestinationRegister)
+	); 
 	
 	
 endmodule

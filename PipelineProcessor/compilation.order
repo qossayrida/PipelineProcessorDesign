@@ -8,6 +8,7 @@
 .\src\integration\PipelineProcessor.v
 .\src\stages\MEMStage.v
 .\src\stages\EXEStage.v
+.\src\stages\WBStage.v
 .\src\stages\IDStage.v
 .\src\stages\IFStage.v
 .\src\utilities\Extender.v

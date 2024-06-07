@@ -6,6 +6,7 @@ C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/ut
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/register_file/RegisterFile.v=S
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/utilities/Extender.v=S
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/instruction_memory/InstructionMemory.v=S
+C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/stages/WBStage.v=S
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/stages/MEMStage.v=S
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/stages/EXEStage.v=S
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/stages/IDStage.v=S
