@@ -9,15 +9,10 @@ module MEMStage (
 );
 
     // Internal wires
-	reg [15:0] data_in,data_out;
+	wire [15:0] data_in,data_out;
 	
+	assign data_in = signals[6] ? DataMemory : Immediate2;
 	
-	always @(posedge clk)begin
-        if (signals[6]==1)
-            data_in = DataMemory;
-        else
-            data_in = Immediate2;
-    end
 
     // DataMemory instance
     DataMemory data_memory (
@@ -42,7 +37,7 @@ module MEMStage (
     end		
 	
 	initial begin
-		$monitor("%0t ==>  data_in= %b   , DataMemory = %b , imm= %b", $time, data_in,DataMemory,Immediate2);
+		$monitor("%0t ==> AluResult=%b , data_in= %b   , DataMemory = %b , imm= %b", $time,AluResult, data_in,DataMemory,Immediate2);
 	end
 
 endmodule
