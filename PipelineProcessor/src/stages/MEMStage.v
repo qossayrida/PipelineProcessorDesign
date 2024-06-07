@@ -9,10 +9,9 @@ module MEMStage (
 );
 
     // Internal wires
-    wire [15:0] data_in,data_out;
+	wire [15:0] data_in,data_out;
 	
-	
-	assign data_in = signals[6] ? DataMemory : Immediate2;
+	assign data_in = signals[2] ? DataMemory : Immediate2;
 
     // DataMemory instance
     DataMemory data_memory (
@@ -21,12 +20,13 @@ module MEMStage (
         .rdEnable(signals[5]),
         .numberOfByte(signals[3:2]),
         .address(AluResult),
-        .in(B),
+        .in(data_in),
         .out(data_out)
     );
 
     // Update MemoryResult on clock edge
     always @(posedge clk) begin
+		#1
         if (signals[1:0]==0)
             DataWB <= PC2;
 		else if (signals[1:0]==1)
@@ -35,6 +35,4 @@ module MEMStage (
 			DataWB <= data_out;
     end
 
-endmodule	 
-
-
+endmodule

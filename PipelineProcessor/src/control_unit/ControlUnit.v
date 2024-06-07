@@ -113,6 +113,7 @@ endmodule
 
 
 module HazardDetect (
+	input clk,
 	input [3:0] opCode,
 	input [2:0] RS1,RS2,Rd2,Rd3,Rd4,
 	input EX_RegWr, MEM_RegWr ,WB_RegWr,EX_MemRd,
@@ -120,8 +121,8 @@ module HazardDetect (
 	output reg [1:0] ForwardA,ForwardB
 ); 
 
-	always @(*) begin 
-	#1
+	always @(posedge clk) begin 
+		#1
         // ForwardA logic
         if ((RS1 != 0) && (RS1 == Rd2) && EX_RegWr) 
             ForwardA = 1;

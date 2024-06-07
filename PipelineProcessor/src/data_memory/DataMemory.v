@@ -17,7 +17,7 @@ module DataMemory (
 		memory[4] = 8'd3;
     end
 
-    always @(*) begin
+    always @(posedge clk) begin
         if (wrEnable) begin  
 			
             // Writing 16-bit data to two consecutive memory locations

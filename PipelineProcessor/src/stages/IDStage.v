@@ -8,7 +8,7 @@ module IDStage (
     input [15:0] instruction,
 	input [15:0] NPC,
 	input [15:0] AluResult,MemoryResult,WBResult,
-	input [2:0] RD4,
+	input [2:0] DestinationRegister,
     output reg [15:0] I_TypeImmediate,
     output reg [15:0] J_TypeImmediate,
     output reg [15:0] ReturnAddress,
@@ -16,7 +16,7 @@ module IDStage (
     output reg [15:0] Immediate1,
     output reg [15:0] A,
     output reg [15:0] B,
-    output reg [2:0] RD2,RA,RB,
+    output reg [2:0] TargetDestinationRegister,RA,RB,
 	output reg gt,
     output reg lt,
     output reg eq,
@@ -37,9 +37,10 @@ module IDStage (
 
     // Register file instance
     RegisterFile reg_file (
+		.clk(clk),
         .RA(RA),
         .RB(RB),
-        .RW(RD4),
+        .RW(DestinationRegister),
         .enableWrite(WB_signals), 
         .BusW(WBResult),      
         .BusA(BusA),
@@ -72,9 +73,9 @@ module IDStage (
 			
 		
 		if (signals[2])
-			RD2 <= 3'b111;
+			TargetDestinationRegister <= 3'b111;
 		else
-			RD2 <= instruction[11:9];
+			TargetDestinationRegister <= instruction[11:9];
 
 				
         // Decoding immediate values
@@ -89,7 +90,7 @@ module IDStage (
 	
 	
 	always @(posedge clk) begin	
-		#1     
+		#2    
         if (ForwardA==0) 
 			A <= BusA;
 		else if (ForwardA==1)
@@ -126,7 +127,7 @@ module IDStage_TB;
     reg [15:0] AluResult;
     reg [15:0] MemoryResult;
     reg [15:0] WBResult;
-    reg [2:0] RD4;
+    reg [2:0] DestinationRegister;
     
     wire [15:0] I_TypeImmediate;
     wire [15:0] J_TypeImmediate;
@@ -135,7 +136,7 @@ module IDStage_TB;
     wire [15:0] Immediate1;
     wire [15:0] A;
     wire [15:0] B;
-    wire [2:0] RD2,RA,RB;
+    wire [2:0] TargetDestinationRegister,RA,RB;
     wire gt;
     wire lt;
     wire eq;
@@ -152,7 +153,7 @@ module IDStage_TB;
         .AluResult(AluResult),
         .MemoryResult(MemoryResult),
         .WBResult(WBResult),
-        .RD4(RD4),
+        .DestinationRegister(DestinationRegister),
         .I_TypeImmediate(I_TypeImmediate),
         .J_TypeImmediate(J_TypeImmediate),
         .ReturnAddress(ReturnAddress),
@@ -160,7 +161,7 @@ module IDStage_TB;
         .Immediate1(Immediate1),
         .A(A),
         .B(B),
-        .RD2(RD2),
+        .TargetDestinationRegister(TargetDestinationRegister),
 		.RA(RA),
 		.RB(RB),
         .gt(gt),
@@ -186,7 +187,7 @@ module IDStage_TB;
         AluResult = 16'b0000000000000000;
         MemoryResult = 16'b0000000000000000;
         WBResult = 16'b0000000000000000;
-        RD4 = 3'b000;
+        DestinationRegister = 3'b000;
 
         // Apply some test vectors
         #10 instruction = 16'b0000001100100011; NPC = 16'b0000000000000010; WBResult = 16'b0000000000001000; WB_signals = 1;
@@ -196,7 +197,7 @@ module IDStage_TB;
 		#1WBResult = 16'b0000000000001110;
         #9 ForwardB = 3;
         #10 signals = 5'b11010; instruction = 16'b0000001100110001;
-        #10 RD4 = 3'b011; instruction = 16'b0000010001100011;
+        #10 DestinationRegister = 3'b011; instruction = 16'b0000010001100011;
 
         // End simulation
         #100 $finish;
@@ -205,7 +206,7 @@ module IDStage_TB;
     initial begin
         // Monitor the changes
         $monitor("Time = %0d, A = %0h, B = %0h, I_TypeImmediate = %0h, J_TypeImmediate = %0h, ReturnAddress = %0h, PC1 = %0h, Immediate1 = %0h, RD2 = %0h, gt = %0b, lt = %0b, eq = %0b", 
-                  $time, A, B, I_TypeImmediate, J_TypeImmediate, ReturnAddress, PC1, Immediate1, RD2, gt, lt, eq);
+                  $time, A, B, I_TypeImmediate, J_TypeImmediate, ReturnAddress, PC1, Immediate1, TargetDestinationRegister, gt, lt, eq);
     end
 
 endmodule

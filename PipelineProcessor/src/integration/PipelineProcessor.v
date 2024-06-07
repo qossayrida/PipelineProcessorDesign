@@ -33,7 +33,7 @@ module PipelineProcessor ();
 	wire [15:0] NPC;
 	reg [15:0] PC1,PC2;
 	reg [15:0] DataWB;
-	reg [2:0] RD2,RD3,RD4,DestinationRegister,RA,RB;
+	reg [2:0] RD2,RD3,RD4,DestinationRegister,RA,RB,TargetDestinationRegister;
 	reg [15:0] Immediate1 , Immediate2,A,B;
 	reg [15:0] AluResult , DataMemory ,DataBus;
 	
@@ -46,12 +46,16 @@ module PipelineProcessor ();
 	
 	
 	always @(posedge clk) begin
+		
+		
         
 		PC2 <= PC1;
 		Immediate2 <= Immediate1;
-		RD3 <= RD2;	
 		
+		RD2 <= TargetDestinationRegister;
+		RD3 <= RD2;	
 		RD4 <= RD3;	   
+		DataMemory <= B;
 		
 		EXE_signals <= signals [10:0];
 	 	MEM_signals <= EXE_signals[7:0];
@@ -87,6 +91,7 @@ module PipelineProcessor ();
 
     // Hazard Detection
     HazardDetect hazard_detect (
+		.clk(clk),
         .opCode(instruction[15:12]),
         .RS1(RA), 
         .RS2(RB),  
@@ -140,7 +145,7 @@ module PipelineProcessor ();
         .AluResult(AluResult),
         .MemoryResult(DataWB), 
         .WBResult(DataBus), 
-        .RD4(DestinationRegister),
+        .DestinationRegister(DestinationRegister),
         .I_TypeImmediate(I_TypeImmediate),
         .J_TypeImmediate(J_TypeImmediate),
         .ReturnAddress(ReturnAddress),
@@ -148,7 +153,7 @@ module PipelineProcessor ();
         .Immediate1(Immediate1),
         .A(A),
         .B(B),
-        .RD2(RD2),
+        .TargetDestinationRegister(TargetDestinationRegister),
 		.RA(RA),
 		.RB(RB),
         .gt(GT),
@@ -168,8 +173,7 @@ module PipelineProcessor ();
         .A(A),
         .B(B),
         .signals(EXE_signals[10:8]),
-        .AluResult(AluResult),
-		.DataMemory(DataMemory)
+        .AluResult(AluResult)
     );
 	
 	

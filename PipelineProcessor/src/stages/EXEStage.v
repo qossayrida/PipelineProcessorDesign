@@ -4,29 +4,25 @@ module EXEStage (
     input wire [15:0] A,
     input wire [15:0] B,
     input wire [2:0] signals,		// AluSRC   ALUOP{2}
-    output reg [15:0] AluResult , DataMemory
+    output reg [15:0] AluResult 
 );
 
     // Internal wires
     wire signed [15:0] ALU_in_B;
     wire signed [15:0] ALU_output;
-
-    // ALU instance
-    ALU alu (
-        .A(A),
-        .B(ALU_in_B),
-        .Output(ALU_output),
-        .ALUop(signals[1:0])
-    );
-
-    // ALU input selection based on ALUsrc
+	
+	// ALU input selection based on ALUsrc
     assign ALU_in_B = signals[2] ? Immediate1 : B;
 
-    // Update AluResult on clock edge
-    always @(posedge clk) begin
-        AluResult <= ALU_output;
-		DataMemory <= B;
-    end
+	
+    // ALU instance
+    ALU alu (
+		.clk(clk),
+        .A(A),
+        .B(ALU_in_B),
+        .Output(AluResult),
+        .ALUop(signals[1:0])
+    );
 
 endmodule
 
@@ -43,7 +39,7 @@ module EXEStage_TB;
     reg [2:0] signals;
 
     // Outputs
-    wire [15:0] AluResult,DataMemory;
+    wire [15:0] AluResult;
 
     // Instantiate the EXEStage
     EXEStage uut (
@@ -52,8 +48,7 @@ module EXEStage_TB;
         .A(A),
         .B(B),
         .signals(signals),
-        .AluResult(AluResult),
-		.DataMemory(DataMemory)
+        .AluResult(AluResult)
     );
 
     // Clock generation
