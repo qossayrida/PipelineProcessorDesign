@@ -27,7 +27,7 @@ module MEMStage (
 
     // Update MemoryResult on clock edge
     always @(posedge clk) begin
-	
+		#1fs
         if (signals[1:0]==0)
             DataWB <= PC2;
 		else if (signals[1:0]==1)
@@ -37,7 +37,7 @@ module MEMStage (
     end		
 	
 	initial begin
-		$monitor("%0t ==> AluResult=%b , data_in= %b   , DataMemory = %b , imm= %b", $time,AluResult, data_in,DataMemory,Immediate2);
+		$monitor("%0t ==> AluResult=%b , data_in= %b   , data_out = %b , imm= %b", $time,AluResult, data_in,data_out,Immediate2);
 	end
 
 endmodule

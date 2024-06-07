@@ -17,8 +17,8 @@ module InstructionMemory(
         // R-type
         instructionMemory[0] = {AND, R4, R6, R7, 3'b000};  	 
 		instructionMemory[1] = {SV , R1, 1'b0 , 8'hFF};
-		instructionMemory[2] = {LBu , R3, R0 ,1'b0, 8'h01};
-		instructionMemory[3] = {LBs , R3, R1 ,1'b1, 8'h00};
+		instructionMemory[2] = {LBu , R3, R0 ,1'b0, 5'b00001};
+		instructionMemory[3] = {LBs , R3, R1 ,1'b1, 5'b00000};
     end
 
 endmodule
