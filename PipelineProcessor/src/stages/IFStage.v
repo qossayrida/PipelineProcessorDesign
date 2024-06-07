@@ -12,7 +12,7 @@ module IFStage (
 		$monitor("PC = %b",   PC);
 	end	
 	
-	assign NPC = PC + 16'd2;
+	assign NPC = PC + 16'd1;
   
   	InstructionMemory instructions (
     	.clk(clk),

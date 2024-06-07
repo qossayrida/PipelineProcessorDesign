@@ -32,6 +32,7 @@ stages/IDStage.v=-1
 stages/IFStage.v=-1
 utilities/Extender.v=-1
 utilities/Compare.v=-1
+instruction_memory/InstructionMemory.v=-1
 [Files.Data]
 .\src\alu\ALU.v=Verilog Source Code
 .\src\data_memory\DataMemory.v=Verilog Source Code
@@ -48,6 +49,7 @@ utilities/Compare.v=-1
 .\src\stages\IFStage.v=Verilog Source Code
 .\src\utilities\Extender.v=Verilog Source Code
 .\src\utilities\Compare.v=Verilog Source Code
+.\src\instruction_memory\InstructionMemory.v=Verilog Source Code
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel

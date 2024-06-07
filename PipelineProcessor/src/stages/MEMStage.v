@@ -26,7 +26,7 @@ module MEMStage (
     );
 
     // Update MemoryResult on clock edge
-    always @(*) begin
+    always @(posedge clk) begin
         if (signals[1:0]==0)
             DataWB <= PC2;
 		else if (signals[1:0]==1)
@@ -35,4 +35,6 @@ module MEMStage (
 			DataWB <= data_out;
     end
 
-endmodule
+endmodule	 
+
+
