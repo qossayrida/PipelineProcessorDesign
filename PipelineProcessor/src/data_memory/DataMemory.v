@@ -25,7 +25,8 @@ module DataMemory (
             // Writing 16-bit data to two consecutive memory locations
 			if (numberOfByte == 2'b10)
             	memory[address + 1] <= in[15:8];
-					
+				
+		
         end	else if (rdEnable) begin
 			
             if (numberOfByte == 2'b00) begin

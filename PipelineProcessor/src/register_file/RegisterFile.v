@@ -36,7 +36,7 @@ module RegisterFile(
     end	 
 	
 	initial begin
-		$monitor("%0t  ==> R4 = %b , R5 = %b , R6 = %b ,R7 = %b",$time,registersArray[4],registersArray[5],registersArray[6],registersArray[7]);
+		$monitor("%0t  ==> R3 = %b , R4 = %b , R5 = %b , R6 = %b ,R7 = %b",$time,registersArray[3],registersArray[4],registersArray[5],registersArray[6],registersArray[7]);
 	end 
 
 endmodule
