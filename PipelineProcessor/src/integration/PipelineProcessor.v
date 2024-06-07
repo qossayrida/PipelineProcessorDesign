@@ -46,13 +46,10 @@ module PipelineProcessor ();
 	
 	
 	always @(posedge clk) begin
-		
-		
-        
+		 
 		PC2 <= PC1;
 		Immediate2 <= Immediate1;
 		
-		RD2 <= TargetDestinationRegister;
 		RD3 <= RD2;	
 		RD4 <= RD3;	   
 		DataMemory <= B;
@@ -108,10 +105,6 @@ module PipelineProcessor ();
     );
 	
 	
-	
-	
-	
-	
 	//******************************************************
 	//					 Pipeline IF stages		
 	//****************************************************** 
@@ -153,7 +146,7 @@ module PipelineProcessor ();
         .Immediate1(Immediate1),
         .A(A),
         .B(B),
-        .TargetDestinationRegister(TargetDestinationRegister),
+        .RD2(RD2),
 		.RA(RA),
 		.RB(RB),
         .gt(GT),

@@ -16,7 +16,7 @@ module IDStage (
     output reg [15:0] Immediate1,
     output reg [15:0] A,
     output reg [15:0] B,
-    output reg [2:0] TargetDestinationRegister,RA,RB,
+    output reg [2:0] RD2,RA,RB,
 	output reg gt,
     output reg lt,
     output reg eq,
@@ -56,29 +56,20 @@ module IDStage (
         .gt(gt),
         .lt(lt),
         .eq(eq)
-    );
+    ); 
+	
+	
+	assign RA = signals[4] ? 3'b000 : instruction[8:6];	
+	assign RB = signals[3] ? instruction[5:3] : instruction[11:9];
 
     always @(posedge clk) begin
-		
-		if (signals[4])
-			RA <= 3'b000;
-		else
-			RA <= instruction[8:6];	  
-			
-			
-	    if (signals[3])
-			RB <= instruction[5:3];
-		else
-			RB <= instruction[11:9];
-			
-		
-		if (signals[2])
-			TargetDestinationRegister <= 3'b111;
-		else
-			TargetDestinationRegister <= instruction[11:9];
-
 				
-        // Decoding immediate values
+		if (signals[2])
+			RD2 <= 3'b111;
+		else
+			RD2 <= instruction[11:9];
+
+		// Decoding immediate values
         I_TypeImmediate <= extended_imm+NPC;
         J_TypeImmediate <= {NPC[15:12],instruction[11:0]};
         ReturnAddress <= R7;
@@ -136,7 +127,7 @@ module IDStage_TB;
     wire [15:0] Immediate1;
     wire [15:0] A;
     wire [15:0] B;
-    wire [2:0] TargetDestinationRegister,RA,RB;
+    wire [2:0] RD2,RA,RB;
     wire gt;
     wire lt;
     wire eq;
@@ -161,7 +152,7 @@ module IDStage_TB;
         .Immediate1(Immediate1),
         .A(A),
         .B(B),
-        .TargetDestinationRegister(TargetDestinationRegister),
+        .RD2(RD2),
 		.RA(RA),
 		.RB(RB),
         .gt(gt),
@@ -206,7 +197,7 @@ module IDStage_TB;
     initial begin
         // Monitor the changes
         $monitor("Time = %0d, A = %0h, B = %0h, I_TypeImmediate = %0h, J_TypeImmediate = %0h, ReturnAddress = %0h, PC1 = %0h, Immediate1 = %0h, RD2 = %0h, gt = %0b, lt = %0b, eq = %0b", 
-                  $time, A, B, I_TypeImmediate, J_TypeImmediate, ReturnAddress, PC1, Immediate1, TargetDestinationRegister, gt, lt, eq);
+                  $time, A, B, I_TypeImmediate, J_TypeImmediate, ReturnAddress, PC1, Immediate1, RD2, gt, lt, eq);
     end
 
 endmodule

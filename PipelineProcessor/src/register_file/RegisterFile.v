@@ -13,13 +13,13 @@ module RegisterFile(
 	
     // read registers always
     always @(posedge clk) begin
-		#1
         BusA = registersArray[RA];
         BusB = registersArray[RB];
 		R7 = registersArray[7];
     end
 
-    always @(*) begin
+    always @(posedge clk) begin
+		#1
         if (enableWrite && (RW != 3'b000)) begin 
             registersArray[RW] = BusW;
         end
@@ -37,7 +37,7 @@ module RegisterFile(
     end	 
 	
 	initial begin
-		#70 $display("%0t  ==> R4 = %b , R5 = %b , R6 = %b ,R7 = %b",$time,registersArray[4],registersArray[5],registersArray[6],registersArray[7]);
+		$monitor("%0t  ==> R4 = %b , R5 = %b , R6 = %b ,R7 = %b",$time,registersArray[4],registersArray[5],registersArray[6],registersArray[7]);
 	end 
 
 endmodule
