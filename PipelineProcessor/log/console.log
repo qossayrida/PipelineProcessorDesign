@@ -8755,3 +8755,910 @@ alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src
 # done
 endsim
 # VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: PipelineProcessor.v (79): Length of connection (2) does not match the length of port "PcSrc" (1) on instance "/PipelineProcessor/pc_control".
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 0 primitives and 31 (100.00%) other processes in SLP
+# SLP: 156 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4742 kB (elbread=427 elab2=4179 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  1:34 AM, Saturday, June 8, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0  ==> R3 = 0000000000000000 , R4 = 0000000000000000 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 0 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> memory[1]=00000001 , memory[2]=00000010
+# KERNEL: PC = 0000000000000001
+# KERNEL: 15 ==> AluResult=0000000000000000 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000010
+# KERNEL: 25 ==> AluResult=0000000000000010 , data_in= 00000000000xx0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000011000
+# KERNEL: PC = 0000000000000011
+# KERNEL: 35 ==> AluResult=0000000000000001 , data_in= 0000000011111111   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000011111111
+# KERNEL: PC = 0000000000000100
+# KERNEL: 45  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 45  ==> memory[1]=11111111 , memory[2]=00000010
+# KERNEL: 45 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000000001
+# KERNEL: PC = 0000000000000101
+# KERNEL: 55 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = 0000000011111111 , imm= 0000000000000000
+# KERNEL: PC = 0000000000000110
+# KERNEL: 65  ==> R3 = 0000000011111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 65 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= 00000000000xxxxx   , data_out = 1111111111111111 , imm= 00000000000xxxxx
+# KERNEL: PC = 0000000000000111
+# KERNEL: 75  ==> R3 = 1111111111111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: PC = 0000000000001000
+# KERNEL: PC = 0000000000001001
+# KERNEL: PC = 0000000000001010
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 110 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 110 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: PipelineProcessor.v (79): Length of connection (2) does not match the length of port "PcSrc" (1) on instance "/PipelineProcessor/pc_control".
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 0 primitives and 31 (100.00%) other processes in SLP
+# SLP: 156 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4744 kB (elbread=427 elab2=4180 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  1:36 AM, Saturday, June 8, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0  ==> R3 = 0000000000000000 , R4 = 0000000000000000 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 0 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> memory[1]=00000001 , memory[2]=00000010
+# KERNEL: PC = 0000000000000001
+# KERNEL: 15 ==> AluResult=0000000000000000 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000010
+# KERNEL: 25 ==> AluResult=0000000000000010 , data_in= 00000000000xx0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000011000
+# KERNEL: PC = 0000000000000011
+# KERNEL: 35 ==> AluResult=0000000000000101 , data_in= 00000000000x00xx   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000010000
+# KERNEL: PC = 0000000000000100
+# KERNEL: 45  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 45 ==> AluResult=0000000000000000 , data_in= 000000000000x0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000001000
+# KERNEL: PC = 0000000000000101
+# KERNEL: 55  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000101 ,R7 = 0000000000000010
+# KERNEL: 55 ==> AluResult=0000000000000001 , data_in= 0000000011111111   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000011111111
+# KERNEL: PC = 0000000000000110
+# KERNEL: 65  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000000 , R6 = 0000000000000101 ,R7 = 0000000000000010
+# KERNEL: 65  ==> memory[1]=11111111 , memory[2]=00000010
+# KERNEL: 65 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= 00000000xxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= 00000000xxxxxxxx
+# KERNEL: PC = 0000000000000111
+# KERNEL: PC = 0000000000001000
+# KERNEL: PC = 0000000000001001
+# KERNEL: PC = 0000000000001010
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 110 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 110 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: PipelineProcessor.v (79): Length of connection (2) does not match the length of port "PcSrc" (1) on instance "/PipelineProcessor/pc_control".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.8 [s]
+# SLP: Finished : 0.8 [s]
+# SLP: 0 primitives and 31 (100.00%) other processes in SLP
+# SLP: 156 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4750 kB (elbread=427 elab2=4187 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  1:47 AM, Saturday, June 8, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0  ==> R3 = 0000000000000000 , R4 = 0000000000000000 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 0 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> memory[1]=00000001 , memory[2]=00000010
+# KERNEL: PC = 0000000000000001
+# KERNEL: 15 ==> AluResult=0000000000000000 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000010
+# KERNEL: 25 ==> AluResult=0000000000000010 , data_in= 00000000000xx0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000011000
+# KERNEL: PC = 0000000000000011
+# KERNEL: 35 ==> AluResult=0000000000000101 , data_in= 00000000000x00xx   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000010000
+# KERNEL: PC = 0000000000000100
+# KERNEL: 45  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 45 ==> AluResult=0000000000000000 , data_in= 000000000000x0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000001000
+# KERNEL: PC = 0000000000000101
+# KERNEL: 55  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000101 ,R7 = 0000000000000010
+# KERNEL: 55 ==> AluResult=0000000000000001 , data_in= 0000000011111111   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000011111111
+# KERNEL: PC = 0000000000000110
+# KERNEL: 65  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000000 , R6 = 0000000000000101 ,R7 = 0000000000000010
+# KERNEL: 65  ==> memory[1]=11111111 , memory[2]=00000010
+# KERNEL: 65 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000000001
+# KERNEL: PC = 0000000000000111
+# KERNEL: 75 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = 0000001011111111 , imm= 0000000000000000
+# KERNEL: PC = 0000000000001000
+# KERNEL: 85  ==> R3 = 0000001011111111 , R4 = 0000000000000010 , R5 = 0000000000000000 , R6 = 0000000000000101 ,R7 = 0000000000000010
+# KERNEL: 85 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= 00000000000xxxxx   , data_out = 0000001011111111 , imm= 00000000000xxxxx
+# KERNEL: PC = 0000000000001001
+# KERNEL: PC = 0000000000001010
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 110 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 110 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: PipelineProcessor.v (79): Length of connection (2) does not match the length of port "PcSrc" (1) on instance "/PipelineProcessor/pc_control".
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.7 [s]
+# SLP: Finished : 0.8 [s]
+# SLP: 0 primitives and 31 (100.00%) other processes in SLP
+# SLP: 156 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.8 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4742 kB (elbread=427 elab2=4179 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  1:49 AM, Saturday, June 8, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0  ==> R3 = 0000000000000000 , R4 = 0000000000000000 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 0 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> memory[1]=00000001 , memory[2]=00000010
+# KERNEL: PC = 0000000000000001
+# KERNEL: 15 ==> AluResult=0000000000000000 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000010
+# KERNEL: 25 ==> AluResult=0000000000000010 , data_in= 00000000000xx0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000011000
+# KERNEL: PC = 0000000000000011
+# KERNEL: 35 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= 00000000000xxxxx
+# KERNEL: PC = 0000000000000100
+# KERNEL: 45  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: PC = 0000000000000101
+# KERNEL: 55 ==> AluResult=0000000000000001 , data_in= 0000000011111111   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000011111111
+# KERNEL: PC = 0000000000000110
+# KERNEL: 65  ==> memory[1]=11111111 , memory[2]=00000010
+# KERNEL: 65 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000000001
+# KERNEL: PC = 0000000000000111
+# KERNEL: 75 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = 0000001011111111 , imm= 0000000000000000
+# KERNEL: PC = 0000000000001000
+# KERNEL: 85  ==> R3 = 0000001011111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 85 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= 00000000000xxxxx   , data_out = 0000001011111111 , imm= 00000000000xxxxx
+# KERNEL: PC = 0000000000001001
+# KERNEL: PC = 0000000000001010
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 110 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 110 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: PipelineProcessor.v (79): Length of connection (2) does not match the length of port "PcSrc" (1) on instance "/PipelineProcessor/pc_control".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.7 [s]
+# SLP: Finished : 0.8 [s]
+# SLP: 0 primitives and 31 (100.00%) other processes in SLP
+# SLP: 156 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.8 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4742 kB (elbread=427 elab2=4179 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  1:50 AM, Saturday, June 8, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0  ==> R3 = 0000000000000000 , R4 = 0000000000000000 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 0 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> memory[1]=00000001 , memory[2]=00000010
+# KERNEL: PC = 0000000000000001
+# KERNEL: 15 ==> AluResult=0000000000000000 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000010
+# KERNEL: 25 ==> AluResult=0000000000000010 , data_in= 00000000000xx0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000011000
+# KERNEL: PC = 0000000000000011
+# KERNEL: 35 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= 00000000000xxxxx
+# KERNEL: PC = 0000000000000100
+# KERNEL: 45  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: PC = 0000000000000101
+# KERNEL: 55 ==> AluResult=0000000000000001 , data_in= 0000000011111111   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000011111111
+# KERNEL: PC = 0000000000000110
+# KERNEL: 65  ==> memory[1]=11111111 , memory[2]=00000010
+# KERNEL: 65 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000000001
+# KERNEL: PC = 0000000000000111
+# KERNEL: 75 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = 0000001011111111 , imm= 0000000000000000
+# KERNEL: PC = 0000000000001000
+# KERNEL: 85  ==> R3 = 0000001011111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 85 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= 00000000000xxxxx   , data_out = 0000001011111111 , imm= 00000000000xxxxx
+# KERNEL: PC = 0000000000001001
+# KERNEL: PC = 0000000000001010
+# KERNEL: PC = 0000000000001011
+# KERNEL: PC = 0000000000001100
+# KERNEL: PC = 0000000000001101
+# KERNEL: PC = 0000000000001110
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: PipelineProcessor.v (79): Length of connection (2) does not match the length of port "PcSrc" (1) on instance "/PipelineProcessor/pc_control".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.8 [s]
+# SLP: Finished : 0.8 [s]
+# SLP: 0 primitives and 31 (100.00%) other processes in SLP
+# SLP: 156 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4742 kB (elbread=427 elab2=4179 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  1:51 AM, Saturday, June 8, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0  ==> R3 = 0000000000000000 , R4 = 0000000000000000 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 0 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> memory[1]=00000001 , memory[2]=00000010
+# KERNEL: PC = 0000000000000001
+# KERNEL: 15 ==> AluResult=0000000000000000 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000010
+# KERNEL: 25 ==> AluResult=0000000000000010 , data_in= 00000000000xx0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000011000
+# KERNEL: PC = 0000000000000011
+# KERNEL: 35 ==> AluResult=0000000000000001 , data_in= 0000000011111111   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000011111111
+# KERNEL: PC = 0000000000000100
+# KERNEL: 45  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 45  ==> memory[1]=11111111 , memory[2]=00000010
+# KERNEL: 45 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000000001
+# KERNEL: PC = 0000000000000101
+# KERNEL: 55 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = 0000001011111111 , imm= 0000000000000000
+# KERNEL: PC = 0000000000000110
+# KERNEL: 65  ==> R3 = 0000001011111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 65 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= 00000000000xxxxx   , data_out = 0000001011111111 , imm= 00000000000xxxxx
+# KERNEL: PC = 0000000000000111
+# KERNEL: PC = 0000000000001000
+# KERNEL: PC = 0000000000001001
+# KERNEL: PC = 0000000000001010
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 110 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 110 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: PipelineProcessor.v (79): Length of connection (2) does not match the length of port "PcSrc" (1) on instance "/PipelineProcessor/pc_control".
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.8 [s]
+# SLP: Finished : 0.9 [s]
+# SLP: 0 primitives and 31 (100.00%) other processes in SLP
+# SLP: 156 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4739 kB (elbread=427 elab2=4176 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  1:52 AM, Saturday, June 8, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0  ==> R3 = 0000000000000000 , R4 = 0000000000000000 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 0 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> memory[1]=00000001 , memory[2]=00000010
+# KERNEL: PC = 0000000000000001
+# KERNEL: 15 ==> AluResult=0000000000000000 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000010
+# KERNEL: 25 ==> AluResult=0000000000000010 , data_in= 00000000000xx0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000011000
+# KERNEL: PC = 0000000000000011
+# KERNEL: 35 ==> AluResult=0000000000000001 , data_in= 0000000011111111   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000011111111
+# KERNEL: PC = 0000000000000100
+# KERNEL: 45  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 45  ==> memory[1]=11111111 , memory[2]=00000010
+# KERNEL: 45 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000000001
+# KERNEL: PC = 0000000000000101
+# KERNEL: 55 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = 0000001011111111 , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000110
+# KERNEL: 65  ==> R3 = 0000001011111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 65 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000111
+# KERNEL: PC = 0000000000001000
+# KERNEL: PC = 0000000000001001
+# KERNEL: PC = 0000000000001010
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 110 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 110 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: PipelineProcessor.v (79): Length of connection (2) does not match the length of port "PcSrc" (1) on instance "/PipelineProcessor/pc_control".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.7 [s]
+# SLP: Finished : 0.8 [s]
+# SLP: 0 primitives and 31 (100.00%) other processes in SLP
+# SLP: 156 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4742 kB (elbread=427 elab2=4179 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  1:53 AM, Saturday, June 8, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0  ==> R3 = 0000000000000000 , R4 = 0000000000000000 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 0 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> memory[1]=00000001 , memory[2]=00000010
+# KERNEL: PC = 0000000000000001
+# KERNEL: 15 ==> AluResult=0000000000000000 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000010
+# KERNEL: 25 ==> AluResult=0000000000000010 , data_in= 00000000000xx0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000011000
+# KERNEL: PC = 0000000000000011
+# KERNEL: 35 ==> AluResult=0000000000000001 , data_in= 0000000011111111   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000011111111
+# KERNEL: PC = 0000000000000100
+# KERNEL: 45  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 45  ==> memory[1]=11111111 , memory[2]=00000010
+# KERNEL: 45 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000000001
+# KERNEL: PC = 0000000000000101
+# KERNEL: 55 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = 0000001011111111 , imm= 0000000000000000
+# KERNEL: PC = 0000000000000110
+# KERNEL: 65  ==> R3 = 0000001011111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 65 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= 00000000000xxxxx   , data_out = 0000001011111111 , imm= 00000000000xxxxx
+# KERNEL: PC = 0000000000000111
+# KERNEL: PC = 0000000000001000
+# KERNEL: PC = 0000000000001001
+# KERNEL: PC = 0000000000001010
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 110 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 110 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: PipelineProcessor.v (79): Length of connection (2) does not match the length of port "PcSrc" (1) on instance "/PipelineProcessor/pc_control".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.8 [s]
+# SLP: Finished : 0.9 [s]
+# SLP: 0 primitives and 31 (100.00%) other processes in SLP
+# SLP: 156 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4742 kB (elbread=427 elab2=4179 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  1:53 AM, Saturday, June 8, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0  ==> R3 = 0000000000000000 , R4 = 0000000000000000 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 0 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> memory[1]=00000001 , memory[2]=00000010
+# KERNEL: PC = 0000000000000001
+# KERNEL: 15 ==> AluResult=0000000000000000 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000010
+# KERNEL: 25 ==> AluResult=0000000000000010 , data_in= 00000000000xx0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000011000
+# KERNEL: PC = 0000000000000011
+# KERNEL: 35 ==> AluResult=0000000000000001 , data_in= 0000000011111111   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000011111111
+# KERNEL: PC = 0000000000000100
+# KERNEL: 45  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 45  ==> memory[1]=11111111 , memory[2]=00000010
+# KERNEL: 45 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000000001
+# KERNEL: PC = 0000000000000101
+# KERNEL: 55 ==> AluResult=0000000000000001 , data_in= xxxxxxxxxxxxxxxx   , data_out = 0000001011111111 , imm= 0000000000000000
+# KERNEL: PC = 0000000000000110
+# KERNEL: 65  ==> R3 = 0000001011111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 65 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = 0000001011111111 , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000111
+# KERNEL: 75  ==> R3 = 0000001011111111 , R4 = 0000001011111111 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 75 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000001000
+# KERNEL: PC = 0000000000001001
+# KERNEL: PC = 0000000000001010
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 110 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 110 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: PipelineProcessor.v (79): Length of connection (2) does not match the length of port "PcSrc" (1) on instance "/PipelineProcessor/pc_control".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.9 [s]
+# SLP: Finished : 1.0 [s]
+# SLP: 0 primitives and 31 (100.00%) other processes in SLP
+# SLP: 156 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 1.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4742 kB (elbread=427 elab2=4179 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  1:59 AM, Saturday, June 8, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0  ==> R3 = 0000000000000000 , R4 = 0000000000000000 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 0 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> memory[1]=00000001 , memory[2]=00000010
+# KERNEL: PC = 0000000000000001
+# KERNEL: 15 ==> AluResult=0000000000000000 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000010
+# KERNEL: 25 ==> AluResult=0000000000000010 , data_in= 00000000000xx0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000011000
+# KERNEL: PC = 0000000000000011
+# KERNEL: 35 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= 00000000000xxxxx
+# KERNEL: PC = 0000000000000100
+# KERNEL: 45  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: PC = 0000000000000101
+# KERNEL: 55 ==> AluResult=0000000000000001 , data_in= 0000000011111111   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000011111111
+# KERNEL: PC = 0000000000000110
+# KERNEL: 65  ==> memory[1]=11111111 , memory[2]=00000010
+# KERNEL: 65 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000000001
+# KERNEL: PC = 0000000000000111
+# KERNEL: 75 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = 0000000011111111 , imm= 0000000000000000
+# KERNEL: PC = 0000000000001000
+# KERNEL: 85  ==> R3 = 0000000011111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 85 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= 00000000000xxxxx   , data_out = 1111111111111111 , imm= 00000000000xxxxx
+# KERNEL: PC = 0000000000001001
+# KERNEL: 95  ==> R3 = 1111111111111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: PC = 0000000000001010
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 110 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 110 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: PipelineProcessor.v (79): Length of connection (2) does not match the length of port "PcSrc" (1) on instance "/PipelineProcessor/pc_control".
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.7 [s]
+# SLP: Finished : 0.8 [s]
+# SLP: 0 primitives and 31 (100.00%) other processes in SLP
+# SLP: 156 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.8 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4742 kB (elbread=427 elab2=4179 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  2:00 AM, Saturday, June 8, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0  ==> R3 = 0000000000000000 , R4 = 0000000000000000 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 0 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> memory[1]=00000001 , memory[2]=00000010
+# KERNEL: PC = 0000000000000001
+# KERNEL: 15 ==> AluResult=0000000000000000 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000010
+# KERNEL: 25 ==> AluResult=0000000000000010 , data_in= 00000000000xx0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000011000
+# KERNEL: PC = 0000000000000011
+# KERNEL: 35 ==> AluResult=0000000000000001 , data_in= 0000000011111111   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000011111111
+# KERNEL: PC = 0000000000000100
+# KERNEL: 45  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 45  ==> memory[1]=11111111 , memory[2]=00000010
+# KERNEL: 45 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000000001
+# KERNEL: PC = 0000000000000101
+# KERNEL: 55 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = 0000000011111111 , imm= 0000000000000000
+# KERNEL: PC = 0000000000000110
+# KERNEL: 65  ==> R3 = 0000000011111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 65 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= 00000000000xxxxx   , data_out = 1111111111111111 , imm= 00000000000xxxxx
+# KERNEL: PC = 0000000000000111
+# KERNEL: 75  ==> R3 = 1111111111111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: PC = 0000000000001000
+# KERNEL: PC = 0000000000001001
+# KERNEL: PC = 0000000000001010
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 110 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 110 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: PipelineProcessor.v (79): Length of connection (2) does not match the length of port "PcSrc" (1) on instance "/PipelineProcessor/pc_control".
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.9 [s]
+# SLP: Finished : 0.9 [s]
+# SLP: 0 primitives and 31 (100.00%) other processes in SLP
+# SLP: 156 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4748 kB (elbread=427 elab2=4185 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  2:00 AM, Saturday, June 8, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0  ==> R3 = 0000000000000000 , R4 = 0000000000000000 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 0 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> memory[1]=00000001 , memory[2]=00000010
+# KERNEL: PC = 0000000000000001
+# KERNEL: 15 ==> AluResult=0000000000000000 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000010
+# KERNEL: 25 ==> AluResult=0000000000000010 , data_in= 00000000000xx0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000011000
+# KERNEL: PC = 0000000000000011
+# KERNEL: 35 ==> AluResult=0000000000000001 , data_in= 0000000011111111   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000011111111
+# KERNEL: PC = 0000000000000100
+# KERNEL: 45  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 45  ==> memory[1]=11111111 , memory[2]=00000010
+# KERNEL: 45 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000000001
+# KERNEL: PC = 0000000000000101
+# KERNEL: 55 ==> AluResult=0000000000000001 , data_in= 000000000000000x   , data_out = 0000000011111111 , imm= 0000000000000000
+# KERNEL: PC = 0000000000000110
+# KERNEL: 65  ==> R3 = 0000000011111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 65 ==> AluResult=0000000000000000 , data_in= 0000000000000001   , data_out = 1111111111111111 , imm= 0000000000000001
+# KERNEL: PC = 0000000000000111
+# KERNEL: 75  ==> R3 = 1111111111111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 75 ==> AluResult=0000000000000000 , data_in= 0000000000000000   , data_out = 1111111111111111 , imm= 0000000000000000
+# KERNEL: PC = 0000000000001000
+# KERNEL: 85 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = 1111111111111111 , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000001001
+# KERNEL: 95 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000001010
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 110 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 110 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/WBStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IDStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+run
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: PipelineProcessor.v (79): Length of connection (2) does not match the length of port "PcSrc" (1) on instance "/PipelineProcessor/pc_control".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.8 [s]
+# SLP: Finished : 0.9 [s]
+# SLP: 0 primitives and 31 (100.00%) other processes in SLP
+# SLP: 156 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4748 kB (elbread=427 elab2=4185 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  2:26 AM, Saturday, June 8, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0  ==> R3 = 0000000000000000 , R4 = 0000000000000000 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 0 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> memory[1]=00000001 , memory[2]=00000010
+# KERNEL: PC = 0000000000000001
+# KERNEL: 15 ==> AluResult=0000000000000000 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000000010
+# KERNEL: 25 ==> AluResult=0000000000000010 , data_in= 00000000000xx0x0   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000011000
+# KERNEL: PC = 0000000000000011
+# KERNEL: 35 ==> AluResult=0000000000000001 , data_in= 0000000011111111   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000011111111
+# KERNEL: PC = 0000000000000100
+# KERNEL: 45  ==> R3 = 0000000000000000 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 45  ==> memory[1]=11111111 , memory[2]=00000010
+# KERNEL: 45 ==> AluResult=0000000000000001 , data_in= xxxxxxxxxxxxxxxx   , data_out = xxxxxxxxxxxxxxxx , imm= 0000000000000001
+# KERNEL: PC = 0000000000000101
+# KERNEL: 55 ==> AluResult=0000000000000001 , data_in= xxxxxxxxxxxxxxxx   , data_out = 0000000011111111 , imm= 0000000000000000
+# KERNEL: PC = 0000000000000110
+# KERNEL: 65  ==> R3 = 0000000011111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 65 ==> AluResult=0000000000000001 , data_in= xxxxxxxxxxxxxxxx   , data_out = 1111111111111111 , imm= 0000000000000001
+# KERNEL: PC = 0000000000000111
+# KERNEL: 75  ==> R3 = 1111111111111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 75 ==> AluResult=0000000000000001 , data_in= xxxxxxxxxxxxxxxx   , data_out = 0000001011111111 , imm= 0000000000000000
+# KERNEL: PC = 0000000000001000
+# KERNEL: 85  ==> R3 = 0000001011111111 , R4 = 0000000000000010 , R5 = 0000000000000010 , R6 = 0000000000000111 ,R7 = 0000000000000010
+# KERNEL: 85 ==> AluResult=xxxxxxxxxxxxxxxx , data_in= xxxxxxxxxxxxxxxx   , data_out = 0000001011111111 , imm= xxxxxxxxxxxxxxxx
+# KERNEL: PC = 0000000000001001
+# KERNEL: 95  ==> R3 = 0000001011111111 , R4 = 0000001011111111 , R5 = 00000000000000
