@@ -11,7 +11,7 @@ module MEMStage (
     // Internal wires
 	wire [15:0] data_in,data_out;
 	
-	assign data_in = signals[2] ? DataMemory : Immediate2;
+	assign data_in = signals[6] ? DataMemory : Immediate2;
 
     // DataMemory instance
     DataMemory data_memory (
@@ -26,12 +26,17 @@ module MEMStage (
 
     // Update MemoryResult on clock edge
     always @(posedge clk) begin
+	
         if (signals[1:0]==0)
             DataWB <= PC2;
 		else if (signals[1:0]==1)
         	DataWB <= AluResult;
 		else
 			DataWB <= data_out;
-    end
+    end		
+	
+	initial begin
+		$monitor("%0t ==>  data_in= %b   , DataMemory = %b , imm= %b", $time, data_in,DataMemory,Immediate2);
+	end
 
 endmodule

@@ -48,16 +48,16 @@ module PipelineProcessor ();
 	always @(posedge clk) begin
 		 
 		PC2 <= PC1;
-		Immediate2 <= Immediate1;
-		
 		RD3 <= RD2;	
 		RD4 <= RD3;	   
-		DataMemory <= B;
+		
 		
 		EXE_signals <= signals [10:0];
 	 	MEM_signals <= EXE_signals[7:0];
-	 	WB_signals <= MEM_signals[0]; 
-		
+	 	WB_signals <= MEM_signals[0];  
+		 
+		Immediate2 <= Immediate1;
+		DataMemory <= B;	
     end
 	
 	

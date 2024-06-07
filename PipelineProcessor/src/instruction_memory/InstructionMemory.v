@@ -18,7 +18,7 @@ module InstructionMemory(
         instructionMemory[0] = {AND, R4, R6, R7, 3'b000};  	 
 		instructionMemory[1] = {ADD, R6, R4, R2, 3'b000};  
 		instructionMemory[2] = {SUB, R5, R4, R5, 3'b000};
-//		instructionMemory[3] = {SV , R5, 1'b0 , 8'hFF};
+		instructionMemory[3] = {SV , R1, 1'b0 , 8'hFF};
 		     
     end
 

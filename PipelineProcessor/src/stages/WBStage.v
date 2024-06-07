@@ -5,7 +5,7 @@ module WBStage (
 	output reg [15:0] DataBus,
 	output reg [2:0] DestinationRegister);
 	  
-	always @(posedge clk) begin
+	always @(*) begin
 		DataBus	<=	DataWB ;
 		DestinationRegister  <= RD4;
 	end

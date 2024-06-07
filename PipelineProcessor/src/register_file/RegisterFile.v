@@ -19,7 +19,6 @@ module RegisterFile(
     end
 
     always @(posedge clk) begin
-		#1
         if (enableWrite && (RW != 3'b000)) begin 
             registersArray[RW] = BusW;
         end
@@ -27,13 +26,13 @@ module RegisterFile(
 
     initial begin
         registersArray[0] <= 16'h0000;
-        registersArray[1] <= 16'h0002;
+        registersArray[1] <= 16'h0001;
         registersArray[2] <= 16'h0003;
         registersArray[3] <= 16'h0000;
         registersArray[4] <= 16'h0000;
         registersArray[5] <= 16'h0002;
-        registersArray[6] <= 16'h000F;
-        registersArray[7] <= 16'h000A;
+        registersArray[6] <= 16'h0007;
+        registersArray[7] <= 16'h0002;
     end	 
 	
 	initial begin
