@@ -24,7 +24,7 @@ module RegisterFile(
     end
 
     initial begin
-        registersArray[0] <= 16'h0007;
+        registersArray[0] <= 16'h0000;
         registersArray[1] <= 16'h0002;
         registersArray[2] <= 16'h0003;
         registersArray[3] <= 16'h0000;

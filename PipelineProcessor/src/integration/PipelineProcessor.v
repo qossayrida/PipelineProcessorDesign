@@ -33,7 +33,7 @@ module PipelineProcessor ();
 	wire [15:0] NPC;
 	reg [15:0] PC1,PC2;
 	reg [15:0] DataWB;
-	reg [2:0] RD2,RD3,RD4,DestinationRegister;
+	reg [2:0] RD2,RD3,RD4,DestinationRegister,RA,RB;
 	reg [15:0] Immediate1 , Immediate2,A,B;
 	reg [15:0] AluResult , DataMemory ,DataBus;
 	
@@ -88,8 +88,8 @@ module PipelineProcessor ();
     // Hazard Detection
     HazardDetect hazard_detect (
         .opCode(instruction[15:12]),
-        .RS1(instruction[8:6]), 
-        .RS2(instruction[5:3]),  
+        .RS1(RA), 
+        .RS2(RB),  
         .Rd2(RD2),
         .Rd3(RD3),
         .Rd4(RD4),
@@ -149,6 +149,8 @@ module PipelineProcessor ();
         .A(A),
         .B(B),
         .RD2(RD2),
+		.RA(RA),
+		.RB(RB),
         .gt(GT),
         .lt(LT),
         .eq(EQ)

@@ -16,13 +16,11 @@ module IDStage (
     output reg [15:0] Immediate1,
     output reg [15:0] A,
     output reg [15:0] B,
-    output reg [2:0] RD2,
+    output reg [2:0] RD2,RA,RB,
 	output reg gt,
     output reg lt,
-    output reg eq
+    output reg eq,
 );
-
-	reg [2:0] RA,RB;
 	
     // Internal wires for extended immediate values
     wire [15:0] extended_imm;
@@ -137,7 +135,7 @@ module IDStage_TB;
     wire [15:0] Immediate1;
     wire [15:0] A;
     wire [15:0] B;
-    wire [2:0] RD2;
+    wire [2:0] RD2,RA,RB;
     wire gt;
     wire lt;
     wire eq;
@@ -163,6 +161,8 @@ module IDStage_TB;
         .A(A),
         .B(B),
         .RD2(RD2),
+		.RA(RA),
+		.RB(RB),
         .gt(gt),
         .lt(lt),
         .eq(eq)

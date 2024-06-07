@@ -7,7 +7,7 @@ module MainAluControl (
 // SRC1   SRC2   RegDst   ExtOp   ExtPlace   AluSRC   ALUOP{2}  DataInSrc  MemRd   MemWr  NumOfByte{2}   WBdata{2}  RegWr
 
 always @ (*) begin
-	
+
     if (stall == 0) begin
       	case (opCode)
             AND:  signlas <= {1'b0 , 1'b1 , 1'b0 , 1'bx , 1'bx , 1'b0 , 2'b00 , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b01 , 1'b1};

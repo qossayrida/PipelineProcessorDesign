@@ -39,5 +39,8 @@ module DataMemory (
 			
         end 
     end
-
+	
+	initial begin
+		 #80 $display("%0t  ==> memory[0]=",$time,memory[0]);
+	end
 endmodule
