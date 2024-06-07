@@ -120,7 +120,8 @@ module HazardDetect (
 	output reg [1:0] ForwardA,ForwardB
 ); 
 
-	always @(*) begin  
+	always @(*) begin 
+	#1
         // ForwardA logic
         if ((RS1 != 0) && (RS1 == Rd2) && EX_RegWr) 
             ForwardA = 1;

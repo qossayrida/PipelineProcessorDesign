@@ -88,8 +88,8 @@ module PipelineProcessor ();
     // Hazard Detection
     HazardDetect hazard_detect (
         .opCode(instruction[15:12]),
-        .RS1(instruction[11:9]), // Assuming RS1 is bits 11-9
-        .RS2(instruction[8:6]),  // Assuming RS2 is bits 8-6
+        .RS1(instruction[8:6]), 
+        .RS2(instruction[5:3]),  
         .Rd2(RD2),
         .Rd3(RD3),
         .Rd4(RD4),

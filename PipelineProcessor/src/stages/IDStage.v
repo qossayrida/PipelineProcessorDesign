@@ -90,8 +90,8 @@ module IDStage (
     end		  
 	
 	
-	always @(*) begin	
-		     
+	always @(posedge clk) begin	
+		#1     
         if (ForwardA==0) 
 			A <= BusA;
 		else if (ForwardA==1)

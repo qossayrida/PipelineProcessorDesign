@@ -26,16 +26,16 @@ module RegisterFile(
     initial begin
         registersArray[0] <= 16'h0007;
         registersArray[1] <= 16'h0002;
-        registersArray[2] <= 16'h0000;
+        registersArray[2] <= 16'h0003;
         registersArray[3] <= 16'h0000;
         registersArray[4] <= 16'h0000;
-        registersArray[5] <= 16'h0000;
-        registersArray[6] <= 16'h0000;
+        registersArray[5] <= 16'h0002;
+        registersArray[6] <= 16'h0007;
         registersArray[7] <= 16'h000A;
     end	 
 	
 	initial begin
-		#60 $display("R4 = %b , R6 = %b ,R7 = %b",   registersArray[4],registersArray[6],registersArray[7]);
+		#70 $display("%0t  ==> R4 = %b , R5 = %b , R6 = %b ,R7 = %b",$time,registersArray[4],registersArray[5],registersArray[6],registersArray[7]);
 	end 
 
 endmodule
