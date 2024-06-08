@@ -59,10 +59,18 @@ module IDStage (
     ); 
 	
 	
-	assign RA = signals[4] ? 3'b000 : instruction[8:6];	
-	assign RB = signals[3] ? instruction[5:3] : instruction[11:9];
-
     always @(posedge clk) begin
+		#1fs  // wait control signal to be genarated 
+		
+		if (signals[4])
+			RA <= 3'b000 ;
+		else
+			RA <= instruction[8:6];
+			
+		if (signals[3])
+			RB <= instruction[5:3];
+		else
+			RB <= instruction[11:9];
 				
 		if (signals[2])
 			RD2 <= 3'b111;
@@ -100,6 +108,11 @@ module IDStage (
 			B <= MemoryResult; 
 		else 
 			B <= WBResult;
+	end	
+	
+	
+	initial begin 
+		 $monitor("%0t ==> ForwardA=%d  , ForwardB =%d",$time,ForwardA,ForwardB);
 	end
 	
 endmodule

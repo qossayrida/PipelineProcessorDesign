@@ -21,7 +21,11 @@ module PipelineProcessor ();
 	//******************************************************
 	
     
-	reg [15:0] instruction, I_TypeImmediate, J_TypeImmediate, ReturnAddress;
+	wire [15:0] instruction; 
+	reg [15:0] IR;
+	
+	wire [15:0] I_TypeImmediate, J_TypeImmediate, ReturnAddress;
+	
 	reg stall, GT, LT, EQ, kill;
 	reg [1:0] PcSrc,ForwardA, ForwardB;
     reg [15:0] signals;
@@ -46,13 +50,18 @@ module PipelineProcessor ();
 	
 	
 	always @(posedge clk) begin
-		 
+		IR <= instruction; 
+		
 		PC2 <= PC1;
 		RD3 <= RD2;	
 		RD4 <= RD3;	   
 		
-
-		EXE_signals <= signals [10:0];
+		
+		if (!stall)
+			EXE_signals <= signals [10:0];
+		else 
+			EXE_signals <= 0;
+			
 	 	MEM_signals <= EXE_signals[7:0];
 	 	WB_signals <= MEM_signals[0];  
 		 
@@ -69,9 +78,9 @@ module PipelineProcessor ();
 
     // Control Unit
     MainAluControl main_alu_control (
+		.clk(clk),
         .opCode(instruction[15:12]),
         .mode(instruction[5]),
-        .stall(stall),
         .signlas(signals)
     );
 
@@ -135,7 +144,7 @@ module PipelineProcessor ();
         .ForwardB(ForwardB),
         .WB_signals(WB_signals),
         .signals(signals[15:11]), // Passing relevant bits of signals
-        .instruction(instruction),
+        .instruction(IR),
         .NPC(NPC),
         .AluResult(AluResult),
         .MemoryResult(DataWB), 
