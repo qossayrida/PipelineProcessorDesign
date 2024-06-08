@@ -113,6 +113,7 @@ module PipelineProcessor ();
     IFStage if_stage (
 	.clk(clk),
 	.stall(stall),
+	.kill(kill),
     .PCsrc(PcSrc),
     .I_TypeImmediate(I_TypeImmediate),
     .J_TypeImmediate(J_TypeImmediate),

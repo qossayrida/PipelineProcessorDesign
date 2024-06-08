@@ -1,5 +1,5 @@
 module InstructionMemory(
-	input wire clk, 
+	input wire clk,kill, 
 	input wire [15:0] address, 
 	output reg [0:15] instruction
 );
@@ -9,9 +9,11 @@ module InstructionMemory(
 
 
 	always @(posedge clk) 
-		#1fs // wait the value for PC
-		instruction <= instructionMemory[address[15:0]]; 
-
+		#1fs 	// wait the value for PC
+		if (!kill)
+			instruction <= instructionMemory[address[15:0]];
+		else
+			instruction <= {ADD, R1, R1, R0, 3'b000};
 
     initial begin
         // R-type
@@ -39,7 +41,8 @@ module instructionMemory_TB;
 
     // Instantiate InstructionMemory module
     InstructionMemory insMem (
-        .clk(clock), 
+		.clk(clock),
+		.kill(kill),
         .address(address), 
         .instruction(instruction)
     );

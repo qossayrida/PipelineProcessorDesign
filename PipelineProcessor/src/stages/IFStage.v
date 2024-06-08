@@ -1,6 +1,6 @@
 module IFStage (
 	input clk,
-	input stall,
+	input stall,kill,
 	input wire [1:0] PCsrc,
 	input[15:0] I_TypeImmediate,J_TypeImmediate,ReturnAddress, 
 	output reg [15:0] NPC, instruction );
@@ -16,26 +16,28 @@ module IFStage (
 	assign NPC = PC + 16'd1;
   
   	InstructionMemory instructions (
-    	.clk(clk),
+		  .clk(clk),
+		  .kill(kill),
     	.address(PC),
     	.instruction(instruction)
   	);	
 	  
 	always @(posedge clk) begin
-        case (PCsrc)
-            00: begin     
-                PC = NPC;      
-            end  
-            01:  begin
-				PC = J_TypeImmediate;    
-            end  
-            10: begin   
-                PC = I_TypeImmediate;
-            end  
-            11: begin
-                PC = ReturnAddress;  
-            end  
-        endcase	 
+		if (!stall)
+        	case (PCsrc)
+            	00: begin     
+                	PC = NPC;      
+            	end  
+	            01:  begin
+					PC = J_TypeImmediate;    
+	            end  
+	            10: begin   
+	                PC = I_TypeImmediate;
+	            end  
+	            11: begin
+	                PC = ReturnAddress;  
+	            end  
+	        endcase	 	
 	end
   
 endmodule 	 
@@ -43,7 +45,7 @@ endmodule
 
 module IFStage_TB;
     // Inputs
-    reg clk;
+    reg clk,stall;
     reg [1:0] PCsrc;
     reg [15:0] I_TypeImmediate;
     reg [15:0] J_TypeImmediate;
@@ -58,6 +60,7 @@ module IFStage_TB;
     IFStage uut (
 		.clk(clk),
 		.stall(stall),
+		.kill(kill),
 		.PCsrc(PCsrc),
 		.I_TypeImmediate(I_TypeImmediate),
 		.J_TypeImmediate(J_TypeImmediate),
