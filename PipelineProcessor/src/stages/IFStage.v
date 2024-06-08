@@ -16,8 +16,9 @@ module IFStage (
 	assign NPC = PC + 16'd1;
   
   	InstructionMemory instructions (
-		  .clk(clk),
-		  .kill(kill),
+		.clk(clk),
+		.kill(kill),
+		.stall(stall),
     	.address(PC),
     	.instruction(instruction)
   	);	
@@ -37,7 +38,8 @@ module IFStage (
 	            11: begin
 	                PC = ReturnAddress;  
 	            end  
-	        endcase	 	
+	        endcase		   
+			
 	end
   
 endmodule 	 

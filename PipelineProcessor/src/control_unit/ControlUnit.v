@@ -91,6 +91,10 @@ module PcControl (
     input GT,LT,EQ,
     output reg PcSrc,kill 
 ); 
+
+	initial begin 
+	 	kill=0;
+	end
 	
 	always @ (*) begin	
 		if ((opCode==BranchGreater && GT) || (opCode==BranchLess && LT) || (opCode==BranchEqual && EQ) || (opCode==BranchNotEqual && !EQ)) begin

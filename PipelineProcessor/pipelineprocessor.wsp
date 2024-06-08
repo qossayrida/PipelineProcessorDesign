@@ -14,8 +14,8 @@ ZoomFactor=0
 Frame=0
 WindowWorkspaceInfo="LAAAAAAAAAADAAAA/////////////////////80AAACZAAAA/wUAAIICAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIAAAAyAAAAAAAAAAAAAAAyAAAAMgAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAEAAAAAAAAAAAAAAA=="
 [COMPILESTATUS|.\src\integration\PipelineProcessor.v]
-FileTimeLow=2237580189
-FileTimeHigh=31111616
+FileTimeLow=93986660
+FileTimeHigh=31111629
 Status=Compiled
 [COMPILESTATUS|.\src\ClockGenerator.v]
 FileTimeLow=3046949957
@@ -46,8 +46,8 @@ FileTimeLow=4227704787
 FileTimeHigh=31108203
 Status=Modified
 [COMPILESTATUS|.\src\instruction_memory\InstructionMemory.v]
-FileTimeLow=1826713663
-FileTimeHigh=31111617
+FileTimeLow=3134558889
+FileTimeHigh=31111628
 Status=Compiled
 [COMPILESTATUS|.\src\RegisterFile.v]
 FileTimeLow=139884964
@@ -62,8 +62,8 @@ FileTimeLow=456638646
 FileTimeHigh=31108204
 Status=Modified
 [COMPILESTATUS|.\src\control_unit\ControlUnit.v]
-FileTimeLow=2530582365
-FileTimeHigh=31111476
+FileTimeLow=3190379876
+FileTimeHigh=31111618
 Status=Compiled
 [COMPILESTATUS|.\src\ALU.v]
 FileTimeLow=608753057
@@ -90,8 +90,8 @@ FileTimeLow=1008176385
 FileTimeHigh=31109989
 Status=Modified
 [COMPILESTATUS|.\src\stages\IFStage.v]
-FileTimeLow=1553486790
-FileTimeHigh=31111617
+FileTimeLow=118434774
+FileTimeHigh=31111622
 Status=Compiled
 [COMPILESTATUS|.\src\mux.v]
 FileTimeLow=1205480412
@@ -154,8 +154,8 @@ FileTimeLow=887558754
 FileTimeHigh=31111245
 Status=Modified
 [COMPILESTATUS|.\src\stages\EXEStage.v]
-FileTimeLow=3651105176
-FileTimeHigh=31111450
+FileTimeLow=3138917984
+FileTimeHigh=31111628
 Status=Compiled
 [COMPILESTATUS|.\src\MEMStage.v]
 FileTimeLow=1418503534

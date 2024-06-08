@@ -1,8 +1,8 @@
-Active-HDL 15.0.261.9132 2024-06-08 12:46:03
+Active-HDL 15.0.261.9132 2024-06-08 20:53:17
 
 Elaboration top modules:
 Verilog Module                PipelineProcessor
-SystemVerilog Package         UnitScopePackage_253
+SystemVerilog Package         UnitScopePackage_276
 
 
 -----------------------------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ DataMemory              | pipelineprocessor |      | 15.0.261.9132 (Windows64) |
 -----------------------------------------------------------------------------------------------------
 SystemVerilog Package   | Library           | Info | Compiler Version          | Compilation Options
 -----------------------------------------------------------------------------------------------------
-UnitScopePackage_253    | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+UnitScopePackage_276    | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 -----------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------
@@ -37,3 +37,9 @@ Library                 | Comment
 -----------------------------------------------------------------------------------------------------
 pipelineprocessor       | None
 -----------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+
+
+The performance of simulation is reduced. Version Student Edition

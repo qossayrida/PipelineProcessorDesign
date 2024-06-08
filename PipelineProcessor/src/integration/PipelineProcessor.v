@@ -1,7 +1,7 @@
 module PipelineProcessor ();
 	
-	initial begin		 
-        #110 $finish; 
+	initial begin
+        #150 $finish; 
     end			
 	
 	
@@ -51,7 +51,7 @@ module PipelineProcessor ();
 		RD3 <= RD2;	
 		RD4 <= RD3;	   
 		
-		
+
 		EXE_signals <= signals [10:0];
 	 	MEM_signals <= EXE_signals[7:0];
 	 	WB_signals <= MEM_signals[0];  
@@ -163,7 +163,7 @@ module PipelineProcessor ();
 	//******************************************************
 	
 	EXEStage exe_stage (
-        .clk(clk),
+	.clk(clk),
         .Immediate1(Immediate1),
         .A(A),
         .B(B),
