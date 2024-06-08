@@ -6,7 +6,8 @@ module ALU(
 );
 
 
-always @(*) begin 
+always @(posedge clk) begin
+	#1
         case (ALUop)
             ALU_OP_AND:  Output <= A & B;
             ALU_OP_ADD:  Output <= A + B;
