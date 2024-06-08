@@ -1,5 +1,6 @@
 module IFStage (
-	input clk, 		   
+	input clk,
+	input stall,
 	input wire [1:0] PCsrc,
 	input[15:0] I_TypeImmediate,J_TypeImmediate,ReturnAddress, 
 	output reg [15:0] NPC, instruction );
@@ -55,13 +56,14 @@ module IFStage_TB;
 
     // Instantiate the Unit Under Test (UUT)
     IFStage uut (
-        .clk(clk),
-        .PCsrc(PCsrc),
-        .I_TypeImmediate(I_TypeImmediate),
-        .J_TypeImmediate(J_TypeImmediate),
-        .ReturnAddress(ReturnAddress),
-        .NPC(NPC),
-        .instruction(instruction)
+		.clk(clk),
+		.stall(stall),
+		.PCsrc(PCsrc),
+		.I_TypeImmediate(I_TypeImmediate),
+		.J_TypeImmediate(J_TypeImmediate),
+		.ReturnAddress(ReturnAddress),
+		.NPC(NPC),
+		.instruction(instruction)
     );
 
     // Clock generation

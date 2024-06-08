@@ -21,6 +21,7 @@ module InstructionMemory(
 		instructionMemory[3] = {LBs , R3, R1 ,1'b1, 5'h00};
 		instructionMemory[4] = {LW , R3, R0 ,1'b0, 5'b00001};
 		instructionMemory[5] = {LW , R4, R1 ,1'b0, 5'b00000};
+		instructionMemory[6] = {SW , R4, R2 ,1'b0, 5'b00000};
     end
 
 endmodule

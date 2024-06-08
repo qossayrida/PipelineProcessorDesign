@@ -111,13 +111,14 @@ module PipelineProcessor ();
 	
 	// IF Stage
     IFStage if_stage (
-        .clk(clk),
-        .PCsrc(PcSrc),
-        .I_TypeImmediate(I_TypeImmediate),
-        .J_TypeImmediate(J_TypeImmediate),
-        .ReturnAddress(ReturnAddress),
-        .NPC(NPC),
-        .instruction(instruction)
+	.clk(clk),
+	.stall(stall),
+    .PCsrc(PcSrc),
+    .I_TypeImmediate(I_TypeImmediate),
+    .J_TypeImmediate(J_TypeImmediate),
+    .ReturnAddress(ReturnAddress),
+    .NPC(NPC),
+    .instruction(instruction)
     );
 	
 	

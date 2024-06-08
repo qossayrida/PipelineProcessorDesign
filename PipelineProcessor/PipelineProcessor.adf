@@ -41,6 +41,7 @@ stages/MEMStage.v=-1
 register_file/RegisterFile.v=-1
 data_memory/DataMemory.v=-1
 data_memory/DataMemory.v=-1
+instruction_memory/InstructionMemory.v=-1
 [Files.Data]
 .\src\alu\ALU.v=Verilog Source Code
 .\src\data_memory\DataMemory.v=Verilog Source Code
@@ -66,6 +67,7 @@ data_memory/DataMemory.v=-1
 .\src\register_file\RegisterFile.v=Verilog Source Code
 .\src\data_memory\DataMemory.v=Verilog Source Code
 .\src\data_memory\DataMemory.v=Verilog Source Code
+.\src\instruction_memory\InstructionMemory.v=Verilog Source Code
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel
