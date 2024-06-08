@@ -31,6 +31,8 @@ module PipelineProcessor ();
 	wire [15:0] immediate_ID , immediate_EXE,immediate_MEM;
 	wire [2:0] Rd_ID,Rd_EXE,Rd_MEM,Rd_WB;
 	
+	wire [2:0] RA,RB;
+	
 	wire [15:0] AluResult_EXE,AluResult_MEM;
 	
 	
@@ -83,9 +85,9 @@ module PipelineProcessor ();
         .opCode(inst_ID[15:12]),
         .RS1(RA), 
         .RS2(RB),  
-        .Rd2(RD2),
-        .Rd3(RD3),
-        .Rd4(RD4),
+        .Rd2(Rd_EXE),
+        .Rd3(Rd_MEM),
+        .Rd4(Rd_WB),
         .EX_RegWr(EXE_signals[0]),
         .MEM_RegWr(MEM_signals[0]),
         .WB_RegWr(WB_signals),
@@ -218,10 +220,10 @@ module PipelineProcessor ();
 	
 	MEMStage mem_stage (
         .clk(clk),
-        .AluResult(AluResult),
-        .Immediate2(Immediate2),
-        .PC2(PC2),
-        .DataMemory(DataMemory),
+        .AluResult(AluResult_MEM),
+        .Immediate2(immediate_MEM),
+        .PC2(PC_MEM),
+        .DataMemory(valueB_MEM),
         .signals(MEM_signals[7:1]),
         .DataWB(DataWB_MEM)
     );	
