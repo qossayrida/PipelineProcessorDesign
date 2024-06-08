@@ -2,7 +2,9 @@ module PipelineProcessor ();
 	
 	initial begin
         #150 $finish; 
-    end			
+    end				 
+	
+
 	
 	
 	
@@ -18,56 +20,36 @@ module PipelineProcessor ();
 	
 	//******************************************************
 	//					   registers		
-	//******************************************************
+	//****************************************************** 
+	
+	wire [15:0] inst_IF, inst_ID;
+	wire [15:0] PC_IF, PC_ID, PC_EXE,PC_MEM;
 	
     
-	wire [15:0] instruction; 
-	reg [15:0] IR;
+	wire [15:0] valueA_ID, valueA_EXE;
+	wire [15:0] valueB_ID, valueB_EXE,valueB_MEM;
+	wire [15:0] immediate_ID , immediate_EXE,immediate_MEM;
+	wire [2:0] Rd_ID,Rd_EXE,Rd_MEM,Rd_WB;
 	
-	wire [15:0] I_TypeImmediate, J_TypeImmediate, ReturnAddress;
+	wire [15:0] AluResult_EXE,AluResult_MEM;
 	
-	reg stall, GT, LT, EQ, kill;
-	reg [1:0] PcSrc,ForwardA, ForwardB;
-    reg [15:0] signals;
-	reg [10:0] EXE_signals;
-	reg [7:0]  MEM_signals;
-	reg WB_signals; 
+	
+	wire [15:0] DataWB_MEM,DataWB_WB;
+	
+	wire stall, GT, LT, EQ, kill;
+	wire [1:0] PcSrc,ForwardA, ForwardB;
+	
+	
+    wire [15:0] signals;
+	wire [10:0] EXE_signals;
+	wire [7:0]  MEM_signals;
+	wire WB_signals; 
 	
 
-	wire [15:0] NPC;
-	reg [15:0] PC1,PC2;
-	reg [15:0] DataWB;
-	reg [2:0] RD2,RD3,RD4,DestinationRegister,RA,RB,TargetDestinationRegister;
-	reg [15:0] Immediate1 , Immediate2,A,B;
-	reg [15:0] AluResult , DataMemory ,DataBus;
+	wire [15:0] I_TypeImmediate, J_TypeImmediate, ReturnAddress;
 	
 	
-	initial begin
-	   EXE_signals = 0;
-	   MEM_signals = 0;
-	   WB_signals =0;
-	end
-	
-	
-	always @(posedge clk) begin
-		IR <= instruction; 
-		
-		PC2 <= PC1;
-		RD3 <= RD2;	
-		RD4 <= RD3;	   
-		
-		
-		if (!stall)
-			EXE_signals <= signals [10:0];
-		else 
-			EXE_signals <= 0;
-			
-	 	MEM_signals <= EXE_signals[7:0];
-	 	WB_signals <= MEM_signals[0];  
-		 
-		Immediate2 <= Immediate1;
-		DataMemory <= B;	
-    end
+
 	
 	
 	
@@ -78,15 +60,15 @@ module PipelineProcessor ();
 
     // Control Unit
     MainAluControl main_alu_control (
-		.clk(clk),
-        .opCode(instruction[15:12]),
-        .mode(instruction[5]),
+        .opCode(inst_ID[15:12]),
+        .mode(inst_ID[5]),
+        .stall(stall),
         .signlas(signals)
     );
 
     // PC Control
     PcControl pc_control (
-        .opCode(instruction[15:12]),
+        .opCode(inst_ID[15:12]),
         .stall(stall),
         .GT(GT),
         .LT(LT),
@@ -98,7 +80,7 @@ module PipelineProcessor ();
     // Hazard Detection
     HazardDetect hazard_detect (
 		.clk(clk),
-        .opCode(instruction[15:12]),
+        .opCode(inst_ID[15:12]),
         .RS1(RA), 
         .RS2(RB),  
         .Rd2(RD2),
@@ -116,7 +98,8 @@ module PipelineProcessor ();
 	
 	//******************************************************
 	//					 Pipeline IF stages		
-	//****************************************************** 
+	//******************************************************
+	 
 	
 	// IF Stage
     IFStage if_stage (
@@ -127,9 +110,21 @@ module PipelineProcessor ();
     .I_TypeImmediate(I_TypeImmediate),
     .J_TypeImmediate(J_TypeImmediate),
     .ReturnAddress(ReturnAddress),
-    .NPC(NPC),
-    .instruction(instruction)
-    );
+    .NPC(PC_IF),
+    .instruction(inst_IF)
+    );	   
+	
+	IF2ID IF2ID_registers (
+		.clk(clk),
+		.stall(stall),
+		.PCIN(PC_IF),
+		.instructionIN(inst_IF),
+		
+		//output
+		.PC(PC_ID),
+		.instruction(inst_ID)
+	);
+	
 	
 	
 	//******************************************************
@@ -144,20 +139,19 @@ module PipelineProcessor ();
         .ForwardB(ForwardB),
         .WB_signals(WB_signals),
         .signals(signals[15:11]), // Passing relevant bits of signals
-        .instruction(IR),
-        .NPC(NPC),
-        .AluResult(AluResult),
-        .MemoryResult(DataWB), 
-        .WBResult(DataBus), 
-        .DestinationRegister(DestinationRegister),
+        .instruction(inst_ID),
+        .NPC(PC_ID),
+        .AluResult(AluResult_EXE),
+        .MemoryResult(DataWB_MEM), 
+        .WBResult(DataWB_WB), 
+        .DestinationRegister(Rd_WB),
         .I_TypeImmediate(I_TypeImmediate),
         .J_TypeImmediate(J_TypeImmediate),
         .ReturnAddress(ReturnAddress),
-        .PC1(PC1),
-        .Immediate1(Immediate1),
-        .A(A),
-        .B(B),
-        .RD2(RD2),
+        .Immediate1(immediate_ID),
+        .A(valueA_ID),
+        .B(valueB_ID),
+        .RD2(Rd_ID),
 		.RA(RA),
 		.RB(RB),
         .gt(GT),
@@ -165,20 +159,56 @@ module PipelineProcessor ();
         .eq(EQ)
     );
 	
-	
-	
+	ID2EXE ID2EXE_registers (
+		.clk(clk),
+		.stall(stall),
+		.valueAIN(valueA_ID) ,
+		.valueBIN(valueB_ID),
+		.immIN(immediate_ID),
+		.PCIN(PC_ID),
+		.RdIN(Rd_ID),
+		.EXE_signals_IN(signals[10:0]),
+		
+		// output
+		.valueA(valueA_EXE),
+		.valueB(valueB_EXE),
+		.imm(immediate_EXE),
+		.PC(PC_EXE),
+		.Rd(Rd_EXE),
+		.EXE_signals(EXE_signals)
+	);	  
+		
 	//******************************************************
 	//					Pipeline EXE stages		
 	//******************************************************
 	
 	EXEStage exe_stage (
-	.clk(clk),
-        .Immediate1(Immediate1),
-        .A(A),
-        .B(B),
+		.clk(clk),
+        .Immediate1(immediate_EXE),
+        .A(valueA_EXE),
+        .B(valueB_EXE),
         .signals(EXE_signals[10:8]),
-        .AluResult(AluResult)
-    );
+        .AluResult(AluResult_EXE)
+    ); 
+	
+	EXE2MEM EXE2MEM_registers (
+		.clk(clk),
+		.valueFromALU_IN(AluResult_EXE),
+		.valueFromReg_IN(valueB_EXE),
+		.immIN(immediate_EXE),
+		.PCIN(PC_EXE),
+		.RdIN(Rd_EXE),
+		.MEM_signals_IN(EXE_signals[7:0]),
+		
+		// output
+		.valueFromALU(AluResult_MEM),
+		.valueFromReg(valueB_MEM),
+		.imm(immediate_MEM),
+		.PC(PC_MEM),
+		.Rd(Rd_MEM),
+		.MEM_signals(MEM_signals)
+	);
+	
 	
 	
 	//******************************************************
@@ -193,21 +223,18 @@ module PipelineProcessor ();
         .PC2(PC2),
         .DataMemory(DataMemory),
         .signals(MEM_signals[7:1]),
-        .DataWB(DataWB)
-    );
+        .DataWB(DataWB_MEM)
+    );	
 	
-	
-	//******************************************************
-	//					 Pipeline WB stages		
-	//****************************************************** 
-	
-	WBStage wb_stage(
+	MEM2WB MEM2WB_registers(
 	.clk(clk),
-	.DataWB(DataWB),
-	.RD4(RD4),
-	.DataBus(DataBus),
-	.DestinationRegister(DestinationRegister)
-	); 
+	.DataWB_IN(DataWB_MEM),
+	.Rd_IN(Rd_MEM),
+	.WB_signal_IN(MEM_signals[0]),
+	.DataWB(DataWB_WB),
+	.Rd(Rd_WB),
+	.WB_signal(WB_signals)
+	);
 	
 	
 endmodule

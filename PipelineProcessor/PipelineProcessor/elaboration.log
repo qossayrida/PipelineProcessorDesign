@@ -1,8 +1,8 @@
-Active-HDL 15.0.261.9132 2024-06-08 21:24:45
+Active-HDL 15.0.261.9132 2024-06-09 02:27:38
 
 Elaboration top modules:
 Verilog Module                PipelineProcessor
-SystemVerilog Package         UnitScopePackage_288
+SystemVerilog Package         UnitScopePackage_326
 
 
 -----------------------------------------------------------------------------------------------------
@@ -14,10 +14,13 @@ MainAluControl          | pipelineprocessor |      | 15.0.261.9132 (Windows64) |
 PcControl               | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 HazardDetect            | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 IFStage                 | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+IF2ID                   | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 IDStage                 | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+ID2EXE                  | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 EXEStage                | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+EXE2MEM                 | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 MEMStage                | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-WBStage                 | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+MEM2WB                  | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 InstructionMemory       | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 Extender                | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 RegisterFile            | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
@@ -29,7 +32,7 @@ DataMemory              | pipelineprocessor |      | 15.0.261.9132 (Windows64) |
 -----------------------------------------------------------------------------------------------------
 SystemVerilog Package   | Library           | Info | Compiler Version          | Compilation Options
 -----------------------------------------------------------------------------------------------------
-UnitScopePackage_288    | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+UnitScopePackage_326    | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 -----------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------

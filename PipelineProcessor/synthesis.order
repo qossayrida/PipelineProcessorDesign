@@ -16,3 +16,7 @@ i<>.\src\Extender.v
 i<>.\src\EXEStage.v
 i<>.\src\MEMStage.v
 i<>.\src\WBStage.v
+i<>.\src\IF_2_ID.v
+i<>.\src\ID_2_EXE.v
+i<>.\src\EXE_2_MEM.v
+i<>.\src\MEM_2_WB.v
