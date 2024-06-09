@@ -48,5 +48,6 @@ module DataMemory (
 	
 	initial begin
 		$monitor("%0t  ==> memory[0]=%b , memory[1]=%b , memory[2]=%b , memory[3]=%b , memory[4]=%b",$time,memory[0],memory[1],memory[2],memory[3],memory[4]);
+		$monitor("%0t  ==> memory[5]=%b , memory[6]=%b , memory[7]=%b , memory[8]=%b , memory[9]=%b",$time,memory[5],memory[6],memory[7],memory[8],memory[9]);
 	end
 endmodule

@@ -6,10 +6,6 @@
 .\src\integration\parameter.v
 .\src\integration\ClockGenerator.v
 .\src\integration\PipelineProcessor.v
-.\src\stages\MEMStage.v
-.\src\stages\EXEStage.v
-.\src\stages\IDStage.v
-.\src\stages\IFStage.v
 .\src\utilities\mux.v
 .\src\utilities\Extender.v
 .\src\utilities\Compare.v
@@ -17,3 +13,7 @@
 .\src\register\EXE_2_MEM.v
 .\src\register\ID_2_EXE.v
 .\src\register\IF_2_ID.v
+.\src\stages\MEMStage.v
+.\src\stages\EXEStage.v
+.\src\stages\IDStage.v
+.\src\stages\IFStage.v

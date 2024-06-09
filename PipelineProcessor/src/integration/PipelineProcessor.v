@@ -1,7 +1,7 @@
 module PipelineProcessor ();
 	
 	initial begin
-        #150 $finish; 
+        #170 $finish; 
     end				 
 	
 
