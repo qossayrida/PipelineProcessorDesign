@@ -7,10 +7,7 @@ module IFStage (
 	
 	reg [15:0] PC;
 	wire [15:0] instruction_wire;	
-
 	
-	assign NPC = PC + 16'd1;
-  
   	InstructionMemory instructions (
 		.clk(clk),
 		.kill(kill),
@@ -25,13 +22,15 @@ module IFStage (
 	    .in2({ADD, R1, R1, R0, 3'b000}),
 	    .sel(kill),
 	    .out(instruction)
-  	);
+  	);	
+	  
+	  
 	  
 	always @(posedge clk) begin
-		if (!stall)
-        	case (PCsrc)
+		if (!stall) 
+		  	case (PCsrc)
             	0: begin     
-                	PC <= NPC;      
+                	PC <= PC + 16'd1;      
             	end  
 	            1:  begin
 					PC <= J_TypeImmediate;    
@@ -42,14 +41,16 @@ module IFStage (
 	            11: begin
 	                PC <= ReturnAddress;  
 	            end  
-	        endcase		   
+	        endcase
+
 		 
+		NPC = PC + 16'd1;
 	end
 	
 	
 	initial begin
 		PC = 16'd0;
-		
+		$monitor("%0t ==> kill= %b",$time,kill);
 		$monitor("%0t ==> PC= %b",$time,PC); 
 	end
   
