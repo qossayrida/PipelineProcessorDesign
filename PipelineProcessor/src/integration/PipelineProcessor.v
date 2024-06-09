@@ -81,7 +81,6 @@ module PipelineProcessor ();
 
     // Hazard Detection
     HazardDetect hazard_detect (
-		.clk(clk),
         .opCode(inst_ID[15:12]),
         .RS1(RA), 
         .RS2(RB),  
@@ -220,12 +219,12 @@ module PipelineProcessor ();
 	
 	MEMStage mem_stage (
         .clk(clk),
-        .AluResult(AluResult_MEM),
-        .Immediate2(immediate_MEM),
-        .PC2(PC_MEM),
-        .DataMemory(valueB_MEM),
+        .AluResult_MEM(AluResult_MEM),
+        .immediate_MEM(immediate_MEM),
+		.valueB_MEM(valueB_MEM),
+        .PC_MEM(PC_MEM),
         .signals(MEM_signals[7:1]),
-        .DataWB(DataWB_MEM)
+        .DataWB_MEM(DataWB_MEM)
     );	
 	
 	MEM2WB MEM2WB_registers(

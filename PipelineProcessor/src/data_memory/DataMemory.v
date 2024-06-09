@@ -25,26 +25,28 @@ module DataMemory (
             // Writing 16-bit data to two consecutive memory locations
 			if (numberOfByte == 2'b10)
             	memory[address + 1] <= in[15:8];
-				
-		
-        end	else if (rdEnable) begin
-			
-            if (numberOfByte == 2'b00) begin
-                // Reading 16-bit data from two consecutive memory locations
-                out = {memory[address + 1], memory[address]};
-            end else if (numberOfByte == 2'b01) begin
-                // Reading 8-bit data from one memory location with MSB = 00000000
-                out = {8'b00000000, memory[address]};	 
-			end else if (numberOfByte == 2'b10) begin
-                // Sign extend memory[address] and store to out
-            	out = {{8{memory[address][7]}}, memory[address]};
-            end
 			
         end 
+    end	
+	
+	
+	always @(posedge clk) begin
+		#1	
+ 	 	if (rdEnable)	
+         	if (numberOfByte == 2'b00) begin
+                // Reading 16-bit data from two consecutive memory locations
+                out = {memory[address + 1], memory[address]};
+         	end else if (numberOfByte == 2'b01) begin
+                // Reading 8-bit data from one memory location with MSB = 00000000
+                out = {8'b00000000, memory[address]};	 
+		 	end else if (numberOfByte == 2'b10) begin
+                // Sign extend memory[address] and store to out
+            	out = {{8{memory[address][7]}}, memory[address]};
+        	 end
+			
     end
 	
 	initial begin
-		$monitor("%0t  ==> memory[1]=%b , memory[2]=%b",$time,memory[1],memory[2]);
-		$monitor("%0t  ==> memory[3]=%b , memory[4]=%b",$time,memory[3],memory[4]);
+		$monitor("%0t  ==> memory[0]=%b , memory[1]=%b , memory[2]=%b , memory[3]=%b , memory[4]=%b",$time,memory[0],memory[1],memory[2],memory[3],memory[4]);
 	end
 endmodule

@@ -7,11 +7,7 @@ module IFStage (
 	
 	reg [15:0] PC;
 		
-	initial begin
-		PC = 16'd0;
-		
-		$monitor("PC = %b",   PC);
-	end	
+
 	
 //	assign NPC = PC + 16'd1;
   
@@ -45,7 +41,9 @@ module IFStage (
 	
 	
 	initial begin
-		$monitor("%0t ==> PC= %d",$time,PC); 
+		PC = 16'd0;
+		
+		$monitor("%0t ==> PC= %b",$time,PC); 
 	end
   
 endmodule 	 

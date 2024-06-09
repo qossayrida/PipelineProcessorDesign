@@ -1194,4 +1194,1599 @@ run
 # RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
 # KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
 # KERNEL: stopped at time: 150 ps
-# VSIM: Simulation has finished. There are no more test vectors to
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (53, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (71, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (53, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (71, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (53, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (71, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Warning: VCP2590 integration/PipelineProcessor.v : (225, 1): Undefined port PC2 in module MEMStage.
+# Warning: VCP2590 integration/PipelineProcessor.v : (227, 1): Undefined port DataWB in module MEMStage.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 2 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (53, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (71, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (53, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (71, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4762 kB (elbread=427 elab2=4199 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  2:57 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0 ==> PC=     0
+# KERNEL: 0  ==> R0=    0  ,  R1=    1  ,R2=    3  ,  R3=    0 , R4=    0  ,  R5=    2  ,  R6=    7  ,  R7 =     2
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: PC = 0000000000000001
+# KERNEL: 5 ==> PC=     1
+# KERNEL: PC = 0000000000000010
+# KERNEL: 15 ==> PC=     2
+# KERNEL: PC = 0000000000000011
+# KERNEL: 25 ==> PC=     3
+# KERNEL: PC = 0000000000000100
+# KERNEL: 35 ==> PC=     4
+# KERNEL: PC = 0000000000000101
+# KERNEL: 45 ==> PC=     5
+# KERNEL: 50  ==> R0=    0  ,  R1=    1  ,R2=    3  ,  R3=    0 , R4=    2  ,  R5=    2  ,  R6=    7  ,  R7 =     2
+# KERNEL: PC = 0000000000000110
+# KERNEL: 55 ==> PC=     6
+# KERNEL: 60  ==> R0=    0  ,  R1=    1  ,R2=    3  ,  R3=    0 , R4=    2  ,  R5=    2  ,  R6=    5  ,  R7 =     2
+# KERNEL: PC = 0000000000000111
+# KERNEL: 65 ==> PC=     7
+# KERNEL: 70  ==> R0=    0  ,  R1=    1  ,R2=    3  ,  R3=    0 , R4=    2  ,  R5=65534  ,  R6=    5  ,  R7 =     2
+# KERNEL: PC = 0000000000001000
+# KERNEL: 75 ==> PC=     8
+# KERNEL: PC = 0000000000001001
+# KERNEL: 85 ==> PC=     9
+# KERNEL: PC = 0000000000001010
+# KERNEL: 95 ==> PC=    10
+# KERNEL: PC = 0000000000001011
+# KERNEL: 105 ==> PC=    11
+# KERNEL: PC = 0000000000001100
+# KERNEL: 115 ==> PC=    12
+# KERNEL: PC = 0000000000001101
+# KERNEL: 125 ==> PC=    13
+# KERNEL: PC = 0000000000001110
+# KERNEL: 135 ==> PC=    14
+# KERNEL: PC = 0000000000001111
+# KERNEL: 145 ==> PC=    15
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (53, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (71, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4762 kB (elbread=427 elab2=4199 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  2:58 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0 ==> PC=     0
+# KERNEL: 0  ==> R0=0  ,  R1=1  ,R2=3  ,  R3=0 , R4=0  ,  R5=2  ,  R60=    7  ,  R7 =2
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: PC = 0000000000000001
+# KERNEL: 5 ==> PC=     1
+# KERNEL: PC = 0000000000000010
+# KERNEL: 15 ==> PC=     2
+# KERNEL: PC = 0000000000000011
+# KERNEL: 25 ==> PC=     3
+# KERNEL: PC = 0000000000000100
+# KERNEL: 35 ==> PC=     4
+# KERNEL: PC = 0000000000000101
+# KERNEL: 45 ==> PC=     5
+# KERNEL: 50  ==> R0=0  ,  R1=1  ,R2=3  ,  R3=0 , R4=2  ,  R5=2  ,  R60=    7  ,  R7 =2
+# KERNEL: PC = 0000000000000110
+# KERNEL: 55 ==> PC=     6
+# KERNEL: 60  ==> R0=0  ,  R1=1  ,R2=3  ,  R3=0 , R4=2  ,  R5=2  ,  R60=    5  ,  R7 =2
+# KERNEL: PC = 0000000000000111
+# KERNEL: 65 ==> PC=     7
+# KERNEL: 70  ==> R0=0  ,  R1=1  ,R2=3  ,  R3=0 , R4=2  ,  R5=65534  ,  R60=    5  ,  R7 =2
+# KERNEL: PC = 0000000000001000
+# KERNEL: 75 ==> PC=     8
+# KERNEL: PC = 0000000000001001
+# KERNEL: 85 ==> PC=     9
+# KERNEL: PC = 0000000000001010
+# KERNEL: 95 ==> PC=    10
+# KERNEL: PC = 0000000000001011
+# KERNEL: 105 ==> PC=    11
+# KERNEL: PC = 0000000000001100
+# KERNEL: 115 ==> PC=    12
+# KERNEL: PC = 0000000000001101
+# KERNEL: 125 ==> PC=    13
+# KERNEL: PC = 0000000000001110
+# KERNEL: 135 ==> PC=    14
+# KERNEL: PC = 0000000000001111
+# KERNEL: 145 ==> PC=    15
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (53, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (71, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4762 kB (elbread=427 elab2=4199 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  2:59 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0 ==> PC=     0
+# KERNEL: 0  ==> R0=0  ,  R1=1  ,R2=11  ,  R3=0 , R4=0  ,  R5=10  ,  R60=0000000000000111  ,  R7 =10
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: PC = 0000000000000001
+# KERNEL: 5 ==> PC=     1
+# KERNEL: PC = 0000000000000010
+# KERNEL: 15 ==> PC=     2
+# KERNEL: PC = 0000000000000011
+# KERNEL: 25 ==> PC=     3
+# KERNEL: PC = 0000000000000100
+# KERNEL: 35 ==> PC=     4
+# KERNEL: PC = 0000000000000101
+# KERNEL: 45 ==> PC=     5
+# KERNEL: 50  ==> R0=0  ,  R1=1  ,R2=11  ,  R3=0 , R4=10  ,  R5=10  ,  R60=0000000000000111  ,  R7 =10
+# KERNEL: PC = 0000000000000110
+# KERNEL: 55 ==> PC=     6
+# KERNEL: 60  ==> R0=0  ,  R1=1  ,R2=11  ,  R3=0 , R4=10  ,  R5=10  ,  R60=0000000000000101  ,  R7 =10
+# KERNEL: PC = 0000000000000111
+# KERNEL: 65 ==> PC=     7
+# KERNEL: 70  ==> R0=0  ,  R1=1  ,R2=11  ,  R3=0 , R4=10  ,  R5=1111111111111110  ,  R60=0000000000000101  ,  R7 =10
+# KERNEL: PC = 0000000000001000
+# KERNEL: 75 ==> PC=     8
+# KERNEL: PC = 0000000000001001
+# KERNEL: 85 ==> PC=     9
+# KERNEL: PC = 0000000000001010
+# KERNEL: 95 ==> PC=    10
+# KERNEL: PC = 0000000000001011
+# KERNEL: 105 ==> PC=    11
+# KERNEL: PC = 0000000000001100
+# KERNEL: 115 ==> PC=    12
+# KERNEL: PC = 0000000000001101
+# KERNEL: 125 ==> PC=    13
+# KERNEL: PC = 0000000000001110
+# KERNEL: 135 ==> PC=    14
+# KERNEL: PC = 0000000000001111
+# KERNEL: 145 ==> PC=    15
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (53, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (71, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4762 kB (elbread=427 elab2=4199 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  3:00 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: PC = 0000000000000000
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,R2=0000000000000011  ,  R3=0000000000000000 , R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7 =0000000000000010
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: PC = 0000000000000001
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: PC = 0000000000000010
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: PC = 0000000000000011
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: PC = 0000000000000100
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: PC = 0000000000000101
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R0=0000000000000000  ,  R1=0000000000000001  ,R2=0000000000000011  ,  R3=0000000000000000 , R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7 =0000000000000010
+# KERNEL: PC = 0000000000000110
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R0=0000000000000000  ,  R1=0000000000000001  ,R2=0000000000000011  ,  R3=0000000000000000 , R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7 =0000000000000010
+# KERNEL: PC = 0000000000000111
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R0=0000000000000000  ,  R1=0000000000000001  ,R2=0000000000000011  ,  R3=0000000000000000 , R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7 =0000000000000010
+# KERNEL: PC = 0000000000001000
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: PC = 0000000000001001
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: PC = 0000000000001010
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: PC = 0000000000001011
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: PC = 0000000000001100
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: PC = 0000000000001101
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: PC = 0000000000001110
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: PC = 0000000000001111
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (53, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 40 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4761 kB (elbread=427 elab2=4198 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  3:01 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,R2=0000000000000011  ,  R3=0000000000000000 , R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7 =0000000000000010
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R0=0000000000000000  ,  R1=0000000000000001  ,R2=0000000000000011  ,  R3=0000000000000000 , R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7 =0000000000000010
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R0=0000000000000000  ,  R1=0000000000000001  ,R2=0000000000000011  ,  R3=0000000000000000 , R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7 =0000000000000010
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R0=0000000000000000  ,  R1=0000000000000001  ,R2=0000000000000011  ,  R3=0000000000000000 , R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7 =0000000000000010
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (53, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 40 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4762 kB (elbread=427 elab2=4198 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  3:03 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (53, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 40 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4764 kB (elbread=427 elab2=4201 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  3:04 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 75  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.8 [s]
+# SLP: Finished : 0.8 [s]
+# SLP: 0 primitives and 40 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4770 kB (elbread=427 elab2=4207 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  5:20 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=xxxxxxxxxxxxxxxx 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 80  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000001 
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 0 primitives and 40 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4764 kB (elbread=427 elab2=4201 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  5:25 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 75  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 40 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4767 kB (elbread=427 elab2=4204 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  5:26 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000110
+# KERNEL: 70  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=xxxxxxxxxxxxxxxx 
+# KERNEL: 75 ==> PC= 0000000000000111
+# KERNEL: 85 ==> PC= 0000000000001000
+# KERNEL: 85  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 95 ==> PC= 0000000000001001
+# KERNEL: 105 ==> PC= 0000000000001010
+# KERNEL: 115 ==> PC= 0000000000001011
+# KERNEL: 125 ==> PC= 0000000000001100
+# KERNEL: 135 ==> PC= 0000000000001101
+# KERNEL: 145 ==> PC= 0000000000001110
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 40 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4767 kB (elbread=427 elab2=4204 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  5:26 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 75  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 90  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=xxxxxxxxxxxxxxxx 
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Error: VCP2020 data_memory/DataMemory.v : (54, 10): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 data_memory/DataMemory.v : (54, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 instruction_memory/InstructionMemory.v : (8, 42): Syntax error. Unexpected token: ;.
+# Error: VCP2000 instruction_memory/InstructionMemory.v : (23, 12): Syntax error. Unexpected token: initial[_INITIAL].
+# Error: VCP2000 instruction_memory/InstructionMemory.v : (38, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 instruction_memory/InstructionMemory.v : (45, 35): Syntax error. Unexpected token: clock_generator[_IDENTIFIER].
+# Error: VCP2000 instruction_memory/InstructionMemory.v : (52, 29): Syntax error. Unexpected token: insMem[_IDENTIFIER].
+# Error: VCP2000 instruction_memory/InstructionMemory.v : (80, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 register_file/RegisterFile.v : (11, 37): Syntax error. Unexpected token: ;.
+# Error: VCP2000 register_file/RegisterFile.v : (29, 12): Syntax error. Unexpected token: initial[_INITIAL].
+# Error: VCP2000 register_file/RegisterFile.v : (40, 12): Syntax error. Unexpected token: initial[_INITIAL].
+# Error: VCP2000 register_file/RegisterFile.v : (45, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 control_unit/ControlUnit.v : (81, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 control_unit/ControlUnit.v : (101, 11): Syntax error. Unexpected token: always[_ALWAYS].
+# Error: VCP2000 control_unit/ControlUnit.v : (118, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 control_unit/ControlUnit.v : (133, 11): Syntax error. Unexpected token: always[_ALWAYS].
+# Error: VCP2000 control_unit/ControlUnit.v : (161, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 integration/parameter.v : (3, 13): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (4, 14): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (6, 25): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (7, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (8, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (9, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (10, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (11, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (12, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (13, 25): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (14, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (15, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (17, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (18, 30): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (19, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (20, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (21, 27): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (22, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (23, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (24, 28): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (25, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (26, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (27, 31): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (28, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (29, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (31, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (32, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (33, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (34, 20): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (36, 15): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (37, 15): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (38, 15): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (39, 15): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (40, 15): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (41, 15): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (42, 15): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (43, 15): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (45, 29): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (46, 24): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/parameter.v : (47, 24): Syntax error. Unexpected token: ,.
+# Error: VCP2000 integration/ClockGenerator.v : (1, 7): Syntax error. Unexpected token: module[_MODULE].
+# Error: VCP2000 integration/ClockGenerator.v : (10, 7): Syntax error. Unexpected token: always[_ALWAYS].
+# Error: VCP2000 integration/ClockGenerator.v : (15, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 integration/PipelineProcessor.v : (3, 12): Syntax error. Unexpected token: initial[_INITIAL].
+# Error: VCP2000 integration/PipelineProcessor.v : (15, 9): Syntax error. Unexpected token: wire[_WIRE].
+# Error: VCP2000 integration/PipelineProcessor.v : (17, 25): Syntax error. Unexpected token: clock[_IDENTIFIER].
+# Error: VCP2000 integration/PipelineProcessor.v : (64, 36): Syntax error. Unexpected token: main_alu_control[_IDENTIFIER].
+# Error: VCP2000 integration/PipelineProcessor.v : (72, 25): Syntax error. Unexpected token: pc_control[_IDENTIFIER].
+# Error: VCP2000 integration/PipelineProcessor.v : (83, 31): Syntax error. Unexpected token: hazard_detect[_IDENTIFIER].
+# Error: VCP2000 integration/PipelineProcessor.v : (106, 21): Syntax error. Unexpected token: if_stage[_IDENTIFIER].
+# Error: VCP2000 integration/PipelineProcessor.v : (118, 26): Syntax error. Unexpected token: IF2ID_registers[_IDENTIFIER].
+# Error: VCP2000 integration/PipelineProcessor.v : (136, 21): Syntax error. Unexpected token: id_stage[_IDENTIFIER].
+# Error: VCP2000 integration/PipelineProcessor.v : (163, 28): Syntax error. Unexpected token: ID2EXE_registers[_IDENTIFIER].
+# Error: VCP2000 integration/PipelineProcessor.v : (186, 23): Syntax error. Unexpected token: exe_stage[_IDENTIFIER].
+# Error: VCP2000 integration/PipelineProcessor.v : (195, 30): Syntax error. Unexpected token: EXE2MEM_registers[_IDENTIFIER].
+# Error: VCP2000 integration/PipelineProcessor.v : (220, 23): Syntax error. Unexpected token: mem_stage[_IDENTIFIER].
+# Error: VCP2000 integration/PipelineProcessor.v : (230, 28): Syntax error. Unexpected token: MEM2WB_registers[_IDENTIFIER].
+# Error: VCP2000 stages/MEMStage.v : (18, 27): Syntax error. Unexpected token: data_memory[_IDENTIFIER].
+# Error: VCP2000 stages/MEMStage.v : (28, 42): Syntax error. Unexpected token: mux_MemoryResult[_IDENTIFIER].
+# Error: VCP2000 stages/EXEStage.v : (19, 12): Syntax error. Unexpected token: alu[_IDENTIFIER].
+# Error: VCP2000 stages/EXEStage.v : (44, 17): Syntax error. Unexpected token: uut[_IDENTIFIER].
+# Error: VCP2000 stages/EXEStage.v : (60, 12): Syntax error. Unexpected token: initial[_INITIAL].
+# Error: VCP2000 stages/EXEStage.v : (102, 12): Syntax error. Unexpected token: initial[_INITIAL].
+# Error: VCP2000 stages/EXEStage.v : (107, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 stages/IDStage.v : (34, 26): Syntax error. Unexpected token: imm_extender[_IDENTIFIER].
+# Error: VCP2000 stages/IDStage.v : (43, 26): Syntax error. Unexpected token: reg_file[_IDENTIFIER].
+# Error: VCP2000 stages/IDStage.v : (61, 38): Syntax error. Unexpected token: mux_ForwardA[_IDENTIFIER].
+# Error: VCP2000 stages/IDStage.v : (71, 36): Syntax error. Unexpected token: mux_ForwardB[_IDENTIFIER].
+# Error: VCP2000 stages/IDStage.v : (81, 17): Syntax error. Unexpected token: comp[_IDENTIFIER].
+# Error: VCP2000 stages/IFStage.v : (14, 35): Syntax error. Unexpected token: instructions[_IDENTIFIER].
+# Error: VCP2000 stages/IFStage.v : (43, 12): Syntax error. Unexpected token: initial[_INITIAL].
+# Error: VCP2000 stages/IFStage.v : (49, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 stages/IFStage.v : (66, 16): Syntax error. Unexpected token: uut[_IDENTIFIER].
+# Error: VCP2000 stages/IFStage.v : (84, 12): Syntax error. Unexpected token: initial[_INITIAL].
+# Error: VCP2000 stages/IFStage.v : (109, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 utilities/mux.v : (9, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 utilities/mux.v : (20, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 utilities/Extender.v : (22, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 utilities/Extender.v : (34, 17): Syntax error. Unexpected token: uut[_IDENTIFIER].
+# Error: VCP2000 utilities/Extender.v : (79, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 utilities/Compare.v : (25, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 utilities/Compare.v : (36, 17): Syntax error. Unexpected token: comp[_IDENTIFIER].
+# Error: VCP2000 utilities/Compare.v : (68, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 register/MEM_2_WB.v : (21, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 register/EXE_2_MEM.v : (27, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 register/ID_2_EXE.v : (29, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Error: VCP2000 register/IF_2_ID.v : (16, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Compile failure 104 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4768 kB (elbread=427 elab2=4205 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  5:32 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 90  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=xxxxxxxxxxxxxxxx 
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4768 kB (elbread=427 elab2=4205 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  5:33 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 75  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 90  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000001 
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4768 kB (elbread=427 elab2=4205 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  5:33 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 75  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 90  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000011111111 
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4765 kB (elbread=427 elab2=4202 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  5:33 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 75  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4768 kB (elbread=427 elab2=4205 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  5:34 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 75  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 90  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000011111111 
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4771 kB (elbread=427 elab2=4208 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  5:34 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 80  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000001 
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4771 kB (elbread=427 elab2=4208 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  5:35 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 75  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 90  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000011111111 
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 100  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=1111111111111111 
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4774 kB (elbread=427 elab2=4211 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  5:37 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 75  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 90  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000001011111111 
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 100  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=1111111111111111 
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 214 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4774 kB (elbread=427 elab2=4211 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  5:38 PM, Sunday, June 9, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000000111
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001000
+# KERNEL: 75  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 85 ==> PC= 0000000000001001
+# KERNEL: 90  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000011111111 
+# KERNEL: 95 ==> PC= 0000000000001010
+# KERNEL: 100  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=1111111111111111 
+# KERNEL: 105 ==> PC= 0000000000001011
+# KERNEL: 110  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000001011111111 
+# KERNEL: 115 ==> PC= 0000000000001100
+# KERNEL: 125 ==> PC= 0000000000001101
+# KERNEL: 135 ==> PC= 0000000000001110
+# KERNEL: 145 ==> PC= 0000000000001111
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 150 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 150 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/stages/IFStage.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (54, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (55, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (69, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor EXEStage_TB IFStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.

@@ -119,7 +119,6 @@ endmodule
 
 
 module HazardDetect (
-	input clk,
 	input [3:0] opCode,
 	input [2:0] RS1,RS2,Rd2,Rd3,Rd4,
 	input EX_RegWr, MEM_RegWr ,WB_RegWr,EX_MemRd,

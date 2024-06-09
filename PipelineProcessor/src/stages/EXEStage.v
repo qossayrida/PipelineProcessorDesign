@@ -14,12 +14,6 @@ module EXEStage (
 	// ALU input selection based on ALUsrc
    assign ALU_in_B = signals[2] ? Immediate1 : B;
 	
-//	always @(posedge clk) begin 
-//		if (signals[2])
-//		  ALU_in_B =  Immediate1;
-//		else 
-//			ALU_in_B =	B;
-//	end
 	
     // ALU instance
     ALU alu (
