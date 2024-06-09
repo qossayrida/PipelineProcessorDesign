@@ -27,30 +27,39 @@ module IFStage (
 	  
 	  
 	always @(posedge clk) begin
-		if (!stall) 
-		  	case (PCsrc)
-            	0: begin     
-                	PC <= PC + 16'd1;      
-            	end  
-	            1:  begin
-					PC <= J_TypeImmediate;    
-	            end  
-	            2: begin   
-	                PC <= I_TypeImmediate;
-	            end  
-	            11: begin
-	                PC <= ReturnAddress;  
-	            end  
-	        endcase
+		if (!stall) begin     
+            PC <= PC + 16'd1;      
 
 		 
-		NPC = PC + 16'd1;
+		NPC <= PC + 16'd1; 
+		end
+	end	
+	
+	
+	always @(kill) begin
+		if (!stall) 
+		  	case (PCsrc)  
+	            1:  begin
+					PC = J_TypeImmediate;
+					NPC = J_TypeImmediate;
+	            end  
+	            2: begin   
+	                PC = I_TypeImmediate;
+					NPC =  I_TypeImmediate;
+	            end  
+	            11: begin
+	                PC = ReturnAddress;
+					NPC = ReturnAddress;
+	            end  
+	        endcase
 	end
 	
 	
 	initial begin
 		PC = 16'd0;
-		$monitor("%0t ==> kill= %b",$time,kill);
+		NPC = 16'd0;
+		$monitor("%0t ==> kill= %b",$time,kill); 
+		$monitor("%0t ==> NPC= %b",$time,NPC);
 		$monitor("%0t ==> PC= %b",$time,PC); 
 	end
   
