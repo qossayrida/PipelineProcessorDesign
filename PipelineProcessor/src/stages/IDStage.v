@@ -6,7 +6,7 @@ module IDStage (
     input [1:0] ForwardB,
 	input [4:0] signals, // SRC1   SRC2   RegDst   ExtOp   ExtPlace
     input [15:0] instruction,
-	input [15:0] NPC,
+	input [15:0] PC_ID,
 	input [15:0] AluResult,MemoryResult,WBResult,
 	input [2:0] DestinationRegister,
     output reg [15:0] I_TypeImmediate,
@@ -53,8 +53,8 @@ module IDStage (
     ); 
 	
 	
-    assign    I_TypeImmediate = extended_imm+NPC;
-    assign    J_TypeImmediate = {NPC[15:12],instruction[11:0]};
+    assign    I_TypeImmediate = extended_imm+PC_ID-1;
+    assign    J_TypeImmediate = {PC_ID[15:12],instruction[11:0]};
     assign    ReturnAddress = R7;
     assign    Immediate1 = extended_imm;
 	  	
@@ -85,6 +85,15 @@ module IDStage (
         .lt(lt),
         .eq(eq)
     ); 
+	
+	
+	initial begin
+
+		$monitor("%0t ==> I_TypeImmediate from decode= %b",$time,I_TypeImmediate); 
+		$monitor("%0t ==> J_TypeImmediate from decode= %b",$time,J_TypeImmediate);
+		$monitor("%0t ==> PC_ID = %b",$time,PC_ID);
+		$monitor("%0t ==> extended_imm= %b",$time,extended_imm); 
+	end
 	
 	
 endmodule

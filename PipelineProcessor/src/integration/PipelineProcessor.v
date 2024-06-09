@@ -141,7 +141,7 @@ module PipelineProcessor ();
         .WB_signals(WB_signals),
         .signals(signals[15:11]), // Passing relevant bits of signals
         .instruction(inst_ID),
-        .NPC(PC_ID),
+        .PC_ID(PC_ID),
         .AluResult(AluResult_EXE),
         .MemoryResult(DataWB_MEM), 
         .WBResult(DataWB_WB), 
