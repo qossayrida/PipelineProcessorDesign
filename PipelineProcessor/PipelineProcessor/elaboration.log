@@ -1,8 +1,8 @@
-Active-HDL 15.0.261.9132 2024-06-09 02:50:56
+Active-HDL 15.0.261.9132 2024-06-09 12:28:51
 
 Elaboration top modules:
 Verilog Module                PipelineProcessor
-SystemVerilog Package         UnitScopePackage_335
+SystemVerilog Package         UnitScopePackage_347
 
 
 -----------------------------------------------------------------------------------------------------
@@ -24,6 +24,7 @@ MEM2WB                  | pipelineprocessor |      | 15.0.261.9132 (Windows64) |
 InstructionMemory       | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 Extender                | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 RegisterFile            | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+mux_4                   | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 Compare                 | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 ALU                     | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 DataMemory              | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
@@ -32,7 +33,7 @@ DataMemory              | pipelineprocessor |      | 15.0.261.9132 (Windows64) |
 -----------------------------------------------------------------------------------------------------
 SystemVerilog Package   | Library           | Info | Compiler Version          | Compilation Options
 -----------------------------------------------------------------------------------------------------
-UnitScopePackage_335    | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+UnitScopePackage_347    | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 -----------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------

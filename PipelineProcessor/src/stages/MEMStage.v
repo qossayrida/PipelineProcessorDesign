@@ -27,7 +27,6 @@ module MEMStage (
 
     // Update MemoryResult on clock edge
     always @(posedge clk) begin
-		#1fs
         if (signals[1:0]==0)
             DataWB <= PC2;
 		else if (signals[1:0]==1)

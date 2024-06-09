@@ -1,13 +1,11 @@
 module ALU(
-	input clk,
 	input wire signed  [15:0] A, B, 
 	input wire [1:0] ALUop, 
 	output reg signed  [15:0] Output
 );
 
 
-always @(posedge clk) begin
-	#1
+	always @(*) begin
         case (ALUop)
             ALU_OP_AND:  Output <= A & B;
             ALU_OP_ADD:  Output <= A + B;
@@ -22,13 +20,12 @@ endmodule
 
 module ALU_TB;
 	
-	reg clk;
     reg signed [15:0] A, B; // Declare testbench registers as signed
     wire signed [15:0] Output; // Declare output wire as signed
     reg [1:0] ALUop;
 
     // Instantiate the ALU
-    ALU alu(clk,A, B, ALUop , Output);
+    ALU alu(A, B, ALUop , Output);
 
     initial begin
         // Unsigned test cases

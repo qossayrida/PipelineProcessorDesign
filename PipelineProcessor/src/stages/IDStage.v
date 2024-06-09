@@ -24,6 +24,11 @@ module IDStage (
     // Internal wires for extended immediate values
     wire [15:0] extended_imm;
     wire [15:0] BusA, BusB, R7;
+	
+	
+	assign RA = signals[4] ? 3'b000 : instruction[8:6];	
+	assign RB = signals[3] ? instruction[5:3] : instruction[11:9];
+	assign RD2 = signals[2] ? 	3'b111  : instruction[11:9];
 
     // Instance of the extender module for immediate values
     Extender imm_extender (
@@ -48,7 +53,31 @@ module IDStage (
     ); 
 	
 	
-	// Instance of the Compare module
+    assign    I_TypeImmediate = extended_imm+NPC;
+    assign    J_TypeImmediate = {NPC[15:12],instruction[11:0]};
+    assign    ReturnAddress = R7;
+    assign    Immediate1 = extended_imm;
+	  	
+	mux_4 #(.LENGTH(16)) mux_ForwardA (
+    .in1(BusA),
+    .in2(AluResult),
+    .in3(MemoryResult),
+	.in4(WBResult),
+    .sel(ForwardA),
+    .out(A)
+  );
+  
+  
+  mux_4 #(.LENGTH(16)) mux_ForwardB (
+    .in1(BusB),
+    .in2(AluResult),
+    .in3(MemoryResult),
+	.in4(WBResult),
+    .sel(ForwardB),
+    .out(B)
+  );
+  
+  // Instance of the Compare module
     Compare comp (
         .A(A),
         .B(B),
@@ -57,47 +86,5 @@ module IDStage (
         .eq(eq)
     ); 
 	
-	
-	assign RA = signals[4] ? 3'b000 : instruction[8:6];	
-	assign RB = signals[3] ? instruction[5:3] : instruction[11:9];
-
-    always @(posedge clk) begin
-				
-		if (signals[2])
-			RD2 <= 3'b111;
-		else
-			RD2 <= instruction[11:9];
-
-		// Decoding immediate values
-        I_TypeImmediate <= extended_imm+NPC;
-        J_TypeImmediate <= {NPC[15:12],instruction[11:0]};
-        ReturnAddress <= R7;
-
-
-        Immediate1 <= extended_imm;
-    end		  
-	
-	
-	always @(posedge clk) begin	
-		#2    
-        if (ForwardA==0) 
-			A <= BusA;
-		else if (ForwardA==1)
-			A <= AluResult;
-		else if (ForwardA==2)
-			A <= MemoryResult; 
-		else 
-			A <= WBResult;
-			
-				
-        if (ForwardB==0) 
-			B <= BusB;
-		else if (ForwardB==1)
-			B <= AluResult;
-		else if (ForwardB==2)
-			B <= MemoryResult; 
-		else 
-			B <= WBResult;
-	end
 	
 endmodule

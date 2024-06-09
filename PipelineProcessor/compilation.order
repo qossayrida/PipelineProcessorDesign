@@ -10,6 +10,7 @@
 .\src\stages\EXEStage.v
 .\src\stages\IDStage.v
 .\src\stages\IFStage.v
+.\src\utilities\mux.v
 .\src\utilities\Extender.v
 .\src\utilities\Compare.v
 .\src\register\MEM_2_WB.v

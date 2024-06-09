@@ -12,17 +12,19 @@ module RegisterFile(
    
 	
     // read registers always
-    always @(posedge clk) begin
-        BusA = registersArray[RA];
-        BusB = registersArray[RB];
-		R7 = registersArray[7];
-    end
 
-    always @(posedge clk) begin
+
+    always @(negedge clk) begin
         if (enableWrite && (RW != 3'b000)) begin 
             registersArray[RW] = BusW;
         end
     end
+	
+	
+    assign  BusA = registersArray[RA];
+    assign  BusB = registersArray[RB];
+	assign	R7 = registersArray[7];
+  
 
     initial begin
         registersArray[0] <= 16'h0000;
