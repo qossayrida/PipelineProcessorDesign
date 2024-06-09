@@ -131,7 +131,7 @@ module HazardDetect (
 		stall=0;
 	end
 
-	always @(posedge clk) begin 
+	always @(*) begin 
         // ForwardA logic
         if ((RS1 != 0) && (RS1 == Rd2) && EX_RegWr) 
             ForwardA = 1;

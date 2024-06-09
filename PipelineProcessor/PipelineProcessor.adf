@@ -36,6 +36,7 @@ register/MEM_2_WB.v=-1
 register/EXE_2_MEM.v=-1
 register/ID_2_EXE.v=-1
 register/IF_2_ID.v=-1
+instruction_memory/InstructionMemory.v=-1
 [Files.Data]
 .\src\mux.v=Verilog Source Code
 .\src\alu\ALU.v=Verilog Source Code
@@ -57,6 +58,7 @@ register/IF_2_ID.v=-1
 .\src\register\EXE_2_MEM.v=Verilog Source Code
 .\src\register\ID_2_EXE.v=Verilog Source Code
 .\src\register\IF_2_ID.v=Verilog Source Code
+.\src\instruction_memory\InstructionMemory.v=Verilog Source Code
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel

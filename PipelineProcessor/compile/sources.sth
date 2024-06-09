@@ -1,9 +1,9 @@
 [Files List]
 C:/Aldec/Active-HDL-Student-Edition/vlib/std/src/standard.vhd=S
+C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/utilities/mux.v=S
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/data_memory/DataMemory.v=S
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/alu/ALU.v=S
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/utilities/Compare.v=S
-C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/utilities/mux.v=S
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/register_file/RegisterFile.v=S
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/utilities/Extender.v=S
 C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/instruction_memory/InstructionMemory.v=S

@@ -62,8 +62,8 @@ FileTimeLow=456638646
 FileTimeHigh=31108204
 Status=Modified
 [COMPILESTATUS|.\src\control_unit\ControlUnit.v]
-FileTimeLow=2597888348
-FileTimeHigh=31111674
+FileTimeLow=3366017798
+FileTimeHigh=31111777
 Status=Compiled
 [COMPILESTATUS|.\src\ALU.v]
 FileTimeLow=608753057
@@ -162,8 +162,8 @@ FileTimeLow=1418503534
 FileTimeHigh=31111254
 Status=Modified
 [COMPILESTATUS|.\src\stages\MEMStage.v]
-FileTimeLow=3898109114
-FileTimeHigh=31111755
+FileTimeLow=3225561334
+FileTimeHigh=31111776
 Status=Compiled
 [CACHEDOC|Aldec.Hde.HdePlugIn.7|.\PipelineProcessor\src/integration/ClockGenerator.v|]
 CurrentLine=4
@@ -510,6 +510,10 @@ FileTimeLow=2643787619
 FileTimeHigh=31111758
 Status=Compiled
 [COMPILESTATUS|.\src\utilities\mux.v]
-FileTimeLow=3436904527
-FileTimeHigh=31111757
+FileTimeLow=2176832017
+FileTimeHigh=31111776
+Status=Compiled
+[COMPILESTATUS|.\src\instruction_memory\InstructionMemory.v]
+FileTimeLow=756496617
+FileTimeHigh=31111777
 Status=Compiled

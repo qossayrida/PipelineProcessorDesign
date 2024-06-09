@@ -24,16 +24,14 @@ module MEMStage (
         .in(data_in),
         .out(data_out)
     );
-
-    // Update MemoryResult on clock edge
-    always @(posedge clk) begin
-        if (signals[1:0]==0)
-            DataWB <= PC2;
-		else if (signals[1:0]==1)
-        	DataWB <= AluResult;
-		else
-			DataWB <= data_out;
-    end		
+	
+  	mux_3 #(.LENGTH(16)) mux_MemoryResult (
+	    .in1(PC2),
+	    .in2(AluResult),
+	    .in3(data_out),
+	    .sel(signals[1:0]),
+	    .out(DataWB)
+  	);
 	
 	initial begin
 		$monitor("%0t ==> AluResult=%b , data_in= %b   , data_out = %b , imm= %b", $time,AluResult, data_in,data_out,Immediate2);
