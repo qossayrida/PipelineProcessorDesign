@@ -9,7 +9,6 @@ module InstructionMemory(
 
 
 	always @(posedge clk) begin
-		#1fs 	// wait the value for PC
 			
 		if (!stall)
 			instruction <= instructionMemory[address[15:0]];
