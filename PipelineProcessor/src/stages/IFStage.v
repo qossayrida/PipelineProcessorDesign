@@ -6,37 +6,44 @@ module IFStage (
 	output reg [15:0] NPC, instruction );
 	
 	reg [15:0] PC;
-		
+	wire [15:0] instruction_wire;	
 
 	
-//	assign NPC = PC + 16'd1;
+	assign NPC = PC + 16'd1;
   
   	InstructionMemory instructions (
 		.clk(clk),
 		.kill(kill),
 		.stall(stall),
     	.address(PC),
-    	.instruction(instruction)
-  	);	
+    	.instruction(instruction_wire)
+  	);
+	  
+	  
+	mux_2 #(.LENGTH(16)) mux_kill (
+	    .in1(instruction_wire),
+	    .in2({ADD, R1, R1, R0, 3'b000}),
+	    .sel(kill),
+	    .out(instruction)
+  	);
 	  
 	always @(posedge clk) begin
-		NPC = PC + 16'd1;
 		if (!stall)
         	case (PCsrc)
-            	00: begin     
+            	0: begin     
                 	PC <= NPC;      
             	end  
-	            01:  begin
+	            1:  begin
 					PC <= J_TypeImmediate;    
 	            end  
-	            10: begin   
+	            2: begin   
 	                PC <= I_TypeImmediate;
 	            end  
 	            11: begin
 	                PC <= ReturnAddress;  
 	            end  
 	        endcase		   
-			
+		 
 	end
 	
 	

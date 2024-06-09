@@ -11,27 +11,35 @@ module InstructionMemory(
 	always @(posedge clk) begin
 		#1fs 	// wait the value for PC
 			
-		if (stall)
-			instruction <= instruction;
-		else if (!kill)
+		if (!stall)
 			instruction <= instructionMemory[address[15:0]];
-		else
-			instruction <= {ADD, R1, R1, R0, 3'b000};
 			
 	end 
 
     initial begin
-        // R-type
-        instructionMemory[0] = {AND, R4, R6, R7, 3'b000};
-    	instructionMemory[1] = {ADD, R6, R4, R2, 3'b000};
-    	instructionMemory[2] = {SUB, R5, R3, R5, 3'b000}; 
+        // R-type		
+		instructionMemory[0] = {AND, R4, R6, R7, 3'b000};
+		instructionMemory[1] = {JMP, 12'h000A};
+		
+		instructionMemory[2] = {SUB, R5, R3, R5, 3'b000}; 
 		instructionMemory[3] = {SV , R1, 1'b0 , 8'hFF};
 		instructionMemory[4] = {LBu , R3, R0 ,1'b0, 5'h01};
-		instructionMemory[5] = {LBs , R3, R1 ,1'b1, 5'h00};
-		instructionMemory[6] = {LW , R3, R0 ,1'b0, 5'b00001}; 
-		instructionMemory[7] = {LW , R4, R1 ,1'b0, 5'b00000};
-		instructionMemory[8] = {SW , R4, R2 ,1'b0, 5'b00000};
-		instructionMemory[9] = {ADD, R4, R6, R7, 3'b000};
+		
+		instructionMemory[10] = {LBs , R3, R1 ,1'b1, 5'h00};
+		instructionMemory[11] = {ADD , R3, R2 ,3'b000};
+
+		
+//  	Program 1		
+//     instructionMemory[0] = {AND, R4, R6, R7, 3'b000};
+//    	instructionMemory[1] = {ADD, R6, R4, R2, 3'b000};
+//    	instructionMemory[2] = {SUB, R5, R3, R5, 3'b000}; 
+//		instructionMemory[3] = {SV , R1, 1'b0 , 8'hFF};
+//		instructionMemory[4] = {LBu , R3, R0 ,1'b0, 5'h01};
+//		instructionMemory[5] = {LBs , R3, R1 ,1'b1, 5'h00};
+//		instructionMemory[6] = {LW , R3, R0 ,1'b0, 5'b00001}; 
+//		instructionMemory[7] = {LW , R4, R1 ,1'b0, 5'b00000};
+//		instructionMemory[8] = {SW , R4, R2 ,1'b0, 5'b00000};
+//		instructionMemory[9] = {ADD, R4, R6, R7, 3'b000};
     end
 
 endmodule
