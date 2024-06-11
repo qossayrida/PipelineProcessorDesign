@@ -58,7 +58,6 @@
 | 21  | Sv                  | ADD   | 01        |        
 
 
-
 | No. | Instruction/Signals | PCSrc | kill|
 |-----|---------------------|-------|-------|
 |  1  | AND                 |  0  |  0  |  0  |   0  |
@@ -81,7 +80,8 @@
 | 18  | JMP                 |  1   |  1  |      
 | 19  | CALL                |  1   |  1  |         
 | 20  | RET                 |  3   |  1  |       
-| 21  | Sv                  |  0   |  0  |
+   
+
 
 ## 🔗 Links
 
@@ -92,5 +92,3 @@
 [![linkedin](https://img.shields.io/badge/linkedin-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/qossay-rida-3aa3b81a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app )
 
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/qossayrida)
-
-
