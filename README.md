@@ -1,6 +1,6 @@
 # Pipeline Processor Design
 
-    ![image](https://github.com/qossayrida/PipelineProcessorDesign/assets/59481839/3f99e71d-71a2-4856-82b2-0f58781f1cda)
+![image](https://github.com/qossayrida/PipelineProcessorDesign/assets/59481839/3f99e71d-71a2-4856-82b2-0f58781f1cda)
 
 
 
