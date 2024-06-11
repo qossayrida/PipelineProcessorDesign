@@ -18,6 +18,7 @@ module DataMemory (
     end
 
     always @(posedge clk) begin
+		#1
         if (wrEnable) begin  
 			
 			memory[address] = in[7:0];
