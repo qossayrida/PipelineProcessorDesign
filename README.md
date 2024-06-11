@@ -60,15 +60,15 @@
 
 | No. | Instruction/Signals | PCSrc | kill|
 |-----|---------------------|-------|-------|
-|  1  | AND                 |  0  |  0  |  0  |   0  |
-|  2  | ADD                 |  0  |  0  |  0  |   0  |    
-|  3  | SUB                 |  0  |  0  |  0  |   0  |       
-|  4  | ADDI                |  0  |  0  |  0  |   0  |       
-|  5  | ANDI                |  0  |  0  |  0  |   0  |      
-|  6  | LW                  |  0  |  0  |  0  |   0  |       
-|  7  | LBU                 |  0  |  0  |  0  |   0  |        
-|  8  | LBS                 |  0  |  0  |  0  |   0  |       
-|  9  | SW                  |  0  |  0  |  0  |   0  |      
+|  1  | AND                 |  0  |  0  |  
+|  2  | ADD                 |  0  |  0  |      
+|  3  | SUB                 |  0  |  0  |       
+|  4  | ADDI                |  0  |  0  |        
+|  5  | ANDI                |  0  |  0  |        
+|  6  | LW                  |  0  |  0  |         
+|  7  | LBU                 |  0  |  0  |          
+|  8  | LBS                 |  0  |  0  |        
+|  9  | SW                  |  0  |  0  |       
 | 10  | BGT                 |  if (Taken) 2 else  0  |  if (Taken) 1 else  0  |       
 | 11  | BGTZ                |  if (Taken) 2 else  0   | if (Taken) 1 else  0  |      
 | 12  | BLT                 |  if (Taken) 2 else  0   | if (Taken) 1 else  0 |        
@@ -80,7 +80,7 @@
 | 18  | JMP                 |  1   |  1  |      
 | 19  | CALL                |  1   |  1  |         
 | 20  | RET                 |  3   |  1  |       
-   
+| 21  | ANDI                |  0   |  0  |   
 
 
 ## 🔗 Links
