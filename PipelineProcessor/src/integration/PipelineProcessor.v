@@ -4,8 +4,6 @@ module PipelineProcessor ();
         #170 $finish; 
     end				 
 	
-
-	
 	
 	
 	//******************************************************
@@ -31,7 +29,7 @@ module PipelineProcessor ();
 	wire [15:0] immediate_ID , immediate_EXE,immediate_MEM;
 	wire [2:0] Rd_ID,Rd_EXE,Rd_MEM,Rd_WB;
 	
-	wire [2:0] RA,RB;
+	wire [2:0] Ra_ID,Rb_ID;
 	
 	wire [15:0] AluResult_EXE,AluResult_MEM;
 	
@@ -62,7 +60,8 @@ module PipelineProcessor ();
 
     // Control Unit
     MainAluControl main_alu_control (
-        .opCode(inst_ID[15:12]),
+		.opCode(inst_ID[15:12]),
+		.Rd(inst_ID[11:9]),
         .mode(inst_ID[5]),
         .stall(stall),
         .signlas(signals)
@@ -82,8 +81,8 @@ module PipelineProcessor ();
     // Hazard Detection
     HazardDetect hazard_detect (
         .opCode(inst_ID[15:12]),
-        .RS1(RA), 
-        .RS2(RB),  
+        .RS1(Ra_ID), 
+        .RS2(Rb_ID),  
         .Rd2(Rd_EXE),
         .Rd3(Rd_MEM),
         .Rd4(Rd_WB),
@@ -112,7 +111,7 @@ module PipelineProcessor ();
     .J_TypeImmediate(J_TypeImmediate),
     .ReturnAddress(ReturnAddress),
     .NPC(PC_IF),
-    .instruction(inst_IF)
+    .inst_IF(inst_IF)
     );	   
 	
 	IF2ID IF2ID_registers (
@@ -135,26 +134,25 @@ module PipelineProcessor ();
 	
 	IDStage id_stage (
         .clk(clk), 
-        .stall(stall),
         .ForwardA(ForwardA),
         .ForwardB(ForwardB),
         .WB_signals(WB_signals),
         .signals(signals[15:11]), // Passing relevant bits of signals
-        .instruction(inst_ID),
+        .inst_ID(inst_ID),
         .PC_ID(PC_ID),
-        .AluResult(AluResult_EXE),
-        .MemoryResult(DataWB_MEM), 
-        .WBResult(DataWB_WB), 
+        .AluResult_EXE(AluResult_EXE),
+        .DataWB_MEM(DataWB_MEM), 
+        .DataWB_WB(DataWB_WB), 
         .DestinationRegister(Rd_WB),
         .I_TypeImmediate(I_TypeImmediate),
         .J_TypeImmediate(J_TypeImmediate),
         .ReturnAddress(ReturnAddress),
-        .Immediate1(immediate_ID),
-        .A(valueA_ID),
-        .B(valueB_ID),
-        .RD2(Rd_ID),
-		.RA(RA),
-		.RB(RB),
+        .immediate_ID(immediate_ID),
+        .valueA_ID(valueA_ID),
+        .valueB_ID(valueB_ID),
+        .Rd_ID(Rd_ID),
+		.Ra_ID(Ra_ID),
+		.Rb_ID(Rb_ID),
         .gt(GT),
         .lt(LT),
         .eq(EQ)
@@ -185,11 +183,11 @@ module PipelineProcessor ();
 	
 	EXEStage exe_stage (
 		.clk(clk),
-        .Immediate1(immediate_EXE),
-        .A(valueA_EXE),
-        .B(valueB_EXE),
+        .immediate_EXE(immediate_EXE),
+        .valueA_EXE(valueA_EXE),
+        .valueB_EXE(valueB_EXE),
         .signals(EXE_signals[10:8]),
-        .AluResult(AluResult_EXE)
+        .AluResult_EXE(AluResult_EXE)
     ); 
 	
 	EXE2MEM EXE2MEM_registers (

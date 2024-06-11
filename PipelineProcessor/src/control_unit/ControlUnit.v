@@ -1,5 +1,6 @@
 module MainAluControl (
 	input [3:0] opCode,
+	input [2:0] Rd,
 	input mode,stall,
 	output reg [15:0] signlas
 );
@@ -64,11 +65,18 @@ always @ (*) begin
 				
 			JMP:  signlas <= {1'bx , 1'bx , 1'bx , 1'bx , 1'bx , 1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'bxx , 1'b0};
 			CALL: signlas <= {1'bx , 1'bx , 1'b1 , 1'bx , 1'bx , 1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b00 , 1'b1};
-			RET:  signlas <= {1'bx , 1'bx , 1'bx , 1'bx , 1'bx , 1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'bxx , 1'b0};
+			RET:  signlas <= {1'b0 , 1'bx , 1'bx , 1'bx , 1'bx , 1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'bxx , 1'b0};
 			SV:   signlas <= {1'b1 , 1'b0 , 1'bx , 1'b0 , 1'b1 , 1'b0 , 2'b01 , 1'b0 , 1'b0 , 1'b1 , 2'bxx , 2'bxx , 1'b0};
 
         endcase
-          
+		
+//		if (opCode != CALL && Rd==3'b111) begin
+//			$display("%0t ==> opcode=%d  , Rd=%d ,  signlas[0]=%b",$time,opCode,Rd,signlas[0] ) ;
+//			signlas[0]<=0;
+//		end
+		
+
+		
     end
 
     else begin
@@ -77,7 +85,9 @@ always @ (*) begin
 	
   end 	
   
-  
+  	 		initial begin
+			$monitor("%0t ==> opcode=%d  , Rd=%d ,  signlas[0]=%b",$time,opCode,Rd,signlas[0] )	; 
+		end
 endmodule 		  
 
 

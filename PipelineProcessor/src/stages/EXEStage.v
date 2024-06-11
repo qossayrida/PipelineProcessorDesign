@@ -1,25 +1,24 @@
 module EXEStage (
     input wire clk,
-    input wire [15:0] Immediate1,
-    input wire [15:0] A,
-    input wire [15:0] B,
+    input wire [15:0] immediate_EXE,
+    input wire [15:0] valueA_EXE,
+    input wire [15:0] valueB_EXE,
     input wire [2:0] signals,		// AluSRC   ALUOP{2}
-    output reg [15:0] AluResult 
-);
+    output reg [15:0] AluResult_EXE 
+); 
 
-    // Internal wires
-    wire signed [15:0] ALU_in_B;
-    wire signed [15:0] ALU_output;
+   	// Internal wires
+   	wire signed [15:0] ALU_in_B,ALU_output;
 	
 	// ALU input selection based on ALUsrc
-   assign ALU_in_B = signals[2] ? Immediate1 : B;
+   	assign ALU_in_B = signals[2] ? immediate_EXE : valueB_EXE;
 	
 	
     // ALU instance
     ALU alu (
-        .A(A),
+        .A(valueA_EXE),
         .B(ALU_in_B),
-        .Output(AluResult),
+        .Output(AluResult_EXE),
         .ALUop(signals[1:0])
     );
 
@@ -32,22 +31,22 @@ module EXEStage_TB;
 
     // Inputs
     reg clk;
-    reg [15:0] Immediate1;
-    reg [15:0] A;
-    reg [15:0] B;
+    reg [15:0] immediate_EXE;
+    reg [15:0] valueA_EXE;
+    reg [15:0] valueB_EXE;
     reg [2:0] signals;
 
     // Outputs
-    wire [15:0] AluResult;
+    wire [15:0] AluResult_EXE;
 
     // Instantiate the EXEStage
     EXEStage uut (
         .clk(clk),
-        .Immediate1(Immediate1),
-        .A(A),
-        .B(B),
+        .immediate_EXE(immediate_EXE),
+        .valueA_EXE(valueA_EXE),
+        .valueB_EXE(valueB_EXE),
         .signals(signals),
-        .AluResult(AluResult)
+        .AluResult_EXE(AluResult_EXE)
     );
 
     // Clock generation
@@ -59,18 +58,18 @@ module EXEStage_TB;
     // Test sequence
     initial begin
         // Initialize inputs
-        Immediate1 = 16'd0;
-        A = -16'sd10;
-        B = 16'd0;
+        immediate_EXE = 16'd0;
+        valueA_EXE = -16'sd10;
+        valueB_EXE = 16'd0;
         signals = 3'b000;
 
         // Wait for global reset
         #10;
 
         // Test 1: AND operation with ALUsrc = 0 (use B)
-        Immediate1 = 16'd5;
-        A = 16'd15;         
-        B = -16'sd10;       
+        immediate_EXE = 16'd5;
+        valueA_EXE = 16'd15;         
+        valueB_EXE = -16'sd10;       
         signals = 3'b000;   // ALUop = 00 (AND), ALUsrc = 0
         #10;
 
@@ -101,7 +100,7 @@ module EXEStage_TB;
     // Monitor values
     initial begin
         $monitor("At time %t, A = %d, B = %d, Immediate1 = %d, signals = %b, AluResult = %d",
-                 $time, A, B, Immediate1, signals, AluResult);
+                 $time, valueA_EXE, valueB_EXE, immediate_EXE, signals, AluResult_EXE);
     end
 
 endmodule

@@ -1,38 +1,38 @@
 module IDStage (
-    input clk, 
-    input stall,
-	input WB_signals,
+    input clk, 	
     input [1:0] ForwardA,
     input [1:0] ForwardB,
+	input WB_signals,
 	input [4:0] signals, // SRC1   SRC2   RegDst   ExtOp   ExtPlace
-    input [15:0] instruction,
+    input [15:0] inst_ID,
 	input [15:0] PC_ID,
-	input [15:0] AluResult,MemoryResult,WBResult,
+	input [15:0] AluResult_EXE,DataWB_MEM,DataWB_WB,
 	input [2:0] DestinationRegister,
     output reg [15:0] I_TypeImmediate,
     output reg [15:0] J_TypeImmediate,
     output reg [15:0] ReturnAddress,
-    output reg [15:0] Immediate1,
-    output reg [15:0] A,
-    output reg [15:0] B,
-    output reg [2:0] RD2,RA,RB,
+    output reg [15:0] immediate_ID,
+    output reg [15:0] valueA_ID,
+    output reg [15:0] valueB_ID,
+    output reg [2:0] Rd_ID,Ra_ID,Rb_ID,
 	output reg gt,
     output reg lt,
     output reg eq,
 );
-	
+
+
     // Internal wires for extended immediate values
     wire [15:0] extended_imm;
     wire [15:0] BusA, BusB, R7;
 	
 	
-	assign RA = signals[4] ? 3'b000 : instruction[8:6];	
-	assign RB = signals[3] ? instruction[5:3] : instruction[11:9];
-	assign RD2 = signals[2] ? 	3'b111  : instruction[11:9];
+	assign Ra_ID = signals[4] ? 3'b000 : inst_ID[8:6];	
+	assign Rb_ID = signals[3] ? inst_ID[5:3] : inst_ID[11:9];
+	assign Rd_ID = signals[2] ? 	3'b111  : inst_ID[11:9];
 
     // Instance of the extender module for immediate values
     Extender imm_extender (
-        .in(instruction[7:0]),
+        .in(inst_ID[7:0]),
         .ExtOp(signals[1]),
         .ExtPlace(signals[0]),
         .out(extended_imm)
@@ -42,11 +42,11 @@ module IDStage (
     // Register file instance
     RegisterFile reg_file (
 		.clk(clk),
-        .RA(RA),
-        .RB(RB),
+        .RA(Ra_ID),
+        .RB(Rb_ID),
         .RW(DestinationRegister),
         .enableWrite(WB_signals), 
-        .BusW(WBResult),      
+        .BusW(DataWB_WB),      
         .BusA(BusA),
         .BusB(BusB),
         .R7(R7)
@@ -54,33 +54,33 @@ module IDStage (
 	
 	
     assign    I_TypeImmediate = extended_imm+PC_ID-1;
-    assign    J_TypeImmediate = {PC_ID[15:12],instruction[11:0]};
-    assign    ReturnAddress = R7;
-    assign    Immediate1 = extended_imm;
+    assign    J_TypeImmediate = {PC_ID[15:12],inst_ID[11:0]};
+    assign    ReturnAddress = valueA_ID;
+    assign    immediate_ID = extended_imm;
 	  	
 	mux_4 #(.LENGTH(16)) mux_ForwardA (
     .in1(BusA),
-    .in2(AluResult),
-    .in3(MemoryResult),
-	.in4(WBResult),
+    .in2(AluResult_EXE),
+    .in3(DataWB_MEM),
+	.in4(DataWB_WB),
     .sel(ForwardA),
-    .out(A)
+    .out(valueA_ID)
   );
   
   
   mux_4 #(.LENGTH(16)) mux_ForwardB (
     .in1(BusB),
-    .in2(AluResult),
-    .in3(MemoryResult),
-	.in4(WBResult),
+    .in2(AluResult_EXE),
+    .in3(DataWB_MEM),
+	.in4(DataWB_WB),
     .sel(ForwardB),
-    .out(B)
+    .out(valueB_ID)
   );
   
   // Instance of the Compare module
     Compare comp (
-        .A(A),
-        .B(B),
+        .A(valueA_ID),
+        .B(valueB_ID),
         .gt(gt),
         .lt(lt),
         .eq(eq)

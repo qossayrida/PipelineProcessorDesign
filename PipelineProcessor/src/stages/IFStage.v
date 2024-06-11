@@ -3,7 +3,8 @@ module IFStage (
 	input stall,kill,
 	input wire [1:0] PCsrc,
 	input[15:0] I_TypeImmediate,J_TypeImmediate,ReturnAddress, 
-	output reg [15:0] NPC, instruction );
+	output reg [15:0] NPC, inst_IF 
+);				 
 	
 	reg [15:0] PC;
 	wire [15:0] instruction_wire;	
@@ -21,10 +22,8 @@ module IFStage (
 	    .in1(instruction_wire),
 	    .in2({ADD, R1, R1, R0, 3'b000}),
 	    .sel(kill),
-	    .out(instruction)
-  	);	
-	  
-	  
+	    .out(inst_IF)
+  	);
 	  
 	always @(posedge clk) begin
 		if (!stall) begin     
@@ -90,7 +89,7 @@ module IFStage_TB;
 		.J_TypeImmediate(J_TypeImmediate),
 		.ReturnAddress(ReturnAddress),
 		.NPC(NPC),
-		.instruction(instruction)
+		.inst_IF(instruction)
     );
 
     // Clock generation
