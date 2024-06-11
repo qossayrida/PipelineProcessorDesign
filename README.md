@@ -30,6 +30,59 @@
 | 21  | Sv    | S-Type | M[rs] = imm | 1111 |   |
 
 
+
+# Instruction Signals Table
+
+| No. | Instruction/Signals | ALUOp | Operation |
+|-----|---------------------|-------|-----------|
+|  1  | AND                 | AND   | 00        |
+|  2  | ADD                 | ADD   | 01        |        
+|  3  | SUB                 | SUB   | 10        |        
+|  4  | ADDI                | ADD   | 01        |        
+|  5  | ANDI                | AND   | 00        |        
+|  6  | LW                  | ADD   | 01        |        
+|  7  | LBU                 | ADD   | 01        |        
+|  8  | LBS                 | ADD   | 01        |        
+|  9  | SW                  | ADD   | 01        |        
+| 10  | BGT                 | X     | XX        |        
+| 11  | BGTZ                | X     | XX        |        
+| 12  | BLT                 | X     | XX        |        
+| 13  | BLTZ                | X     | XX        |        
+| 14  | BEQ                 | X     | XX        |        
+| 15  | BEQZ                | X     | XX        |        
+| 16  | BNE                 | X     | XX        |        
+| 17  | BNEZ                | X     | XX        |        
+| 18  | JMP                 | X     | XX        |        
+| 19  | CALL                | X     | XX        |        
+| 20  | RET                 | X     | XX        |        
+| 21  | Sv                  | ADD   | 01        |        
+
+
+
+| No. | Instruction/Signals | PCSrc | kill|
+|-----|---------------------|-------|-------|
+|  1  | AND                 |  0  |  0  |  0  |   0  |
+|  2  | ADD                 |  0  |  0  |  0  |   0  |    
+|  3  | SUB                 |  0  |  0  |  0  |   0  |       
+|  4  | ADDI                |  0  |  0  |  0  |   0  |       
+|  5  | ANDI                |  0  |  0  |  0  |   0  |      
+|  6  | LW                  |  0  |  0  |  0  |   0  |       
+|  7  | LBU                 |  0  |  0  |  0  |   0  |        
+|  8  | LBS                 |  0  |  0  |  0  |   0  |       
+|  9  | SW                  |  0  |  0  |  0  |   0  |      
+| 10  | BGT                 |  if (Taken) 2 else  0  |  if (Taken) 1 else  0  |       
+| 11  | BGTZ                |  if (Taken) 2 else  0   | if (Taken) 1 else  0  |      
+| 12  | BLT                 |  if (Taken) 2 else  0   | if (Taken) 1 else  0 |        
+| 13  | BLTZ                |  if (Taken) 2 else  0   |  if (Taken) 1 else  0  |       
+| 14  | BEQ                 |  if (Taken) 2 else  0   |  if (Taken) 1 else  0  |       
+| 15  | BEQZ                |  if (Taken) 2 else  0   |  if (Taken) 1 else  0 |       
+| 16  | BNE                 |  if (Taken) 2 else  0   |  if (Taken) 1 else  0  |       
+| 17  | BNEZ                |  if (Taken) 2 else  0   |  if (Taken) 1 else  0 |       
+| 18  | JMP                 |  1   |  1  |      
+| 19  | CALL                |  1   |  1  |         
+| 20  | RET                 |  3   |  1  |       
+| 21  | Sv                  |  0   |  0  |
+
 ## 🔗 Links
 
 [![facebook](https://img.shields.io/badge/facebook-0077B5?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/qossay.rida?mibextid=2JQ9oc)
