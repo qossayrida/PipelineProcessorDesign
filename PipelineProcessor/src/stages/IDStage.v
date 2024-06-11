@@ -3,7 +3,7 @@ module IDStage (
     input [1:0] ForwardA,
     input [1:0] ForwardB,
 	input WB_signals,
-	input [5:0] signals, // SRC1   SRC2   RegDst   ExtOp   ExtPlace
+	input [5:0] signals, // SRC1{2}   SRC2   RegDst   ExtOp   ExtPlace
     input [15:0] inst_ID,
 	input [15:0] PC_ID,
 	input [15:0] AluResult_EXE,DataWB_MEM,DataWB_WB,
@@ -26,8 +26,8 @@ module IDStage (
     wire [15:0] BusA, BusB;
 	
 	
-	assign Ra_ID =  (signals[5:4]==2'b01) ? 3'b000 :
-					(signals[5:4]==2'b01) ? inst_ID[8:6] :
+	assign Ra_ID =  (signals[5:4]==2'b00) ? inst_ID[8:6] :
+					(signals[5:4]==2'b01) ? 3'b000 :
 					(signals[5:4]==2'b10) ? 3'b111 :3'bxxx ;	   
 	
 	assign Rb_ID = signals[3] ? inst_ID[5:3] : inst_ID[11:9];

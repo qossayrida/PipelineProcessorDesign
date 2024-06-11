@@ -20,11 +20,11 @@ module DataMemory (
     always @(posedge clk) begin
         if (wrEnable) begin  
 			
-			memory[address] <= in[7:0];
+			memory[address] = in[7:0];
 			
             // Writing 16-bit data to two consecutive memory locations
 			if (numberOfByte == 2'b10)
-            	memory[address + 1] <= in[15:8];
+            	memory[address + 1] = in[15:8];
 			
         end 
     end	
@@ -42,7 +42,7 @@ module DataMemory (
 		 	end else if (numberOfByte == 2'b10) begin
                 // Sign extend memory[address] and store to out
             	out = {{8{memory[address][7]}}, memory[address]};
-        	 end
+        	end
 			
     end
 	
