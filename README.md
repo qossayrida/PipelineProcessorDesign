@@ -1,6 +1,6 @@
 # Pipeline Processor Design
 
-![image](https://github.com/qossayrida/PipelineProcessorDesign/assets/59481839/3f99e71d-71a2-4856-82b2-0f58781f1cda)
+![image](https://github.com/qossayrida/PipelineProcessorDesign/assets/59481839/0d23f7e3-d67c-4878-a9d0-e9482b42d2c5)
 
 
 # Instruction Set Table
@@ -80,7 +80,7 @@
 | 18  | JMP                 |  1   |  1  |      
 | 19  | CALL                |  1   |  1  |         
 | 20  | RET                 |  3   |  1  |       
-| 21  | ANDI                |  0   |  0  |   
+| 21  | Sv                |  0   |  0  |   
 
 
 ## 🔗 Links

@@ -3104,4 +3104,970 @@ run
 # KERNEL: 115 ==> opcode= 5  , Rd=4 ,  signlas[0]=1
 # KERNEL: 115 ==> J_TypeImmediate from decode= 0000100001000000
 # KERNEL: 115 ==> J_TypeImmediate= 0000100001000000
-# KERNEL: 
+# KERNEL: 115 ==> extended_imm= 0000000000000000
+# KERNEL: 125 ==> PC= 0000000000001010
+# KERNEL: 125 ==> NPC= 0000000000001010
+# KERNEL: 125 ==> PC_ID = 0000000000001001
+# KERNEL: 125 ==> opcode= 7  , Rd=4 ,  signlas[0]=0
+# KERNEL: 125 ==> I_TypeImmediate from decode= 0000000000001000
+# KERNEL: 125 ==> J_TypeImmediate from decode= 0000100010000000
+# KERNEL: 125 ==> J_TypeImmediate= 0000100010000000
+# KERNEL: 125 ==> I_TypeImmediate= 0000000000001000
+# KERNEL: 140  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000001011111111 
+# KERNEL: 145 ==> PC= 0000000000001011
+# KERNEL: 145 ==> NPC= 0000000000001011
+# KERNEL: 145 ==> PC_ID = 0000000000001010
+# KERNEL: 145 ==> opcode= 1  , Rd=4 ,  signlas[0]=1
+# KERNEL: 145 ==> I_TypeImmediate from decode= 0000000000100001
+# KERNEL: 145 ==> J_TypeImmediate from decode= 0000100110111000
+# KERNEL: 145 ==> J_TypeImmediate= 0000100110111000
+# KERNEL: 145 ==> I_TypeImmediate= 0000000000100001
+# KERNEL: 145 ==> extended_imm= 0000000000011000
+# KERNEL: 150  ==> R4=0000001011111111  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 155 ==> PC= 0000000000000110
+# KERNEL: 155 ==> NPC= 0000000000000110
+# KERNEL: 155 ==> PC_ID = 0000000000001011
+# KERNEL: 155 ==> opcode=14  , Rd=0 ,  signlas[0]=0
+# KERNEL: 155 ==> I_TypeImmediate from decode= 0000000000001010
+# KERNEL: 155 ==> J_TypeImmediate from decode= 0000000111000000
+# KERNEL: 155 ==> J_TypeImmediate= 0000000111000000
+# KERNEL: 155 ==> I_TypeImmediate= 0000000000001010
+# KERNEL: 155 ==> kill= 1
+# KERNEL: 155 ==> extended_imm= 0000000000000000
+# KERNEL: 165  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=11111111 , memory[4]=00000010
+# KERNEL: 165 ==> PC= 0000000000000111
+# KERNEL: 165 ==> NPC= 0000000000000111
+# KERNEL: 165 ==> PC_ID = 0000000000000110
+# KERNEL: 165 ==> opcode= 1  , Rd=1 ,  signlas[0]=1
+# KERNEL: 165 ==> I_TypeImmediate from decode= 0000000000000101
+# KERNEL: 165 ==> J_TypeImmediate from decode= 0000001001000000
+# KERNEL: 165 ==> J_TypeImmediate= 0000001001000000
+# KERNEL: 165 ==> I_TypeImmediate= 0000000000000101
+# KERNEL: 165 ==> kill= 0
+# KERNEL: 175 ==> PC= 0000000000001000
+# KERNEL: 175 ==> NPC= 0000000000001000
+# KERNEL: 175 ==> PC_ID = 0000000000000111
+# KERNEL: 175 ==> opcode= 5  , Rd=3 ,  signlas[0]=1
+# KERNEL: 175 ==> I_TypeImmediate from decode= 0000000000000111
+# KERNEL: 175 ==> J_TypeImmediate from decode= 0000011000000001
+# KERNEL: 175 ==> J_TypeImmediate= 0000011000000001
+# KERNEL: 175 ==> I_TypeImmediate= 0000000000000111
+# KERNEL: 175 ==> extended_imm= 0000000000000001
+# KERNEL: 180  ==> R4=0000000000001011  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 185 ==> PC= 0000000000001001
+# KERNEL: 185 ==> NPC= 0000000000001001
+# KERNEL: 185 ==> PC_ID = 0000000000001000
+# KERNEL: 185 ==> opcode= 5  , Rd=4 ,  signlas[0]=1
+# KERNEL: 185 ==> J_TypeImmediate from decode= 0000100001000000
+# KERNEL: 185 ==> J_TypeImmediate= 0000100001000000
+# KERNEL: 185 ==> extended_imm= 0000000000000000
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 190 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 190 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/IFStage.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Info: VCP2876 register_file/RegisterFile.v : (25, 17): Implicit net declaration, symbol R7 has not been declared in module RegisterFile.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (87, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (88, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (86, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor IFStage_TB EXEStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 0 primitives and 45 (100.00%) other processes in SLP
+# SLP: 219 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4801 kB (elbread=427 elab2=4237 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  6:17 PM, Tuesday, June 11, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> opcode= x  , Rd=x ,  signlas[0]=x
+# KERNEL: 0 ==> kill= 0
+# KERNEL: 0 ==> I_TypeImmediate= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> J_TypeImmediate= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> NPC= 0000000000000000
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0 ==> I_TypeImmediate from decode= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> J_TypeImmediate from decode= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> PC_ID = xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> extended_imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 0  ==> memory[5]=xxxxxxxx , memory[6]=xxxxxxxx , memory[7]=xxxxxxxx , memory[8]=xxxxxxxx , memory[9]=xxxxxxxx
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 5 ==> NPC= 0000000000000001
+# KERNEL: 5 ==> PC_ID = 0000000000000000
+# KERNEL: 5 ==> J_TypeImmediate from decode= 0000xxxxxxxxxxxx
+# KERNEL: 5 ==> J_TypeImmediate= 0000xxxxxxxxxxxx
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 15 ==> NPC= 0000000000000010
+# KERNEL: 15 ==> PC_ID = 0000000000000001
+# KERNEL: 15 ==> opcode= 0  , Rd=4 ,  signlas[0]=1
+# KERNEL: 15 ==> J_TypeImmediate from decode= 0000100110111000
+# KERNEL: 15 ==> J_TypeImmediate= 0000100110111000
+# KERNEL: 15 ==> extended_imm= 0000000000011000
+# KERNEL: 15 ==> I_TypeImmediate from decode= 0000000000011000
+# KERNEL: 15 ==> I_TypeImmediate= 0000000000011000
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 25 ==> NPC= 0000000000000011
+# KERNEL: 25 ==> PC_ID = 0000000000000010
+# KERNEL: 25 ==> opcode= 1  , Rd=6 ,  signlas[0]=1
+# KERNEL: 25 ==> I_TypeImmediate from decode= 0000000000010001
+# KERNEL: 25 ==> J_TypeImmediate from decode= 0000110100010000
+# KERNEL: 25 ==> J_TypeImmediate= 0000110100010000
+# KERNEL: 25 ==> I_TypeImmediate= 0000000000010001
+# KERNEL: 25 ==> extended_imm= 0000000000010000
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 35 ==> NPC= 0000000000000100
+# KERNEL: 35 ==> PC_ID = 0000000000000011
+# KERNEL: 35 ==> opcode= 2  , Rd=5 ,  signlas[0]=1
+# KERNEL: 35 ==> I_TypeImmediate from decode= 0000000000001010
+# KERNEL: 35 ==> J_TypeImmediate from decode= 0000101011101000
+# KERNEL: 35 ==> J_TypeImmediate= 0000101011101000
+# KERNEL: 35 ==> I_TypeImmediate= 0000000000001010
+# KERNEL: 35 ==> extended_imm= 0000000000001000
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 45 ==> NPC= 0000000000000101
+# KERNEL: 45 ==> PC_ID = 0000000000000100
+# KERNEL: 45 ==> opcode=15  , Rd=1 ,  signlas[0]=0
+# KERNEL: 45 ==> I_TypeImmediate from decode= 0000000100000010
+# KERNEL: 45 ==> J_TypeImmediate from decode= 0000001011111111
+# KERNEL: 45 ==> J_TypeImmediate= 0000001011111111
+# KERNEL: 45 ==> I_TypeImmediate= 0000000100000010
+# KERNEL: 45 ==> extended_imm= 0000000011111111
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 55 ==> NPC= 0000000000000110
+# KERNEL: 55 ==> PC_ID = 0000000000000101
+# KERNEL: 55 ==> opcode= 5  , Rd=7 ,  signlas[0]=1
+# KERNEL: 55 ==> I_TypeImmediate from decode= 0000000000000101
+# KERNEL: 55 ==> J_TypeImmediate from decode= 0000111000000001
+# KERNEL: 55 ==> J_TypeImmediate= 0000111000000001
+# KERNEL: 55 ==> I_TypeImmediate= 0000000000000101
+# KERNEL: 55 ==> extended_imm= 0000000000000001
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000001010
+# KERNEL: 65 ==> NPC= 0000000000001010
+# KERNEL: 65 ==> PC_ID = 0000000000000110
+# KERNEL: 65 ==> opcode=13  , Rd=0 ,  signlas[0]=1
+# KERNEL: 65 ==> I_TypeImmediate from decode= 0000000000001111
+# KERNEL: 65 ==> J_TypeImmediate from decode= 0000000000001010
+# KERNEL: 65 ==> J_TypeImmediate= 0000000000001010
+# KERNEL: 65 ==> I_TypeImmediate= 0000000000001111
+# KERNEL: 65 ==> kill= 1
+# KERNEL: 65 ==> extended_imm= 0000000000001010
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001011
+# KERNEL: 75 ==> NPC= 0000000000001011
+# KERNEL: 75 ==> PC_ID = 0000000000001010
+# KERNEL: 75 ==> opcode= 1  , Rd=1 ,  signlas[0]=1
+# KERNEL: 75 ==> I_TypeImmediate from decode= 0000000000001001
+# KERNEL: 75 ==> J_TypeImmediate from decode= 0000001001000000
+# KERNEL: 75 ==> J_TypeImmediate= 0000001001000000
+# KERNEL: 75 ==> I_TypeImmediate= 0000000000001001
+# KERNEL: 75 ==> kill= 0
+# KERNEL: 75 ==> extended_imm= 0000000000000000
+# KERNEL: 85 ==> PC= 0000000000000110
+# KERNEL: 85 ==> NPC= 0000000000000110
+# KERNEL: 85 ==> PC_ID = 0000000000001011
+# KERNEL: 85 ==> opcode=14  , Rd=0 ,  signlas[0]=0
+# KERNEL: 85 ==> I_TypeImmediate from decode= 0000000000001010
+# KERNEL: 85 ==> J_TypeImmediate from decode= 0000000111000000
+# KERNEL: 85 ==> J_TypeImmediate= 0000000111000000
+# KERNEL: 85 ==> I_TypeImmediate= 0000000000001010
+# KERNEL: 85 ==> kill= 1
+# KERNEL: 90  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000001000000001 
+# KERNEL: 95 ==> PC= 0000000000000111
+# KERNEL: 95 ==> NPC= 0000000000000111
+# KERNEL: 95 ==> PC_ID = 0000000000000110
+# KERNEL: 95 ==> opcode= 1  , Rd=1 ,  signlas[0]=1
+# KERNEL: 95 ==> I_TypeImmediate from decode= 0000000000000101
+# KERNEL: 95 ==> J_TypeImmediate from decode= 0000001001000000
+# KERNEL: 95 ==> J_TypeImmediate= 0000001001000000
+# KERNEL: 95 ==> I_TypeImmediate= 0000000000000101
+# KERNEL: 95 ==> kill= 0
+# KERNEL: 100  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 105 ==> PC= 0000000000001000
+# KERNEL: 105 ==> NPC= 0000000000001000
+# KERNEL: 105 ==> PC_ID = 0000000000000111
+# KERNEL: 105 ==> opcode= 5  , Rd=3 ,  signlas[0]=1
+# KERNEL: 105 ==> I_TypeImmediate from decode= 0000000000000111
+# KERNEL: 105 ==> J_TypeImmediate from decode= 0000011000000001
+# KERNEL: 105 ==> J_TypeImmediate= 0000011000000001
+# KERNEL: 105 ==> I_TypeImmediate= 0000000000000111
+# KERNEL: 105 ==> extended_imm= 0000000000000001
+# KERNEL: 115 ==> PC= 0000000000001001
+# KERNEL: 115 ==> NPC= 0000000000001001
+# KERNEL: 115 ==> PC_ID = 0000000000001000
+# KERNEL: 115 ==> opcode= 5  , Rd=4 ,  signlas[0]=1
+# KERNEL: 115 ==> J_TypeImmediate from decode= 0000100001000000
+# KERNEL: 115 ==> J_TypeImmediate= 0000100001000000
+# KERNEL: 115 ==> extended_imm= 0000000000000000
+# KERNEL: 125 ==> PC= 0000000000001010
+# KERNEL: 125 ==> NPC= 0000000000001010
+# KERNEL: 125 ==> PC_ID = 0000000000001001
+# KERNEL: 125 ==> opcode= 7  , Rd=4 ,  signlas[0]=0
+# KERNEL: 125 ==> I_TypeImmediate from decode= 0000000000001000
+# KERNEL: 125 ==> J_TypeImmediate from decode= 0000100010000000
+# KERNEL: 125 ==> J_TypeImmediate= 0000100010000000
+# KERNEL: 125 ==> I_TypeImmediate= 0000000000001000
+# KERNEL: 140  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000001000000001 
+# KERNEL: 145 ==> PC= 0000000000001011
+# KERNEL: 145 ==> NPC= 0000000000001011
+# KERNEL: 145 ==> PC_ID = 0000000000001010
+# KERNEL: 145 ==> opcode= 1  , Rd=4 ,  signlas[0]=1
+# KERNEL: 145 ==> I_TypeImmediate from decode= 0000000000100001
+# KERNEL: 145 ==> J_TypeImmediate from decode= 0000100110111000
+# KERNEL: 145 ==> J_TypeImmediate= 0000100110111000
+# KERNEL: 145 ==> I_TypeImmediate= 0000000000100001
+# KERNEL: 145 ==> extended_imm= 0000000000011000
+# KERNEL: 150  ==> R4=0000001000000001  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 155 ==> PC= 0000000000000110
+# KERNEL: 155 ==> NPC= 0000000000000110
+# KERNEL: 155 ==> PC_ID = 0000000000001011
+# KERNEL: 155 ==> opcode=14  , Rd=0 ,  signlas[0]=0
+# KERNEL: 155 ==> I_TypeImmediate from decode= 0000000000001010
+# KERNEL: 155 ==> J_TypeImmediate from decode= 0000000111000000
+# KERNEL: 155 ==> J_TypeImmediate= 0000000111000000
+# KERNEL: 155 ==> I_TypeImmediate= 0000000000001010
+# KERNEL: 155 ==> kill= 1
+# KERNEL: 155 ==> extended_imm= 0000000000000000
+# KERNEL: 165 ==> PC= 0000000000000111
+# KERNEL: 165 ==> NPC= 0000000000000111
+# KERNEL: 165 ==> PC_ID = 0000000000000110
+# KERNEL: 165 ==> opcode= 1  , Rd=1 ,  signlas[0]=1
+# KERNEL: 165 ==> I_TypeImmediate from decode= 0000000000000101
+# KERNEL: 165 ==> J_TypeImmediate from decode= 0000001001000000
+# KERNEL: 165 ==> J_TypeImmediate= 0000001001000000
+# KERNEL: 165 ==> I_TypeImmediate= 0000000000000101
+# KERNEL: 165 ==> kill= 0
+# KERNEL: 175 ==> PC= 0000000000001000
+# KERNEL: 175 ==> NPC= 0000000000001000
+# KERNEL: 175 ==> PC_ID = 0000000000000111
+# KERNEL: 175 ==> opcode= 5  , Rd=3 ,  signlas[0]=1
+# KERNEL: 175 ==> I_TypeImmediate from decode= 0000000000000111
+# KERNEL: 175 ==> J_TypeImmediate from decode= 0000011000000001
+# KERNEL: 175 ==> J_TypeImmediate= 0000011000000001
+# KERNEL: 175 ==> I_TypeImmediate= 0000000000000111
+# KERNEL: 175 ==> extended_imm= 0000000000000001
+# KERNEL: 180  ==> R4=0000000000001011  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 185 ==> PC= 0000000000001001
+# KERNEL: 185 ==> NPC= 0000000000001001
+# KERNEL: 185 ==> PC_ID = 0000000000001000
+# KERNEL: 185 ==> opcode= 5  , Rd=4 ,  signlas[0]=1
+# KERNEL: 185 ==> J_TypeImmediate from decode= 0000100001000000
+# KERNEL: 185 ==> J_TypeImmediate= 0000100001000000
+# KERNEL: 185 ==> extended_imm= 0000000000000000
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 190 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 190 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/IFStage.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Info: VCP2876 register_file/RegisterFile.v : (25, 17): Implicit net declaration, symbol R7 has not been declared in module RegisterFile.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (87, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (88, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (86, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor IFStage_TB EXEStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 0 primitives and 45 (100.00%) other processes in SLP
+# SLP: 219 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4800 kB (elbread=427 elab2=4237 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  6:18 PM, Tuesday, June 11, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> opcode= x  , Rd=x ,  signlas[0]=x
+# KERNEL: 0 ==> kill= 0
+# KERNEL: 0 ==> I_TypeImmediate= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> J_TypeImmediate= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> NPC= 0000000000000000
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0 ==> I_TypeImmediate from decode= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> J_TypeImmediate from decode= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> PC_ID = xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> extended_imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 0  ==> memory[5]=xxxxxxxx , memory[6]=xxxxxxxx , memory[7]=xxxxxxxx , memory[8]=xxxxxxxx , memory[9]=xxxxxxxx
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 5 ==> NPC= 0000000000000001
+# KERNEL: 5 ==> PC_ID = 0000000000000000
+# KERNEL: 5 ==> J_TypeImmediate from decode= 0000xxxxxxxxxxxx
+# KERNEL: 5 ==> J_TypeImmediate= 0000xxxxxxxxxxxx
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 15 ==> NPC= 0000000000000010
+# KERNEL: 15 ==> PC_ID = 0000000000000001
+# KERNEL: 15 ==> opcode= 0  , Rd=4 ,  signlas[0]=1
+# KERNEL: 15 ==> J_TypeImmediate from decode= 0000100110111000
+# KERNEL: 15 ==> J_TypeImmediate= 0000100110111000
+# KERNEL: 15 ==> extended_imm= 0000000000011000
+# KERNEL: 15 ==> I_TypeImmediate from decode= 0000000000011000
+# KERNEL: 15 ==> I_TypeImmediate= 0000000000011000
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 25 ==> NPC= 0000000000000011
+# KERNEL: 25 ==> PC_ID = 0000000000000010
+# KERNEL: 25 ==> opcode= 1  , Rd=6 ,  signlas[0]=1
+# KERNEL: 25 ==> I_TypeImmediate from decode= 0000000000010001
+# KERNEL: 25 ==> J_TypeImmediate from decode= 0000110100010000
+# KERNEL: 25 ==> J_TypeImmediate= 0000110100010000
+# KERNEL: 25 ==> I_TypeImmediate= 0000000000010001
+# KERNEL: 25 ==> extended_imm= 0000000000010000
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 35 ==> NPC= 0000000000000100
+# KERNEL: 35 ==> PC_ID = 0000000000000011
+# KERNEL: 35 ==> opcode= 2  , Rd=5 ,  signlas[0]=1
+# KERNEL: 35 ==> I_TypeImmediate from decode= 0000000000001010
+# KERNEL: 35 ==> J_TypeImmediate from decode= 0000101011101000
+# KERNEL: 35 ==> J_TypeImmediate= 0000101011101000
+# KERNEL: 35 ==> I_TypeImmediate= 0000000000001010
+# KERNEL: 35 ==> extended_imm= 0000000000001000
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 45 ==> NPC= 0000000000000101
+# KERNEL: 45 ==> PC_ID = 0000000000000100
+# KERNEL: 45 ==> opcode=15  , Rd=1 ,  signlas[0]=0
+# KERNEL: 45 ==> I_TypeImmediate from decode= 0000000100000010
+# KERNEL: 45 ==> J_TypeImmediate from decode= 0000001011111111
+# KERNEL: 45 ==> J_TypeImmediate= 0000001011111111
+# KERNEL: 45 ==> I_TypeImmediate= 0000000100000010
+# KERNEL: 45 ==> extended_imm= 0000000011111111
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 55 ==> NPC= 0000000000000110
+# KERNEL: 55 ==> PC_ID = 0000000000000101
+# KERNEL: 55 ==> opcode= 5  , Rd=7 ,  signlas[0]=1
+# KERNEL: 55 ==> I_TypeImmediate from decode= 0000000000000101
+# KERNEL: 55 ==> J_TypeImmediate from decode= 0000111000000001
+# KERNEL: 55 ==> J_TypeImmediate= 0000111000000001
+# KERNEL: 55 ==> I_TypeImmediate= 0000000000000101
+# KERNEL: 55 ==> extended_imm= 0000000000000001
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000001010
+# KERNEL: 65 ==> NPC= 0000000000001010
+# KERNEL: 65 ==> PC_ID = 0000000000000110
+# KERNEL: 65 ==> opcode=13  , Rd=0 ,  signlas[0]=1
+# KERNEL: 65 ==> I_TypeImmediate from decode= 0000000000001111
+# KERNEL: 65 ==> J_TypeImmediate from decode= 0000000000001010
+# KERNEL: 65 ==> J_TypeImmediate= 0000000000001010
+# KERNEL: 65 ==> I_TypeImmediate= 0000000000001111
+# KERNEL: 65 ==> kill= 1
+# KERNEL: 65 ==> extended_imm= 0000000000001010
+# KERNEL: 66  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001011
+# KERNEL: 75 ==> NPC= 0000000000001011
+# KERNEL: 75 ==> PC_ID = 0000000000001010
+# KERNEL: 75 ==> opcode= 1  , Rd=1 ,  signlas[0]=1
+# KERNEL: 75 ==> I_TypeImmediate from decode= 0000000000001001
+# KERNEL: 75 ==> J_TypeImmediate from decode= 0000001001000000
+# KERNEL: 75 ==> J_TypeImmediate= 0000001001000000
+# KERNEL: 75 ==> I_TypeImmediate= 0000000000001001
+# KERNEL: 75 ==> kill= 0
+# KERNEL: 75 ==> extended_imm= 0000000000000000
+# KERNEL: 85 ==> PC= 0000000000000110
+# KERNEL: 85 ==> NPC= 0000000000000110
+# KERNEL: 85 ==> PC_ID = 0000000000001011
+# KERNEL: 85 ==> opcode=14  , Rd=0 ,  signlas[0]=0
+# KERNEL: 85 ==> I_TypeImmediate from decode= 0000000000001010
+# KERNEL: 85 ==> J_TypeImmediate from decode= 0000000111000000
+# KERNEL: 85 ==> J_TypeImmediate= 0000000111000000
+# KERNEL: 85 ==> I_TypeImmediate= 0000000000001010
+# KERNEL: 85 ==> kill= 1
+# KERNEL: 90  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000001011111111 
+# KERNEL: 95 ==> PC= 0000000000000111
+# KERNEL: 95 ==> NPC= 0000000000000111
+# KERNEL: 95 ==> PC_ID = 0000000000000110
+# KERNEL: 95 ==> opcode= 1  , Rd=1 ,  signlas[0]=1
+# KERNEL: 95 ==> I_TypeImmediate from decode= 0000000000000101
+# KERNEL: 95 ==> J_TypeImmediate from decode= 0000001001000000
+# KERNEL: 95 ==> J_TypeImmediate= 0000001001000000
+# KERNEL: 95 ==> I_TypeImmediate= 0000000000000101
+# KERNEL: 95 ==> kill= 0
+# KERNEL: 100  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 105 ==> PC= 0000000000001000
+# KERNEL: 105 ==> NPC= 0000000000001000
+# KERNEL: 105 ==> PC_ID = 0000000000000111
+# KERNEL: 105 ==> opcode= 5  , Rd=3 ,  signlas[0]=1
+# KERNEL: 105 ==> I_TypeImmediate from decode= 0000000000000111
+# KERNEL: 105 ==> J_TypeImmediate from decode= 0000011000000001
+# KERNEL: 105 ==> J_TypeImmediate= 0000011000000001
+# KERNEL: 105 ==> I_TypeImmediate= 0000000000000111
+# KERNEL: 105 ==> extended_imm= 0000000000000001
+# KERNEL: 115 ==> PC= 0000000000001001
+# KERNEL: 115 ==> NPC= 0000000000001001
+# KERNEL: 115 ==> PC_ID = 0000000000001000
+# KERNEL: 115 ==> opcode= 5  , Rd=4 ,  signlas[0]=1
+# KERNEL: 115 ==> J_TypeImmediate from decode= 0000100001000000
+# KERNEL: 115 ==> J_TypeImmediate= 0000100001000000
+# KERNEL: 115 ==> extended_imm= 0000000000000000
+# KERNEL: 125 ==> PC= 0000000000001010
+# KERNEL: 125 ==> NPC= 0000000000001010
+# KERNEL: 125 ==> PC_ID = 0000000000001001
+# KERNEL: 125 ==> opcode= 7  , Rd=4 ,  signlas[0]=0
+# KERNEL: 125 ==> I_TypeImmediate from decode= 0000000000001000
+# KERNEL: 125 ==> J_TypeImmediate from decode= 0000100010000000
+# KERNEL: 125 ==> J_TypeImmediate= 0000100010000000
+# KERNEL: 125 ==> I_TypeImmediate= 0000000000001000
+# KERNEL: 140  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000001011111111 
+# KERNEL: 145 ==> PC= 0000000000001011
+# KERNEL: 145 ==> NPC= 0000000000001011
+# KERNEL: 145 ==> PC_ID = 0000000000001010
+# KERNEL: 145 ==> opcode= 1  , Rd=4 ,  signlas[0]=1
+# KERNEL: 145 ==> I_TypeImmediate from decode= 0000000000100001
+# KERNEL: 145 ==> J_TypeImmediate from decode= 0000100110111000
+# KERNEL: 145 ==> J_TypeImmediate= 0000100110111000
+# KERNEL: 145 ==> I_TypeImmediate= 0000000000100001
+# KERNEL: 145 ==> extended_imm= 0000000000011000
+# KERNEL: 150  ==> R4=0000001011111111  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 155 ==> PC= 0000000000000110
+# KERNEL: 155 ==> NPC= 0000000000000110
+# KERNEL: 155 ==> PC_ID = 0000000000001011
+# KERNEL: 155 ==> opcode=14  , Rd=0 ,  signlas[0]=0
+# KERNEL: 155 ==> I_TypeImmediate from decode= 0000000000001010
+# KERNEL: 155 ==> J_TypeImmediate from decode= 0000000111000000
+# KERNEL: 155 ==> J_TypeImmediate= 0000000111000000
+# KERNEL: 155 ==> I_TypeImmediate= 0000000000001010
+# KERNEL: 155 ==> kill= 1
+# KERNEL: 155 ==> extended_imm= 0000000000000000
+# KERNEL: 156  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=11111111 , memory[4]=00000010
+# KERNEL: 165 ==> PC= 0000000000000111
+# KERNEL: 165 ==> NPC= 0000000000000111
+# KERNEL: 165 ==> PC_ID = 0000000000000110
+# KERNEL: 165 ==> opcode= 1  , Rd=1 ,  signlas[0]=1
+# KERNEL: 165 ==> I_TypeImmediate from decode= 0000000000000101
+# KERNEL: 165 ==> J_TypeImmediate from decode= 0000001001000000
+# KERNEL: 165 ==> J_TypeImmediate= 0000001001000000
+# KERNEL: 165 ==> I_TypeImmediate= 0000000000000101
+# KERNEL: 165 ==> kill= 0
+# KERNEL: 175 ==> PC= 0000000000001000
+# KERNEL: 175 ==> NPC= 0000000000001000
+# KERNEL: 175 ==> PC_ID = 0000000000000111
+# KERNEL: 175 ==> opcode= 5  , Rd=3 ,  signlas[0]=1
+# KERNEL: 175 ==> I_TypeImmediate from decode= 0000000000000111
+# KERNEL: 175 ==> J_TypeImmediate from decode= 0000011000000001
+# KERNEL: 175 ==> J_TypeImmediate= 0000011000000001
+# KERNEL: 175 ==> I_TypeImmediate= 0000000000000111
+# KERNEL: 175 ==> extended_imm= 0000000000000001
+# KERNEL: 180  ==> R4=0000000000001011  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 185 ==> PC= 0000000000001001
+# KERNEL: 185 ==> NPC= 0000000000001001
+# KERNEL: 185 ==> PC_ID = 0000000000001000
+# KERNEL: 185 ==> opcode= 5  , Rd=4 ,  signlas[0]=1
+# KERNEL: 185 ==> J_TypeImmediate from decode= 0000100001000000
+# KERNEL: 185 ==> J_TypeImmediate= 0000100001000000
+# KERNEL: 185 ==> extended_imm= 0000000000000000
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 190 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 190 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/IFStage.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Info: VCP2876 register_file/RegisterFile.v : (25, 17): Implicit net declaration, symbol R7 has not been declared in module RegisterFile.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (87, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (88, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (86, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor IFStage_TB EXEStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 0 primitives and 44 (100.00%) other processes in SLP
+# SLP: 219 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4800 kB (elbread=427 elab2=4236 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  6:35 PM, Tuesday, June 11, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> opcode= x  , Rd=x ,  signlas[0]=x
+# KERNEL: 0 ==> kill= 0
+# KERNEL: 0 ==> I_TypeImmediate= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> J_TypeImmediate= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> NPC= 0000000000000000
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0 ==> I_TypeImmediate from decode= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> J_TypeImmediate from decode= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> PC_ID = xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> extended_imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 0  ==> memory[5]=xxxxxxxx , memory[6]=xxxxxxxx , memory[7]=xxxxxxxx , memory[8]=xxxxxxxx , memory[9]=xxxxxxxx
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 5 ==> NPC= 0000000000000001
+# KERNEL: 5 ==> PC_ID = 0000000000000000
+# KERNEL: 5 ==> J_TypeImmediate from decode= 0000xxxxxxxxxxxx
+# KERNEL: 5 ==> J_TypeImmediate= 0000xxxxxxxxxxxx
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 15 ==> NPC= 0000000000000010
+# KERNEL: 15 ==> PC_ID = 0000000000000001
+# KERNEL: 15 ==> opcode= 0  , Rd=4 ,  signlas[0]=1
+# KERNEL: 15 ==> J_TypeImmediate from decode= 0000100110111000
+# KERNEL: 15 ==> J_TypeImmediate= 0000100110111000
+# KERNEL: 15 ==> extended_imm= 0000000000011000
+# KERNEL: 15 ==> I_TypeImmediate from decode= 0000000000011000
+# KERNEL: 15 ==> I_TypeImmediate= 0000000000011000
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 25 ==> NPC= 0000000000000011
+# KERNEL: 25 ==> PC_ID = 0000000000000010
+# KERNEL: 25 ==> opcode= 1  , Rd=6 ,  signlas[0]=1
+# KERNEL: 25 ==> I_TypeImmediate from decode= 0000000000010001
+# KERNEL: 25 ==> J_TypeImmediate from decode= 0000110100010000
+# KERNEL: 25 ==> J_TypeImmediate= 0000110100010000
+# KERNEL: 25 ==> I_TypeImmediate= 0000000000010001
+# KERNEL: 25 ==> extended_imm= 0000000000010000
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 35 ==> NPC= 0000000000000100
+# KERNEL: 35 ==> PC_ID = 0000000000000011
+# KERNEL: 35 ==> opcode= 2  , Rd=5 ,  signlas[0]=1
+# KERNEL: 35 ==> I_TypeImmediate from decode= 0000000000001010
+# KERNEL: 35 ==> J_TypeImmediate from decode= 0000101011101000
+# KERNEL: 35 ==> J_TypeImmediate= 0000101011101000
+# KERNEL: 35 ==> I_TypeImmediate= 0000000000001010
+# KERNEL: 35 ==> extended_imm= 0000000000001000
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 45 ==> NPC= 0000000000000101
+# KERNEL: 45 ==> PC_ID = 0000000000000100
+# KERNEL: 45 ==> opcode=15  , Rd=1 ,  signlas[0]=0
+# KERNEL: 45 ==> I_TypeImmediate from decode= 0000000100000010
+# KERNEL: 45 ==> J_TypeImmediate from decode= 0000001011111111
+# KERNEL: 45 ==> J_TypeImmediate= 0000001011111111
+# KERNEL: 45 ==> I_TypeImmediate= 0000000100000010
+# KERNEL: 45 ==> extended_imm= 0000000011111111
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 55 ==> NPC= 0000000000000110
+# KERNEL: 55 ==> PC_ID = 0000000000000101
+# KERNEL: 55 ==> opcode= 5  , Rd=7 ,  signlas[0]=1
+# KERNEL: 55 ==> I_TypeImmediate from decode= 0000000000000101
+# KERNEL: 55 ==> J_TypeImmediate from decode= 0000111000000001
+# KERNEL: 55 ==> J_TypeImmediate= 0000111000000001
+# KERNEL: 55 ==> I_TypeImmediate= 0000000000000101
+# KERNEL: 55 ==> extended_imm= 0000000000000001
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000001010
+# KERNEL: 65 ==> NPC= 0000000000001010
+# KERNEL: 65 ==> PC_ID = 0000000000000110
+# KERNEL: 65 ==> opcode=13  , Rd=0 ,  signlas[0]=1
+# KERNEL: 65 ==> I_TypeImmediate from decode= 0000000000001111
+# KERNEL: 65 ==> J_TypeImmediate from decode= 0000000000001010
+# KERNEL: 65 ==> J_TypeImmediate= 0000000000001010
+# KERNEL: 65 ==> I_TypeImmediate= 0000000000001111
+# KERNEL: 65 ==> kill= 1
+# KERNEL: 65 ==> extended_imm= 0000000000001010
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 75 ==> PC= 0000000000001011
+# KERNEL: 75 ==> NPC= 0000000000001011
+# KERNEL: 75 ==> PC_ID = 0000000000001010
+# KERNEL: 75 ==> opcode= 1  , Rd=1 ,  signlas[0]=1
+# KERNEL: 75 ==> I_TypeImmediate from decode= 0000000000001001
+# KERNEL: 75 ==> J_TypeImmediate from decode= 0000001001000000
+# KERNEL: 75 ==> J_TypeImmediate= 0000001001000000
+# KERNEL: 75 ==> I_TypeImmediate= 0000000000001001
+# KERNEL: 75 ==> kill= 0
+# KERNEL: 75 ==> extended_imm= 0000000000000000
+# KERNEL: 85 ==> PC= 0000000000000110
+# KERNEL: 85 ==> NPC= 0000000000000110
+# KERNEL: 85 ==> PC_ID = 0000000000001011
+# KERNEL: 85 ==> opcode=14  , Rd=0 ,  signlas[0]=0
+# KERNEL: 85 ==> I_TypeImmediate from decode= 0000000000001010
+# KERNEL: 85 ==> J_TypeImmediate from decode= 0000000111000000
+# KERNEL: 85 ==> J_TypeImmediate= 0000000111000000
+# KERNEL: 85 ==> I_TypeImmediate= 0000000000001010
+# KERNEL: 85 ==> kill= 1
+# KERNEL: 90  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=xxxxxxxxxxxxxxxx 
+# KERNEL: 95 ==> PC= 0000000000000111
+# KERNEL: 95 ==> NPC= 0000000000000111
+# KERNEL: 95 ==> PC_ID = 0000000000000110
+# KERNEL: 95 ==> opcode= 1  , Rd=1 ,  signlas[0]=1
+# KERNEL: 95 ==> I_TypeImmediate from decode= 0000000000000101
+# KERNEL: 95 ==> J_TypeImmediate from decode= 0000001001000000
+# KERNEL: 95 ==> J_TypeImmediate= 0000001001000000
+# KERNEL: 95 ==> I_TypeImmediate= 0000000000000101
+# KERNEL: 95 ==> kill= 0
+# KERNEL: 100  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 105 ==> PC= 0000000000001000
+# KERNEL: 105 ==> NPC= 0000000000001000
+# KERNEL: 105 ==> PC_ID = 0000000000000111
+# KERNEL: 105 ==> opcode= 5  , Rd=3 ,  signlas[0]=1
+# KERNEL: 105 ==> I_TypeImmediate from decode= 0000000000000111
+# KERNEL: 105 ==> J_TypeImmediate from decode= 0000011000000001
+# KERNEL: 105 ==> J_TypeImmediate= 0000011000000001
+# KERNEL: 105 ==> I_TypeImmediate= 0000000000000111
+# KERNEL: 105 ==> extended_imm= 0000000000000001
+# KERNEL: 115 ==> PC= 0000000000001001
+# KERNEL: 115 ==> NPC= 0000000000001001
+# KERNEL: 115 ==> PC_ID = 0000000000001000
+# KERNEL: 115 ==> opcode= 5  , Rd=4 ,  signlas[0]=1
+# KERNEL: 115 ==> J_TypeImmediate from decode= 0000100001000000
+# KERNEL: 115 ==> J_TypeImmediate= 0000100001000000
+# KERNEL: 115 ==> extended_imm= 0000000000000000
+# KERNEL: 125 ==> PC= 0000000000001010
+# KERNEL: 125 ==> NPC= 0000000000001010
+# KERNEL: 125 ==> PC_ID = 0000000000001001
+# KERNEL: 125 ==> opcode= 7  , Rd=4 ,  signlas[0]=0
+# KERNEL: 125 ==> I_TypeImmediate from decode= 0000000000001000
+# KERNEL: 125 ==> J_TypeImmediate from decode= 0000100010000000
+# KERNEL: 125 ==> J_TypeImmediate= 0000100010000000
+# KERNEL: 125 ==> I_TypeImmediate= 0000000000001000
+# KERNEL: 140  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000001011111111 
+# KERNEL: 145 ==> PC= 0000000000001011
+# KERNEL: 145 ==> NPC= 0000000000001011
+# KERNEL: 145 ==> PC_ID = 0000000000001010
+# KERNEL: 145 ==> opcode= 1  , Rd=4 ,  signlas[0]=1
+# KERNEL: 145 ==> I_TypeImmediate from decode= 0000000000100001
+# KERNEL: 145 ==> J_TypeImmediate from decode= 0000100110111000
+# KERNEL: 145 ==> J_TypeImmediate= 0000100110111000
+# KERNEL: 145 ==> I_TypeImmediate= 0000000000100001
+# KERNEL: 145 ==> extended_imm= 0000000000011000
+# KERNEL: 150  ==> R4=0000001011111111  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 155 ==> PC= 0000000000000110
+# KERNEL: 155 ==> NPC= 0000000000000110
+# KERNEL: 155 ==> PC_ID = 0000000000001011
+# KERNEL: 155 ==> opcode=14  , Rd=0 ,  signlas[0]=0
+# KERNEL: 155 ==> I_TypeImmediate from decode= 0000000000001010
+# KERNEL: 155 ==> J_TypeImmediate from decode= 0000000111000000
+# KERNEL: 155 ==> J_TypeImmediate= 0000000111000000
+# KERNEL: 155 ==> I_TypeImmediate= 0000000000001010
+# KERNEL: 155 ==> kill= 1
+# KERNEL: 155 ==> extended_imm= 0000000000000000
+# KERNEL: 165  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=11111111 , memory[4]=00000010
+# KERNEL: 165 ==> PC= 0000000000000111
+# KERNEL: 165 ==> NPC= 0000000000000111
+# KERNEL: 165 ==> PC_ID = 0000000000000110
+# KERNEL: 165 ==> opcode= 1  , Rd=1 ,  signlas[0]=1
+# KERNEL: 165 ==> I_TypeImmediate from decode= 0000000000000101
+# KERNEL: 165 ==> J_TypeImmediate from decode= 0000001001000000
+# KERNEL: 165 ==> J_TypeImmediate= 0000001001000000
+# KERNEL: 165 ==> I_TypeImmediate= 0000000000000101
+# KERNEL: 165 ==> kill= 0
+# KERNEL: 175 ==> PC= 0000000000001000
+# KERNEL: 175 ==> NPC= 0000000000001000
+# KERNEL: 175 ==> PC_ID = 0000000000000111
+# KERNEL: 175 ==> opcode= 5  , Rd=3 ,  signlas[0]=1
+# KERNEL: 175 ==> I_TypeImmediate from decode= 0000000000000111
+# KERNEL: 175 ==> J_TypeImmediate from decode= 0000011000000001
+# KERNEL: 175 ==> J_TypeImmediate= 0000011000000001
+# KERNEL: 175 ==> I_TypeImmediate= 0000000000000111
+# KERNEL: 175 ==> extended_imm= 0000000000000001
+# KERNEL: 180  ==> R4=0000000000001011  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 185 ==> PC= 0000000000001001
+# KERNEL: 185 ==> NPC= 0000000000001001
+# KERNEL: 185 ==> PC_ID = 0000000000001000
+# KERNEL: 185 ==> opcode= 5  , Rd=4 ,  signlas[0]=1
+# KERNEL: 185 ==> J_TypeImmediate from decode= 0000100001000000
+# KERNEL: 185 ==> J_TypeImmediate= 0000100001000000
+# KERNEL: 185 ==> extended_imm= 0000000000000000
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 190 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 190 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+alog -O2 -sve -msg 5 -sv2k17 -work PipelineProcessor $dsn/src/alu/ALU.v $dsn/src/data_memory/DataMemory.v $dsn/src/instruction_memory/InstructionMemory.v $dsn/src/register_file/RegisterFile.v $dsn/src/control_unit/ControlUnit.v $dsn/src/integration/parameter.v $dsn/src/integration/ClockGenerator.v $dsn/src/integration/PipelineProcessor.v $dsn/src/stages/IFStage.v $dsn/src/stages/MEMStage.v $dsn/src/stages/EXEStage.v $dsn/src/stages/IDStage.v $dsn/src/register/MEM_2_WB.v $dsn/src/register/EXE_2_MEM.v $dsn/src/register/ID_2_EXE.v $dsn/src/register/IF_2_ID.v $dsn/src/utilities/mux.v $dsn/src/utilities/Extender.v $dsn/src/utilities/Compare.v
+# Info: VCP2876 register_file/RegisterFile.v : (25, 17): Implicit net declaration, symbol R7 has not been declared in module RegisterFile.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (87, 19): Implicit net declaration, symbol kill has not been declared in module instructionMemory_TB.
+# Info: VCP2876 instruction_memory/InstructionMemory.v : (88, 21): Implicit net declaration, symbol stall has not been declared in module instructionMemory_TB.
+# Info: VCP2876 stages/IFStage.v : (86, 19): Implicit net declaration, symbol kill has not been declared in module IFStage_TB.
+# Unit top modules: ALU_TB instructionMemory_TB PipelineProcessor IFStage_TB EXEStage_TB Extender_TB Compare_TB.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.4 [s]
+# SLP: 0 primitives and 45 (100.00%) other processes in SLP
+# SLP: 219 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4800 kB (elbread=427 elab2=4237 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Documents\Verilog\PipelineProcessorDesign\PipelineProcessor\src\wave.asdb
+#  6:36 PM, Tuesday, June 11, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Documents/Verilog/PipelineProcessorDesign/PipelineProcessor/src/wave.asdb'.
+run
+# KERNEL: (0) ==> The clk was initialize
+# KERNEL: 0 ==> opcode= x  , Rd=x ,  signlas[0]=x
+# KERNEL: 0 ==> kill= 0
+# KERNEL: 0 ==> I_TypeImmediate= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> J_TypeImmediate= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> NPC= 0000000000000000
+# KERNEL: 0 ==> PC= 0000000000000000
+# KERNEL: 0 ==> I_TypeImmediate from decode= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> J_TypeImmediate from decode= xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> PC_ID = xxxxxxxxxxxxxxxx
+# KERNEL: 0 ==> extended_imm= xxxxxxxxxxxxxxxx
+# KERNEL: 0  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000000000000000 
+# KERNEL: 0  ==> R4=0000000000000000  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 0  ==> memory[0]=xxxxxxxx , memory[1]=00000001 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 0  ==> memory[5]=xxxxxxxx , memory[6]=xxxxxxxx , memory[7]=xxxxxxxx , memory[8]=xxxxxxxx , memory[9]=xxxxxxxx
+# KERNEL: 5 ==> PC= 0000000000000001
+# KERNEL: 5 ==> NPC= 0000000000000001
+# KERNEL: 5 ==> PC_ID = 0000000000000000
+# KERNEL: 5 ==> J_TypeImmediate from decode= 0000xxxxxxxxxxxx
+# KERNEL: 5 ==> J_TypeImmediate= 0000xxxxxxxxxxxx
+# KERNEL: 15 ==> PC= 0000000000000010
+# KERNEL: 15 ==> NPC= 0000000000000010
+# KERNEL: 15 ==> PC_ID = 0000000000000001
+# KERNEL: 15 ==> opcode= 0  , Rd=4 ,  signlas[0]=1
+# KERNEL: 15 ==> J_TypeImmediate from decode= 0000100110111000
+# KERNEL: 15 ==> J_TypeImmediate= 0000100110111000
+# KERNEL: 15 ==> extended_imm= 0000000000011000
+# KERNEL: 15 ==> I_TypeImmediate from decode= 0000000000011000
+# KERNEL: 15 ==> I_TypeImmediate= 0000000000011000
+# KERNEL: 25 ==> PC= 0000000000000011
+# KERNEL: 25 ==> NPC= 0000000000000011
+# KERNEL: 25 ==> PC_ID = 0000000000000010
+# KERNEL: 25 ==> opcode= 1  , Rd=6 ,  signlas[0]=1
+# KERNEL: 25 ==> I_TypeImmediate from decode= 0000000000010001
+# KERNEL: 25 ==> J_TypeImmediate from decode= 0000110100010000
+# KERNEL: 25 ==> J_TypeImmediate= 0000110100010000
+# KERNEL: 25 ==> I_TypeImmediate= 0000000000010001
+# KERNEL: 25 ==> extended_imm= 0000000000010000
+# KERNEL: 35 ==> PC= 0000000000000100
+# KERNEL: 35 ==> NPC= 0000000000000100
+# KERNEL: 35 ==> PC_ID = 0000000000000011
+# KERNEL: 35 ==> opcode= 2  , Rd=5 ,  signlas[0]=1
+# KERNEL: 35 ==> I_TypeImmediate from decode= 0000000000001010
+# KERNEL: 35 ==> J_TypeImmediate from decode= 0000101011101000
+# KERNEL: 35 ==> J_TypeImmediate= 0000101011101000
+# KERNEL: 35 ==> I_TypeImmediate= 0000000000001010
+# KERNEL: 35 ==> extended_imm= 0000000000001000
+# KERNEL: 45 ==> PC= 0000000000000101
+# KERNEL: 45 ==> NPC= 0000000000000101
+# KERNEL: 45 ==> PC_ID = 0000000000000100
+# KERNEL: 45 ==> opcode=15  , Rd=1 ,  signlas[0]=0
+# KERNEL: 45 ==> I_TypeImmediate from decode= 0000000100000010
+# KERNEL: 45 ==> J_TypeImmediate from decode= 0000001011111111
+# KERNEL: 45 ==> J_TypeImmediate= 0000001011111111
+# KERNEL: 45 ==> I_TypeImmediate= 0000000100000010
+# KERNEL: 45 ==> extended_imm= 0000000011111111
+# KERNEL: 50  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000111  ,  R7=0000000000000010 
+# KERNEL: 55 ==> PC= 0000000000000110
+# KERNEL: 55 ==> NPC= 0000000000000110
+# KERNEL: 55 ==> PC_ID = 0000000000000101
+# KERNEL: 55 ==> opcode= 5  , Rd=7 ,  signlas[0]=1
+# KERNEL: 55 ==> I_TypeImmediate from decode= 0000000000000101
+# KERNEL: 55 ==> J_TypeImmediate from decode= 0000111000000001
+# KERNEL: 55 ==> J_TypeImmediate= 0000111000000001
+# KERNEL: 55 ==> I_TypeImmediate= 0000000000000101
+# KERNEL: 55 ==> extended_imm= 0000000000000001
+# KERNEL: 60  ==> R4=0000000000000010  ,  R5=0000000000000010  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 65 ==> PC= 0000000000001010
+# KERNEL: 65 ==> NPC= 0000000000001010
+# KERNEL: 65 ==> PC_ID = 0000000000000110
+# KERNEL: 65 ==> opcode=13  , Rd=0 ,  signlas[0]=1
+# KERNEL: 65 ==> I_TypeImmediate from decode= 0000000000001111
+# KERNEL: 65 ==> J_TypeImmediate from decode= 0000000000001010
+# KERNEL: 65 ==> J_TypeImmediate= 0000000000001010
+# KERNEL: 65 ==> I_TypeImmediate= 0000000000001111
+# KERNEL: 65 ==> kill= 1
+# KERNEL: 65 ==> extended_imm= 0000000000001010
+# KERNEL: 66  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=00000011 , memory[4]=00000011
+# KERNEL: 70  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000010 
+# KERNEL: 75 ==> PC= 0000000000001011
+# KERNEL: 75 ==> NPC= 0000000000001011
+# KERNEL: 75 ==> PC_ID = 0000000000001010
+# KERNEL: 75 ==> opcode= 1  , Rd=1 ,  signlas[0]=1
+# KERNEL: 75 ==> I_TypeImmediate from decode= 0000000000001001
+# KERNEL: 75 ==> J_TypeImmediate from decode= 0000001001000000
+# KERNEL: 75 ==> J_TypeImmediate= 0000001001000000
+# KERNEL: 75 ==> I_TypeImmediate= 0000000000001001
+# KERNEL: 75 ==> kill= 0
+# KERNEL: 75 ==> extended_imm= 0000000000000000
+# KERNEL: 85 ==> PC= 0000000000000110
+# KERNEL: 85 ==> NPC= 0000000000000110
+# KERNEL: 85 ==> PC_ID = 0000000000001011
+# KERNEL: 85 ==> opcode=14  , Rd=0 ,  signlas[0]=0
+# KERNEL: 85 ==> I_TypeImmediate from decode= 0000000000001010
+# KERNEL: 85 ==> J_TypeImmediate from decode= 0000000111000000
+# KERNEL: 85 ==> J_TypeImmediate= 0000000111000000
+# KERNEL: 85 ==> I_TypeImmediate= 0000000000001010
+# KERNEL: 85 ==> kill= 1
+# KERNEL: 90  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000001011111111 
+# KERNEL: 95 ==> PC= 0000000000000111
+# KERNEL: 95 ==> NPC= 0000000000000111
+# KERNEL: 95 ==> PC_ID = 0000000000000110
+# KERNEL: 95 ==> opcode= 1  , Rd=1 ,  signlas[0]=1
+# KERNEL: 95 ==> I_TypeImmediate from decode= 0000000000000101
+# KERNEL: 95 ==> J_TypeImmediate from decode= 0000001001000000
+# KERNEL: 95 ==> J_TypeImmediate= 0000001001000000
+# KERNEL: 95 ==> I_TypeImmediate= 0000000000000101
+# KERNEL: 95 ==> kill= 0
+# KERNEL: 100  ==> R4=0000000000000010  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 105 ==> PC= 0000000000001000
+# KERNEL: 105 ==> NPC= 0000000000001000
+# KERNEL: 105 ==> PC_ID = 0000000000000111
+# KERNEL: 105 ==> opcode= 5  , Rd=3 ,  signlas[0]=1
+# KERNEL: 105 ==> I_TypeImmediate from decode= 0000000000000111
+# KERNEL: 105 ==> J_TypeImmediate from decode= 0000011000000001
+# KERNEL: 105 ==> J_TypeImmediate= 0000011000000001
+# KERNEL: 105 ==> I_TypeImmediate= 0000000000000111
+# KERNEL: 105 ==> extended_imm= 0000000000000001
+# KERNEL: 115 ==> PC= 0000000000001001
+# KERNEL: 115 ==> NPC= 0000000000001001
+# KERNEL: 115 ==> PC_ID = 0000000000001000
+# KERNEL: 115 ==> opcode= 5  , Rd=4 ,  signlas[0]=1
+# KERNEL: 115 ==> J_TypeImmediate from decode= 0000100001000000
+# KERNEL: 115 ==> J_TypeImmediate= 0000100001000000
+# KERNEL: 115 ==> extended_imm= 0000000000000000
+# KERNEL: 125 ==> PC= 0000000000001010
+# KERNEL: 125 ==> NPC= 0000000000001010
+# KERNEL: 125 ==> PC_ID = 0000000000001001
+# KERNEL: 125 ==> opcode= 7  , Rd=4 ,  signlas[0]=0
+# KERNEL: 125 ==> I_TypeImmediate from decode= 0000000000001000
+# KERNEL: 125 ==> J_TypeImmediate from decode= 0000100010000000
+# KERNEL: 125 ==> J_TypeImmediate= 0000100010000000
+# KERNEL: 125 ==> I_TypeImmediate= 0000000000001000
+# KERNEL: 140  ==> R0=0000000000000000  ,  R1=0000000000000001  ,  R2=0000000000000011  ,  R3=0000001011111111 
+# KERNEL: 145 ==> PC= 0000000000001011
+# KERNEL: 145 ==> NPC= 0000000000001011
+# KERNEL: 145 ==> PC_ID = 0000000000001010
+# KERNEL: 145 ==> opcode= 1  , Rd=4 ,  signlas[0]=1
+# KERNEL: 145 ==> I_TypeImmediate from decode= 0000000000100001
+# KERNEL: 145 ==> J_TypeImmediate from decode= 0000100110111000
+# KERNEL: 145 ==> J_TypeImmediate= 0000100110111000
+# KERNEL: 145 ==> I_TypeImmediate= 0000000000100001
+# KERNEL: 145 ==> extended_imm= 0000000000011000
+# KERNEL: 150  ==> R4=0000001011111111  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 155 ==> PC= 0000000000000110
+# KERNEL: 155 ==> NPC= 0000000000000110
+# KERNEL: 155 ==> PC_ID = 0000000000001011
+# KERNEL: 155 ==> opcode=14  , Rd=0 ,  signlas[0]=0
+# KERNEL: 155 ==> I_TypeImmediate from decode= 0000000000001010
+# KERNEL: 155 ==> J_TypeImmediate from decode= 0000000111000000
+# KERNEL: 155 ==> J_TypeImmediate= 0000000111000000
+# KERNEL: 155 ==> I_TypeImmediate= 0000000000001010
+# KERNEL: 155 ==> kill= 1
+# KERNEL: 155 ==> extended_imm= 0000000000000000
+# KERNEL: 156  ==> memory[0]=xxxxxxxx , memory[1]=11111111 , memory[2]=00000010 , memory[3]=11111111 , memory[4]=00000010
+# KERNEL: 165 ==> PC= 0000000000000111
+# KERNEL: 165 ==> NPC= 0000000000000111
+# KERNEL: 165 ==> PC_ID = 0000000000000110
+# KERNEL: 165 ==> opcode= 1  , Rd=1 ,  signlas[0]=1
+# KERNEL: 165 ==> I_TypeImmediate from decode= 0000000000000101
+# KERNEL: 165 ==> J_TypeImmediate from decode= 0000001001000000
+# KERNEL: 165 ==> J_TypeImmediate= 0000001001000000
+# KERNEL: 165 ==> I_TypeImmediate= 0000000000000101
+# KERNEL: 165 ==> kill= 0
+# KERNEL: 175 ==> PC= 0000000000001000
+# KERNEL: 175 ==> NPC= 0000000000001000
+# KERNEL: 175 ==> PC_ID = 0000000000000111
+# KERNEL: 175 ==> opcode= 5  , Rd=3 ,  signlas[0]=1
+# KERNEL: 175 ==> I_TypeImmediate from decode= 0000000000000111
+# KERNEL: 175 ==> J_TypeImmediate from decode= 0000011000000001
+# KERNEL: 175 ==> J_TypeImmediate= 0000011000000001
+# KERNEL: 175 ==> I_TypeImmediate= 0000000000000111
+# KERNEL: 175 ==> extended_imm= 0000000000000001
+# KERNEL: 180  ==> R4=0000000000001011  ,  R5=1111111111111110  ,  R6=0000000000000101  ,  R7=0000000000000110 
+# KERNEL: 185 ==> PC= 0000000000001001
+# KERNEL: 185 ==> NPC= 0000000000001001
+# KERNEL: 185 ==> PC_ID = 0000000000001000
+# KERNEL: 185 ==> opcode= 5  , Rd=4 ,  signlas[0]=1
+# KERNEL: 185 ==> J_TypeImmediate from decode= 0000100001000000
+# KERNEL: 185 ==> J_TypeImmediate= 0000100001000000
+# KERNEL: 185 ==> extended_imm= 0000000000000000
+# RUNTIME: Info: RUNTIME_0068 PipelineProcessor.v (4): $finish called.
+# KERNEL: Time: 190 ps,  Iteration: 0,  Instance: /PipelineProcessor,  Process: @INITIAL#3_0@.
+# KERNEL: stopped at time: 190 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
