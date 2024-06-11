@@ -24,13 +24,13 @@ module InstructionMemory(
 		instructionMemory[3] = {SV , R1, 1'b0 , 8'hFF};
 		instructionMemory[4] = {LBu , R7, R0 ,1'b0, 5'h01};
 		instructionMemory[5] = {RET , 3'b000,3'b111 ,6'b000000};
+		instructionMemory[5] = {CALL , 12'h00A};
+		instructionMemory[10] = {RET , 3'b000,3'b111 ,6'b000000};
+		instructionMemory[6] = {LW , R3, R0 ,1'b0, 5'b00001}; 
+		instructionMemory[7] = {LW , R4, R1 ,1'b0, 5'b00000};
+		instructionMemory[8] = {SW , R4, R2 ,1'b0, 5'b00000};
+		instructionMemory[9] = {ADD, R4, R6, R7, 3'b000}; 
 		
-//		instructionMemory[5] = {CALL , 12'h008};
-//		instructionMemory[6] = {LW , R3, R0 ,1'b0, 5'b00001}; 
-//		instructionMemory[7] = {LW , R4, R1 ,1'b0, 5'b00000};
-//		instructionMemory[8] = {SW , R4, R2 ,1'b0, 5'b00000};
-//		instructionMemory[9] = {ADD, R4, R6, R7, 3'b000}; 
-//		instructionMemory[10] = {RET , 3'b000,3'b111 ,6'b000000};
 
 //  	Program 2		
 //		instructionMemory[0] = {AND, R4, R6, R7, 3'b000};

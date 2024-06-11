@@ -3,8 +3,7 @@ module RegisterFile(
 	input wire [2:0] RA, RB, RW, 
 	input wire enableWrite, 
 	input wire [15:0] BusW , 
-	output reg [15:0] BusA, BusB,
-	output reg [15:0] R7
+	output reg [15:0] BusA, BusB
 );
 
 

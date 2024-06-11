@@ -2,80 +2,73 @@ module MainAluControl (
 	input [3:0] opCode,
 	input [2:0] Rd,
 	input mode,stall,
-	output reg [15:0] signlas
+	output reg [16:0] signlas
 );
 
-// SRC1   SRC2   RegDst   ExtOp   ExtPlace   AluSRC   ALUOP{2}  DataInSrc  MemRd   MemWr  NumOfByte{2}   WBdata{2}  RegWr
+// SRC1{2}   SRC2   RegDst   ExtOp   ExtPlace   AluSRC   ALUOP{2}  DataInSrc  MemRd   MemWr  NumOfByte{2}   WBdata{2}  RegWr
 
 always @ (*) begin
 
     if (stall == 0) begin
       	case (opCode)
-            AND:  signlas <= {1'b0 , 1'b1 , 1'b0 , 1'bx , 1'bx , 1'b0 , 2'b00 , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b01 , 1'b1};
-            ADD:  signlas <= {1'b0 , 1'b1 , 1'b0 , 1'bx , 1'bx , 1'b0 , 2'b01 , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b01 , 1'b1};
-            SUB:  signlas <= {1'b0 , 1'b1 , 1'b0 , 1'bx , 1'bx , 1'b0 , 2'b10 , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b01 , 1'b1};
-			ADDI: signlas <= {1'b0 , 1'b0 , 1'b0 , 1'b1 , 1'b0 , 1'b1 , 2'b01 , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b01 , 1'b1};
-			ANDI: signlas <= {1'b0 , 1'b0 , 1'b0 , 1'b1 , 1'b0 , 1'b1 , 2'b00 , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b01 , 1'b1};
-			LW:   signlas <= {1'b0 , 1'bx , 1'b0 , 1'b1 , 1'b0 , 1'b1 , 2'b01 , 1'bx , 1'b1 , 1'b0 , 2'b00 , 2'b10 , 1'b1};
-			SW:	  signlas <= {1'b0 , 1'b0 , 1'bx , 1'b1 , 1'b0 , 1'b1 , 2'b01 , 1'b1 , 1'b0 , 1'b1 , 2'b10 , 2'bxx , 1'b0};
+            AND:  signlas <= {2'b00 , 1'b1 , 1'b0 , 1'bx , 1'bx , 1'b0 , 2'b00 , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b01 , 1'b1};
+            ADD:  signlas <= {2'b00 , 1'b1 , 1'b0 , 1'bx , 1'bx , 1'b0 , 2'b01 , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b01 , 1'b1};
+            SUB:  signlas <= {2'b00 , 1'b1 , 1'b0 , 1'bx , 1'bx , 1'b0 , 2'b10 , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b01 , 1'b1};
+			ADDI: signlas <= {2'b00 , 1'b0 , 1'b0 , 1'b1 , 1'b0 , 1'b1 , 2'b01 , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b01 , 1'b1};
+			ANDI: signlas <= {2'b00 , 1'b0 , 1'b0 , 1'b1 , 1'b0 , 1'b1 , 2'b00 , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b01 , 1'b1};
+			LW:   signlas <= {2'b00 , 1'bx , 1'b0 , 1'b1 , 1'b0 , 1'b1 , 2'b01 , 1'bx , 1'b1 , 1'b0 , 2'b00 , 2'b10 , 1'b1};
+			SW:	  signlas <= {2'b00 , 1'b0 , 1'bx , 1'b1 , 1'b0 , 1'b1 , 2'b01 , 1'b1 , 1'b0 , 1'b1 , 2'b10 , 2'bxx , 1'b0};
 			LoadByte:
 				begin
                 	if (!mode) begin
-                    	 signlas <= {1'b0 , 1'bx , 1'b0 , 1'b1 , 1'b0 ,	1'b1 , 2'b01 , 1'bx , 1'b1 , 1'b0 , 2'b01 ,	2'b10 , 1'b1};
+                    	 signlas <= {2'b00 , 1'bx , 1'b0 , 1'b1 , 1'b0 ,	1'b1 , 2'b01 , 1'bx , 1'b1 , 1'b0 , 2'b01 ,	2'b10 , 1'b1};
                 	end else begin
-                    	 signlas <= {1'b0 , 1'bx , 1'b0 , 1'b1 , 1'b0 ,	1'b1 , 2'b01 , 1'bx , 1'b1 , 1'b0 , 2'b10 ,	2'b10 , 1'b1};
+                    	 signlas <= {2'b00 , 1'bx , 1'b0 , 1'b1 , 1'b0 ,	1'b1 , 2'b01 , 1'bx , 1'b1 , 1'b0 , 2'b10 ,	2'b10 , 1'b1};
                 	end
 		  		end
 		  	
 			BranchGreater:
 			  	begin
                 	if (!mode) begin
-                    	 signlas <= {1'b0 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
+                    	 signlas <= {2'b00 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
                 	end else begin
-                    	 signlas <= {1'b1 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
+                    	 signlas <= {2'b01 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
                 	end
 		  		end
 				  
 			BranchLess:
 			    begin
                 	if (!mode) begin
-                    	 signlas <= {1'b0 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
+                    	 signlas <= {2'b00 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
                 	end else begin
-                    	 signlas <= {1'b1 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
+                    	 signlas <= {2'b01 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
                 	end
 		  		end
 				  
 			BranchEqual: 
 			  	begin
                 	if (!mode) begin
-                    	 signlas <= {1'b0 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
+                    	 signlas <= {2'b00 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
                 	end else begin
-                    	 signlas <= {1'b1 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
+                    	 signlas <= {2'b01 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
                 	end
 				end
 		    
 		    BranchNotEqual:
 			   	begin
                 	if (!mode) begin
-                    	 signlas <= {1'b0 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
+                    	 signlas <= {2'b00 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
                 	end else begin
-                    	 signlas <= {1'b1 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
+                    	 signlas <= {2'b01 , 1'b0 , 1'bx , 1'b1 , 1'b0 ,	1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx ,	2'bxx , 1'b0};
                 	end
 				end
 				
-			JMP:  signlas <= {1'bx , 1'bx , 1'bx , 1'bx , 1'bx , 1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'bxx , 1'b0};
-			CALL: signlas <= {1'bx , 1'bx , 1'b1 , 1'bx , 1'bx , 1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b00 , 1'b1};
-			RET:  signlas <= {1'b0 , 1'bx , 1'bx , 1'bx , 1'bx , 1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'bxx , 1'b0};
-			SV:   signlas <= {1'b1 , 1'b0 , 1'bx , 1'b0 , 1'b1 , 1'b0 , 2'b01 , 1'b0 , 1'b0 , 1'b1 , 2'bxx , 2'bxx , 1'b0};
+			JMP:  signlas <= {2'bxx , 1'bx , 1'bx , 1'bx , 1'bx , 1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'bxx , 1'b0};
+			CALL: signlas <= {2'bxx , 1'bx , 1'b1 , 1'bx , 1'bx , 1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'b00 , 1'b1};
+			RET:  signlas <= {2'b10 , 1'bx , 1'bx , 1'bx , 1'bx , 1'bx , 2'bxx , 1'bx , 1'b0 , 1'b0 , 2'bxx , 2'bxx , 1'b0};
+			SV:   signlas <= {2'b01 , 1'b0 , 1'bx , 1'b0 , 1'b1 , 1'b0 , 2'b01 , 1'b0 , 1'b0 , 1'b1 , 2'bxx , 2'bxx , 1'b0};
 
         endcase
-		
-//		if (opCode != CALL && Rd==3'b111) begin
-//			$display("%0t ==> opcode=%d  , Rd=%d ,  signlas[0]=%b",$time,opCode,Rd,signlas[0] ) ;
-//			signlas[0]<=0;
-//		end
-		
-
 		
     end
 

@@ -40,7 +40,7 @@ module PipelineProcessor ();
 	wire [1:0] PcSrc,ForwardA, ForwardB;
 	
 	
-    wire [15:0] signals;
+    wire [16:0] signals;
 	wire [10:0] EXE_signals;
 	wire [7:0]  MEM_signals;
 	wire WB_signals; 
@@ -137,7 +137,7 @@ module PipelineProcessor ();
         .ForwardA(ForwardA),
         .ForwardB(ForwardB),
         .WB_signals(WB_signals),
-        .signals(signals[15:11]), // Passing relevant bits of signals
+        .signals(signals[16:11]), // Passing relevant bits of signals
         .inst_ID(inst_ID),
         .PC_ID(PC_ID),
         .AluResult_EXE(AluResult_EXE),
