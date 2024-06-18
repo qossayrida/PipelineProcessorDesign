@@ -67,60 +67,86 @@ endmodule
 
 
 module IFStage_TB;
-    // Inputs
-    reg clk,stall;
-    reg [1:0] PCsrc;
-    reg [15:0] I_TypeImmediate;
-    reg [15:0] J_TypeImmediate;
-    reg [15:0] ReturnAddress;
 
-    // Outputs
-    wire [15:0] NPC;
-    wire [15:0] instruction;
-   
+  // Inputs
+  reg clk;
+  reg stall;
+  reg kill;
+  reg [1:0] PCsrc;
+  reg [15:0] I_TypeImmediate;
+  reg [15:0] J_TypeImmediate;
+  reg [15:0] ReturnAddress;
 
-    // Instantiate the Unit Under Test (UUT)
-    IFStage uut (
-		.clk(clk),
-		.stall(stall),
-		.kill(kill),
-		.PCsrc(PCsrc),
-		.I_TypeImmediate(I_TypeImmediate),
-		.J_TypeImmediate(J_TypeImmediate),
-		.ReturnAddress(ReturnAddress),
-		.NPC(NPC),
-		.inst_IF(instruction)
-    );
+  // Outputs
+  wire [15:0] NPC;
+  wire [15:0] inst_IF;
 
-    // Clock generation
-    initial begin
-        clk = 0;
-        forever #5 clk = ~clk; // 10ns clock period
-    end
+  // Instantiate the Unit Under Test (UUT)
+  IFStage uut (
+    .clk(clk),
+    .stall(stall),
+    .kill(kill),
+    .PCsrc(PCsrc),
+    .I_TypeImmediate(I_TypeImmediate),
+    .J_TypeImmediate(J_TypeImmediate),
+    .ReturnAddress(ReturnAddress),
+    .NPC(NPC),
+    .inst_IF(inst_IF)
+  );
 
-    initial begin
-        // Monitor changes and display values
-        $monitor("At  PCsrc: %b, NPC: %b, Instruction: %b",   PCsrc, NPC, instruction);
+  // Clock generation
+  initial begin
+    clk = 0;
+    forever #10 clk = ~clk; // 10 time units period clock
+  end
 
-        // Initialize inputs
-        PCsrc = 2'b00;
-        I_TypeImmediate = 16'd4;
-        J_TypeImmediate = 16'd8;
-        ReturnAddress = 16'd12;
+  // Stimulus
+  initial begin
+    // Initialize Inputs
+    stall = 0;
+    kill = 0;
+    PCsrc = 0;
+    I_TypeImmediate = 16'hA;
+    J_TypeImmediate = 16'h0;
+    ReturnAddress = 16'h4;
 
-        // Provide stimulus
-        #10; // Wait for 10 ns
-        PCsrc = 2'b00; // Normal increment
-        #10; // Wait for 10 ns
-        PCsrc = 2'b01; // Jump type immediate
-        #10; // Wait for 10 ns
-        PCsrc = 2'b10; // I-Type immediate
-        #10; // Wait for 10 ns
-        PCsrc = 2'b11; // Return address
-        #10; // Wait for 10 ns
-        
-        // Finish simulation
-        $finish;
-    end
+    // Monitor values
+    $monitor("Time: %0t | clk: %b | stall: %b | kill: %b | PCsrc: %b | I_TypeImmediate: %h | J_TypeImmediate: %h | ReturnAddress: %h | NPC: %h | inst_IF: %h", 
+              $time, clk, stall, kill, PCsrc, I_TypeImmediate, J_TypeImmediate, ReturnAddress, NPC, inst_IF);
+
+    // Test sequence
+    #10;
+    // Test : Normal operation, no stall, no kill
+    #20;
+
+    // Test : Apply stall
+    stall = 1;
+    #21;
+    stall = 0;
+    // Test : Change PCsrc to I_TypeImmediate
+    PCsrc = 2; 
+    kill = 1;
+    #21;
+    PCsrc = 0;
+    kill = 0;
+    #21;
+    // Test : Change PCsrc to J_TypeImmediate
+    PCsrc = 1;
+    kill = 1;
+    #21;
+    PCsrc = 0;
+    kill = 0;
+    #21
+    // Test 6: Change PCsrc to ReturnAddress
+    PCsrc = 3;
+    kill =1;
+    #21;
+    PCsrc = 0;
+    kill = 0;
+
+    // Test complete
+    #50;
+    $finish;
+  end
 
 endmodule

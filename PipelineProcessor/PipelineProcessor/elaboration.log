@@ -1,41 +1,22 @@
-Active-HDL 15.0.261.9132 2024-06-18 19:55:14
+Active-HDL 15.0.261.9132 2024-06-18 21:42:09
 
 Elaboration top modules:
-Verilog Module                PipelineProcessor
-SystemVerilog Package         UnitScopePackage_645
+Verilog Module                EXEStage_TB
+SystemVerilog Package         UnitScopePackage_674
 
 
 -----------------------------------------------------------------------------------------------------
 Verilog Module          | Library           | Info | Compiler Version          | Compilation Options
 -----------------------------------------------------------------------------------------------------
-PipelineProcessor       | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-ClockGenerator          | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-MainAluControl          | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-PcControl               | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-HazardDetect            | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-IFStage                 | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-IF2ID                   | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-IDStage                 | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-ID2EXE                  | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+EXEStage_TB             | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 EXEStage                | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-EXE2MEM                 | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-MEMStage                | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-MEM2WB                  | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-InstructionMemory       | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-mux_2                   | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-Extender                | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-RegisterFile            | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-mux_4                   | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-Compare                 | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 ALU                     | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-DataMemory              | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
-mux_3                   | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 -----------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------
 SystemVerilog Package   | Library           | Info | Compiler Version          | Compilation Options
 -----------------------------------------------------------------------------------------------------
-UnitScopePackage_645    | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+UnitScopePackage_674    | pipelineprocessor |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
 -----------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------
@@ -45,7 +26,7 @@ pipelineprocessor       | None
 -----------------------------------------------------------------------------------------------------
 
 
-Simulation Options: asim -O5 +access +r +m+PipelineProcessor PipelineProcessor
+Simulation Options: asim -O5 +access +r +m+EXEStage_TB EXEStage_TB
 
 
 The performance of simulation is reduced. Version Student Edition

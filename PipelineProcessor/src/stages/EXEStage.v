@@ -99,7 +99,7 @@ module EXEStage_TB;
 
     // Monitor values
     initial begin
-        $monitor("At time %t, A = %d, B = %d, Immediate1 = %d, signals = %b, AluResult = %d",
+        $monitor("%0t, valueA_EXE = %d, valueB_EXE = %d, immediate_EXE = %d, signals = %b, AluResult_EXE = %d",
                  $time, valueA_EXE, valueB_EXE, immediate_EXE, signals, AluResult_EXE);
     end
 
