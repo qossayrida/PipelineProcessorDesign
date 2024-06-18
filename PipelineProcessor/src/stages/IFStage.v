@@ -27,8 +27,8 @@ module IFStage (
 	  
 	always @(posedge clk) begin
 		if (!stall) begin     
-            PC <= PC + 16'd1;       
-			NPC <= PC + 16'd1; 
+            PC <= PC + 16'd2;       
+			NPC <= PC + 16'd2; 
 		end
 	end	
 	
