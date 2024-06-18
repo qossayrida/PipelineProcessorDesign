@@ -1,6 +1,6 @@
 # Pipeline Processor Design
 
-![image](https://github.com/qossayrida/PipelineProcessorDesign/assets/59481839/0d23f7e3-d67c-4878-a9d0-e9482b42d2c5)
+![final](https://github.com/qossayrida/PipelineProcessorDesign/assets/164505468/06ee75ba-6b8a-43a8-9df7-f4c44cb20ea2)
 
 
 # Instruction Set Table
