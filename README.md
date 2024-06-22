@@ -27,7 +27,7 @@
 | 18  | JMP   | J-Type | Next PC = {PC[15:10], Immediate} | 1100 |   |
 | 19  | CALL  | J-Type | Next PC = {PC[15:10], Immediate} PC + 4 is saved on r15 | 1101 |   |
 | 20  | RET   | J-Type | Next PC = r7 | 1110 |   |
-| 21  | Sv    | S-Type | M[rs] = imm | 1111 |   |
+| 21  | Sv    | S-Type | M[rs] = imm | 1111 |   | 
 
 
 
