@@ -55,7 +55,7 @@ module IDStage (
     ); 
 	
 	
-    assign    I_TypeImmediate = extended_imm+PC_ID-2;
+    assign    I_TypeImmediate = extended_imm+PC_ID;
     assign    J_TypeImmediate = {PC_ID[15:12],inst_ID[11:0]};
     assign    ReturnAddress = valueA_ID;
     assign    immediate_ID = extended_imm;
