@@ -24,19 +24,24 @@ module InstructionMemory(
 		// 			
 		//			  [15-12] Opcode , [11-9] Rd , [8-6] Rs1 , [5] M , [4-0] Imm 
 		// ******************************************************************************
-		// ******************************************************************************
+		// ****************************************************************************** 
 		
-		{instructionMemory[1],instructionMemory[0]}   = {AND, R4, R6, R7, 3'b000};
-        {instructionMemory[3],instructionMemory[2]}   = {ADD, R6, R4, R2, 3'b000};
-        {instructionMemory[5],instructionMemory[4]}   = {SUB, R5, R3, R5, 3'b000}; 
-        {instructionMemory[7],instructionMemory[6]}   = {SV , R1, 1'b0 , 8'hFF};
-        {instructionMemory[9],instructionMemory[8]}   = {LW , R7, R0 ,1'b0, 5'h01};
-        {instructionMemory[11],instructionMemory[10]} = {CALL , 12'h010};
-        {instructionMemory[13],instructionMemory[12]} = {LW , R3, R0 ,1'b0, 5'b00001}; 
-        {instructionMemory[15],instructionMemory[14]} = {LW , R4, R1 ,1'b0, 5'b00000};
-        {instructionMemory[17],instructionMemory[16]} = {SW , R4, R2 ,1'b0, 5'b00000};
-        {instructionMemory[19],instructionMemory[18]} = {ADD, R4, R6, R7, 3'b000}; 
-		{instructionMemory[21],instructionMemory[20]} = {RET , 12'h000};
+		{instructionMemory[1],instructionMemory[0]} = {LW, R1, R0, 1'b0, 5'b00001}; // Load memory[1:2] into R1
+		{instructionMemory[3],instructionMemory[2]} = {LW, R2, R0, 1'b0, 5'b00011}; // Load memory[3:4] into R2
+		{instructionMemory[5],instructionMemory[4]} = {ADD, R3, R1, R2, 3'b000};   // R3 = R1 + R2
+		{instructionMemory[7],instructionMemory[6]} = {SW, R3, R0, 1'b0, 5'b00101}; // Store R3 in memory[5:6]
+		
+//		{instructionMemory[1],instructionMemory[0]}   = {AND, R4, R6, R7, 3'b000};
+//        {instructionMemory[3],instructionMemory[2]}   = {ADD, R6, R4, R2, 3'b000};
+//        {instructionMemory[5],instructionMemory[4]}   = {SUB, R5, R3, R5, 3'b000}; 
+//        {instructionMemory[7],instructionMemory[6]}   = {SV , R1, 1'b0 , 8'hFF};
+//        {instructionMemory[9],instructionMemory[8]}   = {LW , R7, R0 ,1'b0, 5'h01};
+//        {instructionMemory[11],instructionMemory[10]} = {CALL , 12'h010};
+//        {instructionMemory[13],instructionMemory[12]} = {LW , R3, R0 ,1'b0, 5'b00001}; 
+//        {instructionMemory[15],instructionMemory[14]} = {LW , R4, R1 ,1'b0, 5'b00000};
+//        {instructionMemory[17],instructionMemory[16]} = {SW , R4, R2 ,1'b0, 5'b00000};
+//        {instructionMemory[19],instructionMemory[18]} = {ADD, R4, R6, R7, 3'b000}; 
+//		{instructionMemory[21],instructionMemory[20]} = {RET , 12'h000};
 			
 
 //  	Program 2		

@@ -7,7 +7,7 @@ module MainAluControl (
 
 // SRC1{2}   SRC2   RegDst   ExtOp   ExtPlace   AluSRC   ALUOP{2}  DataInSrc  MemRd   MemWr  NumOfByte{2}   WBdata{2}  RegWr
 
-always @ (*) begin
+always @ (opCode,mode) begin
 
     if (stall == 0) begin
       	case (opCode)
