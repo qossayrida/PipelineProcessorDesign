@@ -1,10 +1,42 @@
 # Pipeline Processor Design
+This repository contains the design and verification of a simple pipelined RISC processor in Verilog, developed as a project for the Computer Architecture course (ENCS4370) at the Faculty of Engineering & Technology, Electrical & Computer Engineering Department.
 
-![final](https://github.com/qossayrida/PipelineProcessorDesign/assets/164505468/06ee75ba-6b8a-43a8-9df7-f4c44cb20ea2)
+## Table of Contents
+- [Abstract](#abstract)
+- [Features](#features)
+- [Instruction Set Architecture (ISA)](#instruction-set-architecture-isa)
+- [Design and Implementation](#design-and-implementation)
+- [Datapath](#datapath)
+- [Control Signals](#control-signals)
+- [Individual Components](#individual-components)
+- [Pipeline Stages](#pipeline-stages)
+- [Team Members](#team-members)
+- [Acknowledgments](#acknowledgments)
 
+## Abstract
+This project involves designing and verifying a simple pipelined RISC processor in Verilog, featuring a five-stage pipeline: fetch, decode, ALU, memory access, and write-back. We implemented an instruction set architecture (ISA) with R-type, I-type, J-type, and S-type instructions, supported by 8 general-purpose registers and byte-addressable memory. Our report provides a comprehensive description of the datapath, control path, control signals, and verification methods, including detailed simulation results. We demonstrate the processor's functionality through rigorous testing and analysis.
 
-# Instruction Set Table
+## Features
+- Five-stage pipeline: Fetch, Decode, Execute, Memory Access, and Write-Back
+- Support for R-type, I-type, J-type, and S-type instructions
+- 8 general-purpose registers
+- Byte-addressable memory
+- Hazard detection and forwarding mechanisms
 
+## Instruction Set Architecture (ISA)
+### Instruction Types
+- **R-Type**: Arithmetic and logic operations
+- **I-Type**: Immediate arithmetic and logic operations, load word
+- **J-Type**: Jump instructions
+- **S-Type**: Store word
+
+### Instruction Formats
+- **R-Type**: `Opcode | Rd | Rs1 | Rs2`
+- **I-Type**: `Opcode | Rd | Rs1 | Immediate`
+- **J-Type**: `Opcode | Jump Offset`
+- **S-Type**: `Opcode | Rs | Immediate`
+
+### Instruction Set Table
 | No. | Instr | Format | Meaning | Opcode Value | m |
 |-----|-------|--------|---------|--------------|---|
 | 1   | AND   | R-Type | Reg(Rd) = Reg(Rs1) & Reg(Rs2) | 0000 |   |
@@ -29,34 +61,41 @@
 | 20  | RET   | J-Type | Next PC = r7 | 1110 |   |
 | 21  | Sv    | S-Type | M[rs] = imm | 1111 |   | 
 
+## Design and Implementation
+The processor design is divided into multiple stages to facilitate pipelining and improve performance. Each component in the datapath was built separately in Verilog and then integrated to form the complete processor.
+
+### Datapath
+The datapath includes the flow of data through the processor, including instruction fetch, decoding, execution, memory access, and write-back stages. Key components include the ALU, registers, instruction memory, data memory, and control unit.
+
+![final](https://github.com/qossayrida/PipelineProcessorDesign/assets/164505468/06ee75ba-6b8a-43a8-9df7-f4c44cb20ea2)
+
+### Control Signals
+Control signals manage the operation of the processor components, including ALU operations, memory access, and instruction flow control, for more information see the report above.
+
+### Individual Components
+- **Instruction Memory**: Stores and fetches instructions.
+- **Register File**: Provides read and write access to registers.
+- **Data Memory**: Handles data storage and retrieval.
+- **ALU**: Performs arithmetic and logic operations.
+- **Extender**: Adjusts the bit-width of data.
+- **Compare**: Performs value comparisons.
+- **Control Unit**: Generates control signals and manages instruction flow.
+
+### Pipeline Stages
+1. **Instruction Fetch (IF)**: Retrieves instructions from memory.
+2. **Instruction Decode (ID)**: Decodes instructions and reads registers.
+3. **Execution (EXE)**: Performs arithmetic and logic operations.
+4. **Memory Access (MEM)**: Handles data memory operations.
+5. **Write-Back (WB)**: Writes results back to registers.
 
 
-# Instruction Signals Table
+## Team Members
+- Qossay Rida
+- Ahmad Hamdan
+- Mohammad Fareed
 
-| No. | Instruction/Signals | ALUOp | Operation | PCSrc | kill|
-|-----|---------------------|-------|-----------|-------|-------|
-|  1  | AND                 | AND   | 00        | 0  |  0  | 
-|  2  | ADD                 | ADD   | 01        | 0  |  0  |      
-|  3  | SUB                 | SUB   | 10        | 0  |  0  |       
-|  4  | ADDI                | ADD   | 01        | 0  |  0  |        
-|  5  | ANDI                | AND   | 00        | 0  |  0  |        
-|  6  | LW                  | ADD   | 01        | 0  |  0  |         
-|  7  | LBU                 | ADD   | 01        | 0  |  0  |        
-|  8  | LBS                 | ADD   | 01        | 0  |  0  |        
-|  9  | SW                  | ADD   | 01        | 0  |  0  |        
-| 10  | BGT                 | X     | XX        |  if (Taken) 2 else  0  |  if (Taken) 1 else  0  |       
-| 11  | BGTZ                | X     | XX        |  if (Taken) 2 else  0  |  if (Taken) 1 else  0  |       
-| 12  | BLT                 | X     | XX        |  if (Taken) 2 else  0  |  if (Taken) 1 else  0  |      
-| 13  | BLTZ                | X     | XX        |  if (Taken) 2 else  0  |  if (Taken) 1 else  0  |      
-| 14  | BEQ                 | X     | XX        |  if (Taken) 2 else  0  |  if (Taken) 1 else  0  |     
-| 15  | BEQZ                | X     | XX        |  if (Taken) 2 else  0  |  if (Taken) 1 else  0  |      
-| 16  | BNE                 | X     | XX        |  if (Taken) 2 else  0  |  if (Taken) 1 else  0  |      
-| 17  | BNEZ                | X     | XX        |  if (Taken) 2 else  0  |  if (Taken) 1 else  0  |      
-| 18  | JMP                 | X     | XX        |  1   |  1  |      
-| 19  | CALL                | X     | XX        |  1   |  1  |      
-| 20  | RET                 | X     | XX        |  3   |  1  |     
-| 21  | Sv                  | ADD   | 01        |  0   |  0  |     
-
+## Acknowledgments
+This project was completed under the guidance of Dr. Aziz Qaroush, Faculty of Engineering & Technology, Electrical & Computer Engineering Department.
 
 
 ## 🔗 Links
